@@ -1,0 +1,65 @@
+.tabs > input[type="radio"] {
+    position: absolute;
+    left: -200vw;
+}
+
+.tabs__panel {
+    @include trans;
+
+    border-top: rem(1) solid colors(grey-dark);
+    display: none;
+    padding: rem(30 0);
+}
+
+.tabs > input:first-child:checked ~ .tab-panels > .tabs__panel:first-child,
+.tabs > input:nth-child(3):checked ~ .tab-panels > .tabs__panel:nth-child(2),
+.tabs > input:nth-child(5):checked ~ .tab-panels > .tabs__panel:nth-child(3),
+.tabs > input:nth-child(7):checked ~ .tab-panels > .tabs__panel:nth-child(4),
+.tabs > input:nth-child(9):checked ~ .tab-panels > .tabs__panel:nth-child(5),
+.tabs > input:nth-child(11):checked ~ .tab-panels > .tabs__panel:nth-child(6) {
+    display: block;
+}
+
+.tabs > label {
+    @include trans(color);
+
+    border-bottom: 0;
+    border: 1px solid transparent;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 600;
+    padding: rem(15 10 25);
+    position: relative;
+    width: 32%;
+}
+
+.tabs > label::after {
+    background: colors(black);
+    bottom: rem(10);
+    content: "";
+    height: rem(4);
+    left: rem(15);
+    position: absolute;
+    width: rem(22);
+}
+
+.tabs > label:hover,
+.tabs > input:checked,
+.tabs > input:focus + label {
+    color: colors(green);
+}
+
+.tabs > label:hover::after,
+.tabs > input:focus + label::after,
+.tabs > input:checked + label::after {
+    background: colors(green);
+    color: colors(green);
+}
+
+.tabs > input:checked + label {
+    border-color: colors(grey-dark);
+    border-bottom: rem(1) solid colors(white);
+    box-shadow: 0 rem(3) 0 0 colors(white);
+    margin-bottom: rem(-1);
+    z-index: 2;
+}

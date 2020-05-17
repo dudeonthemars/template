@@ -1,0 +1,35 @@
+
+$colors: (
+    white : #fff,
+    orange: #f37b06,
+    green: #89d80b,
+    blue:  #2793d6,
+    gray-light: #f4f4f4,
+    black: #000,
+    grey-dark: #222,
+    yellow: #ebeb12,
+    orange-red: #ff3e33
+);
+
+//font
+$font-size: rem(18);
+
+$font-family-normal: 'Jost', sans-serif;
+$font-family-alt: 'Caveat', cursive;
+
+//shadows
+
+$box-shadow: 0 0 rem(30) rem(20) rgba(colors(black), 0.2);
+$box-shadow-sm:  0 0 rem(30) rem(8) rgba(colors(black), 0.2);
+$box-shadow-neuro: inset 4px 4px 4px 0 #d1d9e6, inset -4px -4px 4px 0 colors(white);
+
+// breakpoints
+$breakpoints: (
+    xxs: 350px,
+    xs: 450px,
+    sm: 768px,
+    md: 992px,
+    lg: 1200px,
+    hd: 1920px,
+    xl: 1921px
+);

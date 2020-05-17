@@ -1,0 +1,30 @@
+
+.question {
+	@include trans;
+	cursor: pointer;
+
+	&:hover {
+		text-decoration: underline;
+	}
+
+	&.active + .answer {
+		opacity: 1;
+		height: auto;
+	}
+}
+
+.answer {
+	@include trans;
+	
+	opacity: 0;
+	height: 0;
+	overflow: hidden;
+}
+
+$text-alignments: (left,right,center,justify);
+
+@each $val in $text-alignments {
+	.text-#{$val} { // sass-lint:disable-line class-name-format
+		text-align: $val;
+	}
+}

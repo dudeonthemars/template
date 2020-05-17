@@ -1,0 +1,8 @@
+{
+    "guideSrc": "./app/template/scss/",
+    "guideDest": "./app/template/guide",
+    "cssSrc": "./app/template/",
+    "partials": {
+        "assetshead": "./app/template/guide/project-head.mustache"
+    }
+}

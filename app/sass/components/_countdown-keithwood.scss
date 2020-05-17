@@ -1,0 +1,41 @@
+/* countdown timer-keithwood styles */
+.countdown-section {
+    position: relative;
+}
+.countdown-amount {
+	font-size: 32px;
+	position: relative;
+	padding: 17px;
+	
+	@include media(sm) {
+		font-size: 42px;
+		padding: 20px;
+	}
+}
+.countdown-period {
+	font-size: 12px;
+	position: absolute;
+	bottom: -15px;
+	left: 50%;
+	transform: translateX(-50%);
+	color: #6c6c6c;   
+	
+	@include media(sm) {
+		font-size: 14px;
+	}
+}
+@media screen and (max-width:428px) {
+    .countdown-amount {
+        font-size: 32px;
+        position: relative;
+        padding: 17px;
+    }
+    .countdown-period {
+        font-size: 12px;
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #6c6c6c;
+    }
+}

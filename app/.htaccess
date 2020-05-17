@@ -1,0 +1,12 @@
+AddDefaultCharset utf-8
+AddType 'text/html; charset=utf-8' .html .htm .shtml
+
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(js|css|xml|gz|woff2)$">
+    Header append Vary: Accept-Encoding
+  </FilesMatch>
+</IfModule>
+
+RewriteCond %{HTTP:X-HTTPS} !1
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
