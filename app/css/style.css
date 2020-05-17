@@ -1637,6 +1637,44 @@ footer {
   stroke: #89d80b;
   width: 70px; }
 
+header {
+  min-height: 100vh; }
+
+.hero-one {
+  background-color: black;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(https://source.unsplash.com/lfyKGQWEbew);
+  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://source.unsplash.com/lfyKGQWEbew);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://source.unsplash.com/lfyKGQWEbew);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-clip-path: polygon(0 0, 60vw 0, 40vw 100vh, 0 100vh);
+          clip-path: polygon(0 0, 60vw 0, 40vw 100vh, 0 100vh);
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  width: 60%;
+  z-index: 1; }
+
+.hero-two {
+  background-color: green;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.5))), url(https://source.unsplash.com/PRne5FNBRmk);
+  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url(https://source.unsplash.com/PRne5FNBRmk);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url(https://source.unsplash.com/PRne5FNBRmk);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 60%; }
+
+.caption {
+  position: absolute;
+  width: 100%;
+  z-index: 2; }
+
 @media all and (min-width: 350px){
   .h-padding-top-12-xxs{
     padding-top: 12px; }
