@@ -3,13 +3,12 @@ $(document).on('ready', function() {
     //  WOW Transitions
     if ($(window).width() > 767) {
         wow = new WOW({
-            boxClass: 'wow', // default               
+            boxClass: 'wow', // default
             offset: 200, // default
             mobile: true, // default
             live: true // default
         })
         wow.init();
-        $(window).stellar();
     }
 
     // smooth scroll
@@ -20,81 +19,7 @@ $(document).on('ready', function() {
         }, 600);
         return false;
     });
-
-    //text-rotator
-    $(".rotate").textrotator({
-        animation: "dissolve", //  Options dissolve (default), fade, flip, flipUp, flipCube, flipCubeUp and spin.
-        separator: ",", // If you don't want commas to be the separator, you can define a new separator (|, &, * etc.) by yourself using this field.
-        speed: 2000 // How many milliseconds until the next word show.
-    });
-    //slick
-    $('.testimonials').slick({
-        draggable: true,
-        infinite: true,
-        dots: false,
-        autoplay: false,
-        speed: 900,
-        cssEase: 'ease-in-out',
-        lazyLoad: 'ondemand',
-        slidesToShow: 1,
-        responsive: [{
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    dots: false,
-                    arrows: false,
-                    infinite: true,
-
-                }
-            },
-            {
-                breakpoint: 760,
-                settings: {
-                    slidesToShow: 1,
-                    dots: false,
-                    arrows: false,
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 580,
-                settings: {
-                    dots: false,
-                    arrows: false
-                }
-            }
-
-        ]
-    });
-
-    //readmore
-
-    $('.testimonials p').readmore({
-        speed: 300,
-        moreLink: '<a href="#">Читать полностью</a>',
-        lessLink: '<a href="#">Закрыть</a>',
-        collapsedHeight: 240
-    });
-
-    // site preloader 
-    $(window).load(function() {
-        $('#preloader').fadeOut('slow', function() {
-            $(this).remove();
-        });
-    });
-});
-
-
-//parallax
-if ($(window).width() > 767) {
-    var scene = document.getElementById('scene1');
-    var parallax = new Parallax(scene);
-
-    var scene = document.getElementById('scene2');
-    var parallax = new Parallax(scene);
-
-}
+})
 
 
 // form fields
@@ -229,31 +154,4 @@ let toggler = (function() {
     }
 })();
 
-// autodateChanger
-let dateChanger = (function() {
-    return {
-        init: function() {
-            let ourDate = jQuery('.ourDate');
-            let theDate = new Date(2019, 9, 14);
-            let currentDate = new Date();
-            let options = {
-                month: 'long',
-                day: 'numeric'
-            };
-
-            do {
-                theDate.setDate(theDate.getDate() + 14);
-            } while (currentDate > theDate);
-
-            for (let i = 0; i <= ourDate.length; i++) {
-                ourDate[i].innerHTML = theDate.toLocaleString("ru", options);
-            }
-
-        }
-    }
-})();
-// call need scripts
-countDown.init();
-timer.init();
 toggler.init();
-dateChanger.init();

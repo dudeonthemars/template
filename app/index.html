@@ -15,6 +15,7 @@
     <link rel="shortcut icon" href="img/ico.png">
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:400,400i,700,900|Roboto+Slab:400,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="css/libs.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -22,18 +23,44 @@
         <header>
             <div class="hero-one"></div>
             <div class="hero-two"></div>
-            <div class="caption">
-                <h1 class="title">
-                    Как новичкам успешно продавать онлайн-курсы самим или через продюсера
+            <div class="caption animated wow fadeInUp">
+                <h1 class="title-alt text-center">
+                    Как новичкам успешно продавать онлайн-курсы <span class="c-green">самим</span> или через <span class="c-orange">продюсера</span>
                 </h1>
-    
-                Почему нет смысла быть «уникальным» и изобретать что-то якобы «новое» 
-                За что на самом деле покупатели готовы вам заплатить деньги
-                Как правильно выбрать продюсера и  не нарваться  на мошенника
-                Как организовать прибыльный инфобизнес самим без помощи продюсера
-                Технологии поэтапного делегирования рутинных операций сотрудникам
+                <ol class="check-list">
+                    <li>Почему нет смысла быть «уникальным» и изобретать что-то якобы «новое» </li>
+                    <li>За что на самом деле покупатели готовы вам заплатить деньги </li>
+                    <li>Как правильно выбрать продюсера и  не нарваться  на мошенника </li>
+                    <li>Как организовать прибыльный инфобизнес самим без помощи продюсера </li>
+                    <li>Технологии поэтапного делегирования рутинных операций сотрудникам </li>
+                </ol>
+                <div class="text-center">
+                    <a href="#form" class="btn btn_green">Забрать семинар</a>
+                </div>
             </div>
         </header>
+        <section id="form">
+            <div class="form">
+                <form class="ea_form" action="https://olgayurkovskaya.e-autopay.com/checkout/save_order_data.php" method=post name="order_form" target="_blank" onSubmit="return EAcheckForm(this);">
+                    
+                    <div class="form__group">
+                        <input type="email" placeholder="Ваш email*" id="input-email" name="email" class="ea_email form__input emailInput" required="required">
+                        <label for="input-email" class="form__label">Ваш email*</label>
+                    </div>
+                    <div class="form__group">
+                        <input type="text" placeholder="Ваш телефон*" id="input-phone" name="phone" class="ea_phone form__input phoneInput" required="required">
+                        <label for="input-phone" class="form__label">Ваш телефон*</label>
+                    </div>
+                    <div class="text-center">
+                        <input type="submit" value="Зарегистрироваться" class="ea_submit btn btn_orange-red" name="submit" id="formSubmit" target="_blank" role="button" />
+                    </div>
+                    <input type="hidden" name="form_charset" id="form_charset" value="">
+                    <input type="hidden" name="tovar_id" value="456046">
+                    <input type="hidden" name="form_id" value="26879">
+                    <input type="hidden" name="order_page_referer" id="order_page_referer" value="" />
+                </form>
+            </div>
+        </section>
         <footer>
             <div class="container-fluid">
                 <div class="center">
@@ -73,7 +100,7 @@
     <script type="text/javascript" src="js/jquery-2.1.1.js"></script>
     <script type="text/javascript" src="js/libs.min.js"></script>
     <script type="text/javascript" src="js/modernizr.js"></script>
-    <script type="text/javascript" src="js/ea-form.js"></script>
+    <script async type="text/javascript" src="js/ea-form.js"></script>
     <!--
         <script async language="javascript" src="//olgayurkovskaya.e-autopay.com/stat.js"></script>
         <script async language="javascript" src="//olgayurkovskaya.e-autopay.com/hit.js"></script>
