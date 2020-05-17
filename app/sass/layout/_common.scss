@@ -45,9 +45,9 @@ header {
 }
 
 .caption {
-    background: rgba(colors(white), 0.9);
+    background: rgba(colors(white), 0.85);
     border-radius: rem(5);
-    max-width: 750px;
+    max-width: 850px;
     padding: rem(48);
     position: relative;
     width: 100%;
@@ -61,6 +61,7 @@ header {
     margin-top: rem(50);
 
     li {
+        background: colors(white);
         border-radius: 0 0.5rem 0.5rem 0.5rem;
         box-shadow: $box-shadow-neuro;
         counter-increment: gradient-counter;
@@ -133,11 +134,19 @@ header {
     color: lighten(colors(black), 60%);
     font-size: rem(14);
     position: absolute;
-    transform: translate(88px, -76px);
+    transform: translate(73px, -62px);
     width: 100%;
+
+    @include media(md) {
+        transform: translate(88px, -76px);
+    }
 }
 
 .form__input:placeholder-shown + .form__label {
     font-size: rem(16);
-    transform: translate(88px, -35px);
+    transform: translate(77px, -30px);
+
+    @include media(md) {
+        transform: translate(88px, -35px);
+    }
 }

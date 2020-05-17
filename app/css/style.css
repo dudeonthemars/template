@@ -1691,9 +1691,9 @@ header {
   width: 60%; }
 
 .caption {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.85);
   border-radius: 0.3125rem;
-  max-width: 750px;
+  max-width: 850px;
   padding: 3rem;
   position: relative;
   width: 100%;
@@ -1705,6 +1705,7 @@ header {
   margin-bottom: 3.125rem;
   margin-top: 3.125rem; }
   .check-list li {
+    background: #fff;
     border-radius: 0 0.5rem 0.5rem 0.5rem;
     -webkit-box-shadow: inset 4px 4px 4px 0 #ccc, inset -4px -4px 4px 0 #fff;
             box-shadow: inset 4px 4px 4px 0 #ccc, inset -4px -4px 4px 0 #fff;
@@ -1791,16 +1792,16 @@ header {
   color: #999999;
   font-size: 0.875rem;
   position: absolute;
-  -webkit-transform: translate(88px, -76px);
-      -ms-transform: translate(88px, -76px);
-          transform: translate(88px, -76px);
+  -webkit-transform: translate(73px, -62px);
+      -ms-transform: translate(73px, -62px);
+          transform: translate(73px, -62px);
   width: 100%; }
 
 .form__input:placeholder-shown + .form__label {
   font-size: 1rem;
-  -webkit-transform: translate(88px, -35px);
-      -ms-transform: translate(88px, -35px);
-          transform: translate(88px, -35px); }
+  -webkit-transform: translate(77px, -30px);
+      -ms-transform: translate(77px, -30px);
+          transform: translate(77px, -30px); }
 
 @media all and (min-width: 350px){
   .h-padding-top-12-xxs{
@@ -2718,7 +2719,15 @@ header {
   .h-padding-right-100-md{
     padding-right: 100px; }
   .h-margin-right-100-md{
-    margin-right: 100px; } }
+    margin-right: 100px; }
+  .form__label{
+    -webkit-transform: translate(88px, -76px);
+        -ms-transform: translate(88px, -76px);
+            transform: translate(88px, -76px); }
+  .form__input:placeholder-shown + .form__label{
+    -webkit-transform: translate(88px, -35px);
+        -ms-transform: translate(88px, -35px);
+            transform: translate(88px, -35px); } }
 
 @media all and (min-width: 1200px){
   .h-padding-top-12-lg{
