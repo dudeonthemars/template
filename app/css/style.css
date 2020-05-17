@@ -1744,6 +1744,9 @@ header {
       padding: 0.125em 0.25em;
       z-index: 1; }
 
+#form {
+  padding-top: 5vh; }
+
 .form {
   max-width: 28.125rem;
   margin: 3.125rem auto;

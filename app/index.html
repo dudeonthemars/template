@@ -40,25 +40,30 @@
             </div>
         </header>
         <section id="form">
-            <div class="form">
-                <form class="ea_form" action="https://olgayurkovskaya.e-autopay.com/checkout/save_order_data.php" method=post name="order_form" target="_blank" onSubmit="return EAcheckForm(this);">
-                    
-                    <div class="form__group">
-                        <input type="email" placeholder="Ваш email*" id="input-email" name="email" class="ea_email form__input emailInput" required="required">
-                        <label for="input-email" class="form__label">Ваш email*</label>
-                    </div>
-                    <div class="form__group">
-                        <input type="text" placeholder="Ваш телефон*" id="input-phone" name="phone" class="ea_phone form__input phoneInput" required="required">
-                        <label for="input-phone" class="form__label">Ваш телефон*</label>
-                    </div>
-                    <div class="text-center">
-                        <input type="submit" value="Зарегистрироваться" class="ea_submit btn btn_orange-red" name="submit" id="formSubmit" target="_blank" role="button" />
-                    </div>
-                    <input type="hidden" name="form_charset" id="form_charset" value="">
-                    <input type="hidden" name="tovar_id" value="456046">
-                    <input type="hidden" name="form_id" value="26879">
-                    <input type="hidden" name="order_page_referer" id="order_page_referer" value="" />
-                </form>
+            <div class="container">
+                <h2 class="hero text-center">
+                    Успевайте на скидку
+                </h2>
+                <div class="form">
+                    <form class="ea_form" action="https://olgayurkovskaya.e-autopay.com/checkout/save_order_data.php" method=post name="order_form" target="_blank" onSubmit="return EAcheckForm(this);">
+                        
+                        <div class="form__group">
+                            <input type="email" placeholder="Ваш email*" id="input-email" name="email" class="ea_email form__input emailInput" required="required">
+                            <label for="input-email" class="form__label">Ваш email*</label>
+                        </div>
+                        <div class="form__group">
+                            <input type="text" placeholder="Ваш телефон*" id="input-phone" name="phone" class="ea_phone form__input phoneInput" required="required">
+                            <label for="input-phone" class="form__label">Ваш телефон*</label>
+                        </div>
+                        <div class="text-center">
+                            <input type="submit" value="Зарегистрироваться" class="ea_submit btn btn_orange-red" name="submit" id="formSubmit" target="_blank" role="button" />
+                        </div>
+                        <input type="hidden" name="form_charset" id="form_charset" value="">
+                        <input type="hidden" name="tovar_id" value="456046">
+                        <input type="hidden" name="form_id" value="26879">
+                        <input type="hidden" name="order_page_referer" id="order_page_referer" value="" />
+                    </form>
+                </div>
             </div>
         </section>
         <footer>
@@ -100,11 +105,8 @@
     <script type="text/javascript" src="js/jquery-2.1.1.js"></script>
     <script type="text/javascript" src="js/libs.min.js"></script>
     <script type="text/javascript" src="js/modernizr.js"></script>
-    <script async type="text/javascript" src="js/ea-form.js"></script>
-    <!--
-        <script async language="javascript" src="//olgayurkovskaya.e-autopay.com/stat.js"></script>
-        <script async language="javascript" src="//olgayurkovskaya.e-autopay.com/hit.js"></script>
-    -->
+    <script async language="javascript" src="https://olgayurkovskaya.e-autopay.com/stat.js"></script>
+    <script async language="javascript" src="https://olgayurkovskaya.e-autopay.com/hit.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <!-- scripts  -->
 </body>
