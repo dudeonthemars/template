@@ -18,6 +18,13 @@
     <a class="btn btn_green"><span class="fi flaticon-fingerprint"></span> button green with icon</a>
 ```
 
+
+## button yellow
+
+```html_example
+    <a class="btn btn_yellow"><span class="fi flaticon-fingerprint"></span> button yellow with icon</a>
+```
+
 ## button link
 
 ```html_example
@@ -36,6 +43,7 @@
         display: inline-block;
         font-size: rem(18);
         letter-spacing: 1px;
+        min-width: rem(290);
         padding: rem(16 30);
         position: relative;
         text-decoration: none;
@@ -101,6 +109,21 @@
         &::after {
             background-color: colors(orange-red);
         }
+    }
+
+    &_yellow {
+        background-color: colors(yellow);
+        color: colors(black);
+        text-shadow: none;
+        font-weight: bold;
+
+        &::after {
+            background-color: colors(yellow);
+        }
+    }
+
+    &_squared {
+        border-radius: rem(5);
     }
 }
 
