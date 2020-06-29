@@ -17,8 +17,50 @@ $box-shadow-neuro: inset 4px 4px 4px 0 #d1d9e6, inset -4px -4px 4px 0 colors(whi
     }
 }
 
+#features {
+    padding-bottom: 4vh;
+}
+
+.features-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    @include media(md) {
+        flex-wrap: nowrap;
+    }
+
+    &__right {
+        border: 3px solid colors(orange);
+        box-shadow: rem(24 0 13 -12) #ccc;
+        left: 0;
+        padding: rem(24);
+        position: relative;
+
+        @include media(md) {
+            left: rem(-80);
+            padding: rem(100);
+        }
+    }
+}
+
+.features-box {
+    background: #f7f7f7;
+    border-radius: 5px;
+    box-shadow: $box-shadow-neuro;
+    font-size: rem(24);
+    font-weight: bold;
+    padding: rem(24 8);
+    text-align: center;
+    width: rem(300);
+    position: relative;
+    z-index: 1;
+}
+
 #content2 {
     padding-bottom: 10vh;
+    padding-top: 10vh;
 }
 
 .c2-box {
@@ -26,17 +68,19 @@ $box-shadow-neuro: inset 4px 4px 4px 0 #d1d9e6, inset -4px -4px 4px 0 colors(whi
     border-radius: 5px;
     box-shadow: $box-shadow-sm;
     left: 50%;
-    max-width: rem(600);
+    max-width: rem(750);
     padding: rem(36 24);
     position: relative;
     transform: translate(-50%, -80%);
     width: 100%;
+    font-size: 24px;
 }
 
 .c2-content {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    margin-top: rem(50);
 
     @include media(md) {
         flex-wrap: nowrap;

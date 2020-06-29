@@ -135,6 +135,12 @@
 .c-orange-red {
   color: #ff3e33; }
 
+.c-purple {
+  color: #990e99; }
+
+.c-brown {
+  color: #3f2f20; }
+
 .h-padding-top-12 {
   padding-top: 12px; }
 
@@ -1474,6 +1480,105 @@ All collections you can find by the link below
 .flaticon-add-1:before {
   content: "\f189"; }
 
+.flaticon-project:before {
+  content: "\f18a"; }
+
+.flaticon-question:before {
+  content: "\f18b"; }
+
+.flaticon-stair:before {
+  content: "\f18c"; }
+
+.flaticon-job:before {
+  content: "\f18d"; }
+
+.flaticon-union:before {
+  content: "\f18e"; }
+
+.flaticon-work:before {
+  content: "\f18f"; }
+
+.flaticon-connect:before {
+  content: "\f190"; }
+
+.flaticon-man:before {
+  content: "\f191"; }
+
+.flaticon-meet:before {
+  content: "\f192"; }
+
+.flaticon-question-1:before {
+  content: "\f193"; }
+
+.flaticon-car:before {
+  content: "\f194"; }
+
+.flaticon-members:before {
+  content: "\f195"; }
+
+.flaticon-businessman:before {
+  content: "\f196"; }
+
+.flaticon-growth-1:before {
+  content: "\f197"; }
+
+.flaticon-group:before {
+  content: "\f198"; }
+
+.flaticon-businessman-1:before {
+  content: "\f199"; }
+
+.flaticon-cog:before {
+  content: "\f19a"; }
+
+.flaticon-chief:before {
+  content: "\f19b"; }
+
+.flaticon-dollar-sign:before {
+  content: "\f19c"; }
+
+.flaticon-between:before {
+  content: "\f19d"; }
+
+.flaticon-human:before {
+  content: "\f19e"; }
+
+.flaticon-dollar:before {
+  content: "\f19f"; }
+
+.flaticon-guy:before {
+  content: "\f1a0"; }
+
+.flaticon-money-3:before {
+  content: "\f1a1"; }
+
+.flaticon-businessman-2:before {
+  content: "\f1a2"; }
+
+.flaticon-coin-2:before {
+  content: "\f1a3"; }
+
+.flaticon-lightbulb:before {
+  content: "\f1a4"; }
+
+.flaticon-umbrella-1:before {
+  content: "\f1a5"; }
+
+.flaticon-candidate:before {
+  content: "\f1a6"; }
+
+.flaticon-globe:before {
+  content: "\f1a7"; }
+
+.flaticon-portrait:before {
+  content: "\f1a8"; }
+
+.flaticon-dollar-sign-1:before {
+  content: "\f1a9"; }
+
+.flaticon-male:before {
+  content: "\f1aa"; }
+
 .ea_form .ph {
   border-radius: 30px;
   border: 2px solid #000;
@@ -1686,8 +1791,49 @@ footer {
     color: #fff;
     text-shadow: 1px 1px 1px #000; }
 
+#features {
+  padding-bottom: 4vh; }
+
+.features-content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .features-content__right {
+    border: 3px solid #f37b06;
+    -webkit-box-shadow: 1.5rem 0rem 0.8125rem -0.75rem #ccc;
+            box-shadow: 1.5rem 0rem 0.8125rem -0.75rem #ccc;
+    left: 0;
+    padding: 1.5rem;
+    position: relative; }
+
+.features-box {
+  background: #f7f7f7;
+  border-radius: 5px;
+  -webkit-box-shadow: inset 4px 4px 4px 0 #d1d9e6, inset -4px -4px 4px 0 #fff;
+          box-shadow: inset 4px 4px 4px 0 #d1d9e6, inset -4px -4px 4px 0 #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 1.5rem 0.5rem;
+  text-align: center;
+  width: 18.75rem;
+  position: relative;
+  z-index: 1; }
+
 #content2 {
-  padding-bottom: 10vh; }
+  padding-bottom: 10vh;
+  padding-top: 10vh; }
 
 .c2-box {
   background: #fff;
@@ -1695,13 +1841,14 @@ footer {
   -webkit-box-shadow: 0 0 1.875rem 0.5rem rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 1.875rem 0.5rem rgba(0, 0, 0, 0.2);
   left: 50%;
-  max-width: 37.5rem;
+  max-width: 46.875rem;
   padding: 2.25rem 1.5rem;
   position: relative;
   -webkit-transform: translate(-50%, -80%);
       -ms-transform: translate(-50%, -80%);
           transform: translate(-50%, -80%);
-  width: 100%; }
+  width: 100%;
+  font-size: 24px; }
 
 .c2-content {
   display: -webkit-box;
@@ -1714,7 +1861,8 @@ footer {
           align-items: center;
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
-          flex-wrap: wrap; }
+          flex-wrap: wrap;
+  margin-top: 3.125rem; }
   .c2-content > * {
     padding: 1.5rem; }
 
@@ -2691,6 +2839,13 @@ footer {
     padding-right: 100px; }
   .h-margin-right-100-md{
     margin-right: 100px; }
+  .features-content{
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap; }
+  .features-content__right{
+    left: -5rem;
+    padding: 6.25rem; }
   .c2-content{
     -webkit-flex-wrap: nowrap;
         -ms-flex-wrap: nowrap;
