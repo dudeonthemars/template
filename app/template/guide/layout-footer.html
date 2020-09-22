@@ -350,6 +350,12 @@
                         </svg>
                         media(sm)
                     </div>
+                    <div role="listitem" class="atlas-component-aside__list-item">
+                        <svg role="img" width="16" height="16">
+                            <use xlink:href="#icon-component"></use>
+                        </svg>
+                        trans(all, .2s)
+                    </div>
             </div>
         </div>
     </div>
@@ -391,11 +397,20 @@
 <pre><code class="js-copier-text language-html" contenteditable="true">&lt;footer&gt;
     &lt;div class&#x3D;&quot;container-fluid&quot;&gt;
         &lt;div class&#x3D;&quot;center&quot;&gt;
+            &lt;svg xmlns&#x3D;&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&quot; class&#x3D;&quot;footer__icon&quot; viewBox&#x3D;&quot;0 0 76 81&quot; id&#x3D;&quot;logo&quot;&gt;
+
+                &lt;g id&#x3D;&quot;125a3f92-a363-45f1-acc8-10742e17ab1f&quot;&gt;
+                    &lt;g id&#x3D;&quot;d472b04f-b251-45da-92c4-daf5784f296f&quot;&gt;
+                        &lt;polygon points&#x3D;&quot;0.5 50.5 0.5 0.5 75.5 0.5 75.5 80.5 0.5 80.5 0.5 50.5&quot; stroke-miterlimit&#x3D;&quot;10&quot; &#x2F;&gt;
+                        &lt;polyline points&#x3D;&quot;15.5 15.5 39.5 40.5 57.5 15.5 39.5 44.5 39.5 68.5&quot; stroke-miterlimit&#x3D;&quot;10&quot; &#x2F;&gt;
+                    &lt;&#x2F;g&gt;
+                &lt;&#x2F;g&gt;
+            &lt;&#x2F;svg&gt;
             YURKOVSKAYA CONSULTANCY FZE LLC | Licence #1810 United Arab Emirates
         &lt;&#x2F;div&gt;
         &lt;div class&#x3D;&quot;footer&quot;&gt;
             &lt;div class&#x3D;&quot;fitem footer-links&quot;&gt;
-                &lt;a href&#x3D;&quot;https:&#x2F;&#x2F;infobiz.help&#x2F;policy-infobiz.pdf&quot; target&#x3D;&quot;_blank&quot; class&#x3D;&quot;btn-link&quot;&gt;Политика конфиденциальности&lt;&#x2F;a&gt; | E-mail: &lt;a href&#x3D;&quot;mailto:info@stressa.net&quot; target&#x3D;&quot;_blank&quot; class&#x3D;&quot;btn-link&quot;&gt;info@stressa.net&lt;&#x2F;a&gt;
+                &lt;a href&#x3D;&quot;https:&#x2F;&#x2F;infobiz.help&#x2F;policy-infobiz.pdf&quot; target&#x3D;&quot;_blank&quot; class&#x3D;&quot;help-link&quot;&gt;Политика конфиденциальности&lt;&#x2F;a&gt; &lt;br&gt; | E-mail: &lt;a href&#x3D;&quot;mailto:info@stressa.net&quot; target&#x3D;&quot;_blank&quot; class&#x3D;&quot;help-link&quot;&gt;info@stressa.net&lt;&#x2F;a&gt;
             &lt;&#x2F;div&gt;
             &lt;div class&#x3D;&quot;footer-socials&quot;&gt;
                 &lt;a href&#x3D;&quot;https:&#x2F;&#x2F;www.facebook.com&#x2F;olgayurkovskaya&quot; target&#x3D;&quot;_blank&quot; class&#x3D;&quot;social-link&quot;&gt;&lt;i class&#x3D;&quot;fi flaticon-facebook-1&quot;&gt;&lt;&#x2F;i&gt;&lt;&#x2F;a&gt;
@@ -413,11 +428,20 @@
 <footer>
     <div class="container-fluid">
         <div class="center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="footer__icon" viewBox="0 0 76 81" id="logo">
+
+                <g id="125a3f92-a363-45f1-acc8-10742e17ab1f">
+                    <g id="d472b04f-b251-45da-92c4-daf5784f296f">
+                        <polygon points="0.5 50.5 0.5 0.5 75.5 0.5 75.5 80.5 0.5 80.5 0.5 50.5" stroke-miterlimit="10" />
+                        <polyline points="15.5 15.5 39.5 40.5 57.5 15.5 39.5 44.5 39.5 68.5" stroke-miterlimit="10" />
+                    </g>
+                </g>
+            </svg>
             YURKOVSKAYA CONSULTANCY FZE LLC | Licence #1810 United Arab Emirates
         </div>
         <div class="footer">
             <div class="fitem footer-links">
-                <a href="https://infobiz.help/policy-infobiz.pdf" target="_blank" class="btn-link">Политика конфиденциальности</a> | E-mail: <a href="mailto:info@stressa.net" target="_blank" class="btn-link">info@stressa.net</a>
+                <a href="https://infobiz.help/policy-infobiz.pdf" target="_blank" class="help-link">Политика конфиденциальности</a> <br> | E-mail: <a href="mailto:info@stressa.net" target="_blank" class="help-link">info@stressa.net</a>
             </div>
             <div class="footer-socials">
                 <a href="https://www.facebook.com/olgayurkovskaya" target="_blank" class="social-link"><i class="fi flaticon-facebook-1"></i></a>
@@ -440,7 +464,7 @@
             <div role="region" class="atlas-component-footer__section" aria-label="Ruleset sizes">
                 <figure class="atlas-info-digit _primary">
                     <div class="atlas-info-digit__digit">
-                        31
+                        38
                     </div>
                     <figcaption class="atlas-info-digit__details">
                         <div role="heading" aria-level="3" class="atlas-info-digit__title">
@@ -452,9 +476,9 @@
                     <title id="component-graph-title">Declaration sets size through the file</title>
                     <g class="atlas-sparkline__line">
                         <g class="atlas-sparkline__shadow">
-                            <path d="M0,40C0,40,20.120009622949716,65.50595076493455,29,64C39.83865006707421,62.161881638796295,46.68681589767487,26.876962470892213,58,16C66.69423448512296,7.641003863060682,78.45153058395472,-2.591986214893198,87,0C98.79575118412663,3.5765963443910564,103.77262756748523,50.657975066089605,116,56C124.4451309399432,59.68959891426455,135.33333333333334,48.000000000000014,145,48C154.6666666666667,48.000000000000014,164.55485565784562,57.11493290453192,174,56C183.9105580877175,54.83012827395808,193.33333333333334,40,203,40C212.6666666666667,40,222.08944191228247,54.83012827395808,232,56C241.44514434215438,57.11493290453192,251.33333333333337,48.000000000000014,261,48C270.66666666666674,48.000000000000014,290,56,290,56" stroke="currentColor" fill="none" filter="url(#blur-filter)"/>
+                            <path d="M0,40C0,40,18.333713639444927,65.33723278845952,26.363636363636363,64C36.31578974788861,62.34265580400835,42.269657569722185,26.91958065828677,52.72727272727273,16C60.574873296914674,7.80573141168317,71.37260122035565,-2.3256283327967333,79.09090909090908,0C90.0254728216226,3.2947287987743192,94.03707714512896,50.92740580501812,105.45454545454545,56C113.07194894599286,59.38428762702872,123.03030303030305,48.00000000000001,131.8181818181818,48C140.6060606060606,47.99999999999999,149.62800878039178,57.07855663512704,158.18181818181816,56C167.23170318911454,54.85889279691823,175.75757575757575,40,184.54545454545453,40C193.33333333333334,40,201.85920590179452,54.85889279691822,210.9090909090909,56C219.4629003105173,57.07855663512704,228.48484848484847,48.00000000000001,237.27272727272728,48C246.0606060606061,48,255.57794332430902,58.43572792294707,263.6363636363636,56C273.5220115777418,53.011976566769604,290,24,290,24" stroke="currentColor" fill="none" filter="url(#blur-filter)"/>
                         </g>
-                        <path d="M0,40C0,40,20.120009622949716,65.50595076493455,29,64C39.83865006707421,62.161881638796295,46.68681589767487,26.876962470892213,58,16C66.69423448512296,7.641003863060682,78.45153058395472,-2.591986214893198,87,0C98.79575118412663,3.5765963443910564,103.77262756748523,50.657975066089605,116,56C124.4451309399432,59.68959891426455,135.33333333333334,48.000000000000014,145,48C154.6666666666667,48.000000000000014,164.55485565784562,57.11493290453192,174,56C183.9105580877175,54.83012827395808,193.33333333333334,40,203,40C212.6666666666667,40,222.08944191228247,54.83012827395808,232,56C241.44514434215438,57.11493290453192,251.33333333333337,48.000000000000014,261,48C270.66666666666674,48.000000000000014,290,56,290,56" stroke="currentColor" fill="none"/>
+                        <path d="M0,40C0,40,18.333713639444927,65.33723278845952,26.363636363636363,64C36.31578974788861,62.34265580400835,42.269657569722185,26.91958065828677,52.72727272727273,16C60.574873296914674,7.80573141168317,71.37260122035565,-2.3256283327967333,79.09090909090908,0C90.0254728216226,3.2947287987743192,94.03707714512896,50.92740580501812,105.45454545454545,56C113.07194894599286,59.38428762702872,123.03030303030305,48.00000000000001,131.8181818181818,48C140.6060606060606,47.99999999999999,149.62800878039178,57.07855663512704,158.18181818181816,56C167.23170318911454,54.85889279691823,175.75757575757575,40,184.54545454545453,40C193.33333333333334,40,201.85920590179452,54.85889279691822,210.9090909090909,56C219.4629003105173,57.07855663512704,228.48484848484847,48.00000000000001,237.27272727272728,48C246.0606060606061,48,255.57794332430902,58.43572792294707,263.6363636363636,56C273.5220115777418,53.011976566769604,290,24,290,24" stroke="currentColor" fill="none"/>
                     </g>
                 </svg>
             </div>
@@ -499,24 +523,32 @@
             <div role="region" class="atlas-component-footer__section" aria-label="Most used properties">
                 <div role="list" class="atlas-info-list">
                     <div role="listitem" class="atlas-info-list__item">
-                        <span class="atlas-info-list__total">5</span>
-                        <span class="atlas-info-list__name">color</span>
+                        <span class="atlas-info-list__total">6</span>
+                        <span class="atlas-info-list__name">display</span>
                     </div>
                     <div role="listitem" class="atlas-info-list__item">
                         <span class="atlas-info-list__total">5</span>
-                        <span class="atlas-info-list__name">display</span>
+                        <span class="atlas-info-list__name">color</span>
                     </div>
                     <div role="listitem" class="atlas-info-list__item">
                         <span class="atlas-info-list__total">4</span>
                         <span class="atlas-info-list__name">text-align</span>
                     </div>
                     <div role="listitem" class="atlas-info-list__item">
-                        <span class="atlas-info-list__total">2</span>
-                        <span class="atlas-info-list__name">padding</span>
+                        <span class="atlas-info-list__total">3</span>
+                        <span class="atlas-info-list__name">fill</span>
+                    </div>
+                    <div role="listitem" class="atlas-info-list__item">
+                        <span class="atlas-info-list__total">3</span>
+                        <span class="atlas-info-list__name">stroke</span>
+                    </div>
+                    <div role="listitem" class="atlas-info-list__item">
+                        <span class="atlas-info-list__total">3</span>
+                        <span class="atlas-info-list__name">width</span>
                     </div>
                     <div role="listitem" class="atlas-info-list__item">
                         <span class="atlas-info-list__total">2</span>
-                        <span class="atlas-info-list__name">width</span>
+                        <span class="atlas-info-list__name">padding</span>
                     </div>
                     <div role="listitem" class="atlas-info-list__item">
                         <span class="atlas-info-list__total">1</span>
@@ -525,14 +557,6 @@
                     <div role="listitem" class="atlas-info-list__item">
                         <span class="atlas-info-list__total">1</span>
                         <span class="atlas-info-list__name">animation</span>
-                    </div>
-                    <div role="listitem" class="atlas-info-list__item">
-                        <span class="atlas-info-list__total">1</span>
-                        <span class="atlas-info-list__name">background</span>
-                    </div>
-                    <div role="listitem" class="atlas-info-list__item">
-                        <span class="atlas-info-list__total">1</span>
-                        <span class="atlas-info-list__name">fill</span>
                     </div>
                 </div>
             </div>
@@ -564,8 +588,8 @@
                                                                 <div role="list" class="atlas-component-structure__nodes">
                                                                         <div role="listitem" class="atlas-component-structure__node">
                                                                             <div class="atlas-component-structure__selector">
-                                                                                <span class="atlas-component-structure__type _modifier" title="modifier"></span>
-                                                                                <span class="atlas-component-structure__name">.icon--logo</span><span class="atlas-component-structure__brackets"> {...}</span>
+                                                                                <span class="atlas-component-structure__type _element" title="element"></span>
+                                                                                <span class="atlas-component-structure__name">.footer__icon</span><span class="atlas-component-structure__brackets"> {...}</span>
                                                                             </div>
                                                                         </div>
                                                                 </div>
@@ -649,6 +673,26 @@
                                                             </div>
                                                         </div>
                                                 </div>
+                                        </div>
+                                </div>
+                        </div>
+                        <div role="listitem" class="atlas-component-structure__node">
+                            <div class="atlas-component-structure__selector">
+                                <span class="atlas-component-structure__type _element" title="element"></span>
+                                <span class="atlas-component-structure__name">.footer__icon</span><span class="atlas-component-structure__brackets"> {...}</span>
+                            </div>
+                                <div role="list" class="atlas-component-structure__nodes">
+                                        <div role="listitem" class="atlas-component-structure__node">
+                                            <div class="atlas-component-structure__selector">
+                                                <span class="atlas-component-structure__type _mixin" title="mixin"></span>
+                                                <span class="atlas-component-structure__name">include trans(all, .2s)</span><span class="atlas-component-structure__brackets">;</span>
+                                            </div>
+                                        </div>
+                                        <div role="listitem" class="atlas-component-structure__node">
+                                            <div class="atlas-component-structure__selector">
+                                                <span class="atlas-component-structure__type _mixin" title="mixin"></span>
+                                                <span class="atlas-component-structure__name">include media(lg)</span><span class="atlas-component-structure__brackets">;</span>
+                                            </div>
                                         </div>
                                 </div>
                         </div>

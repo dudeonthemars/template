@@ -94,6 +94,15 @@
         }
     }
 
+    &_orange {
+        background-color: colors(orange);
+        color: colors(white);
+
+        &::after {
+            background-color: colors(orange);
+        }
+    }
+
     &_orange-red {
         background-color: colors(orange-red);
         color: colors(white);
