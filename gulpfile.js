@@ -67,10 +67,10 @@ gulp.task('scripts', function() {
     return gulp.src([
             'app/libs/slick-carousel/slick/slick.min.js',
             'app/libs/jquery.scrollTo/jquery.scrollTo.min.js',
-            //'app/libs/rotator/jquery.simple-text-rotator.js',
-            //'app/libs/stellar/jquery.stellar.js',
+            'app/libs/rotator/jquery.simple-text-rotator.js',
+            'app/libs/stellar/jquery.stellar.js',
             'app/libs/timer-keithwood/timer-keithwood.js',
-            //'app/libs/wow/dist/wow.min.js',
+            'app/libs/wow/dist/wow.min.js',
             'app/libs/readmore-js/readmore.min.js'
         ])
         .pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.js

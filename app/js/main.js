@@ -3,13 +3,12 @@ $(document).on('ready', function() {
     //  WOW Transitions
     if ($(window).width() > 767) {
         wow = new WOW({
-            boxClass: 'wow', // default               
+            boxClass: 'wow', // default
             offset: 200, // default
             mobile: true, // default
             live: true // default
         })
         wow.init();
-        $(window).stellar();
     }
 
     // smooth scroll
@@ -86,48 +85,6 @@ $(document).on('ready', function() {
 });
 
 
-//parallax
-if ($(window).width() > 767) {
-    var scene = document.getElementById('scene1');
-    var parallax = new Parallax(scene);
-
-    var scene = document.getElementById('scene2');
-    var parallax = new Parallax(scene);
-
-}
-
-
-// form fields
-function checkform(f) {
-    var line = document.getElementsByClassName('.some-form__line');
-    var errMSG = "";
-    // цикл ниже перебирает все элементы в объекте f, 
-    // переданном в качестве параметра
-    // функции, в данном случае - наша форма.            
-    for (var i = 0; i < f.elements.length; i++)
-    // если текущий элемент имеет атрибут required
-    // т.е. обязательный для заполнения
-        if (null != f.elements[i].getAttribute("required"))
-        // проверяем, заполнен ли он в форме
-            if (isEmpty(f.elements[i].value)) // пустой
-                errMSG += "  " + f.elements[i].name + "\n"; // формируем сообщение
-            // об ошибке, перечисляя 
-            // незаполненные поля
-            // если сообщение об ошибке не пусто,
-            // выводим его, и возвращаем false     
-    if ("" != errMSG) {
-        alert("Не заполнены обязательные поля:\n" + errMSG);
-        return false;
-    }
-
-    function isEmpty(str) {
-        for (var i = 0; i < str.length; i++)
-            if (" " != str.charAt(i))
-                return false;
-        return true;
-    }
-
-}
 
 // count-down digits
 let countDown = (function() {
@@ -254,6 +211,6 @@ let dateChanger = (function() {
 })();
 // call need scripts
 countDown.init();
-timer.init();
+//timer.init();
 toggler.init();
-dateChanger.init();
+//dateChanger.init();
