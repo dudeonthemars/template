@@ -1414,6 +1414,67 @@ section {
   padding-left: 15px;
   padding-right: 15px; }
 
+#footer {
+  background: -webkit-gradient(linear, left top, left bottom, from(#2a0213), to(#483775));
+  background: -o-linear-gradient(top, #2a0213, #483775);
+  background: linear-gradient(180deg, #2a0213, #483775);
+  margin-top: -0.125rem;
+  padding-bottom: 1vh;
+  padding-top: 5vh; }
+
+.footer {
+  -webkit-box-align: start;
+  -webkit-align-items: start;
+      -ms-flex-align: start;
+          align-items: start;
+  border-top: 1px dashed #fbc618;
+  color: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 1.5rem; }
+  .footer .title-sub {
+    font-size: 0.875rem; }
+  .footer__column {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+    font-size: 0.75rem; }
+  .footer__socials {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0.75rem 0; }
+  .footer__socials-item {
+    padding-right: 1.5rem; }
+    .footer__socials-item a {
+      color: #fff;
+      font-size: 1.5rem; }
+  .footer__logo {
+    width: 9.375rem;
+    display: block;
+    margin-bottom: 0.75rem; }
+  .footer__list {
+    margin-top: 0.75rem; }
+  .footer__item {
+    margin-bottom: 0.625rem;
+    padding: 0rem 0.625rem 0rem 0rem; }
+  .footer__link {
+    color: #fff;
+    line-height: 1.3;
+    font-size: 0.75rem; }
+    .footer__link:hover {
+      text-decoration: underline; }
+
 .header {
   background: -webkit-gradient(linear, left top, right top, from(#2a0213), to(#483775));
   background: -o-linear-gradient(left, #2a0213, #483775);
@@ -2113,68 +2174,7 @@ section {
   .priceblock a {
     margin: 1rem auto;
     width: 100%; }
-
-#footer {
-  background: -webkit-gradient(linear, left top, left bottom, from(#2a0213), to(#483775));
-  background: -o-linear-gradient(top, #2a0213, #483775);
-  background: linear-gradient(180deg, #2a0213, #483775);
-  margin-top: -0.125rem;
-  padding-bottom: 1vh;
-  padding-top: 5vh; }
-
-.footer {
-  -webkit-box-align: start;
-  -webkit-align-items: start;
-      -ms-flex-align: start;
-          align-items: start;
-  border-top: 1px dashed #fbc618;
-  color: #fff;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding-top: 1.5rem; }
-  .footer .title-sub {
-    font-size: 0.875rem; }
-  .footer__column {
-    width: 100%;
-    margin-bottom: 1.5rem;
-    margin-top: 1.5rem;
-    font-size: 0.75rem; }
-  .footer__socials {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    padding: 0.75rem 0; }
-  .footer__socials-item {
-    padding-right: 1.5rem; }
-    .footer__socials-item a {
-      color: #fff;
-      font-size: 1.5rem; }
-  .footer__logo {
-    width: 9.375rem;
-    display: block;
-    margin-bottom: 0.75rem; }
-  .footer__list {
-    margin-top: 0.75rem; }
-  .footer__item {
-    margin-bottom: 0.625rem;
-    padding: 0rem 0.625rem 0rem 0rem; }
-  .footer__link {
-    color: #fff;
-    line-height: 1.3;
-    font-size: 0.75rem; }
-    .footer__link:hover {
-      text-decoration: underline; }
-    @media all and (min-width: 350px) {
+  @media all and (min-width: 350px) {
   .h-padding-top-12-xxs {
     padding-top: 12px; }
   .h-margin-top-12-xxs {
@@ -2399,7 +2399,7 @@ section {
     padding-right: 100px; }
   .h-margin-right-100-xxs {
     margin-right: 100px; } }
-    @media all and (min-width: 450px) {
+  @media all and (min-width: 450px) {
   .h-padding-top-12-xs {
     padding-top: 12px; }
   .h-margin-top-12-xs {
@@ -2624,7 +2624,7 @@ section {
     padding-right: 100px; }
   .h-margin-right-100-xs {
     margin-right: 100px; } }
-    @media all and (min-width: 768px) {
+  @media all and (min-width: 768px) {
   .h-padding-top-12-sm {
     padding-top: 12px; }
   .h-margin-top-12-sm {
@@ -2857,6 +2857,8 @@ section {
     font-size: 3.25rem; }
   .count-down__column {
     width: 50%; }
+  .footer__column {
+    width: 50%; }
   .content-1__hero-wrap {
     font-size: 2rem; }
   .content-2__features {
@@ -2923,10 +2925,8 @@ section {
   .content-7__splash-img {
     width: 45%; }
   .content-7__splash-text {
-    width: 50%; }
-  .footer__column {
     width: 50%; } }
-    @media all and (min-width: 992px) {
+  @media all and (min-width: 992px) {
   .h-padding-top-12-md {
     padding-top: 12px; }
   .h-margin-top-12-md {
@@ -3153,6 +3153,8 @@ section {
     margin-right: 100px; }
   .count-down__column {
     width: 25%; }
+  .footer__column {
+    width: 25%; }
   .header__nav {
     -webkit-flex-wrap: nowrap;
         -ms-flex-wrap: nowrap;
@@ -3186,10 +3188,8 @@ section {
     display: none; }
   .content-5__feats-item {
     margin-bottom: unset;
-    width: 21.875rem; }
-  .footer__column {
-    width: 25%; } }
-    @media all and (min-width: 1200px) {
+    width: 21.875rem; } }
+  @media all and (min-width: 1200px) {
   .h-padding-top-12-lg {
     padding-top: 12px; }
   .h-margin-top-12-lg {
@@ -3414,7 +3414,7 @@ section {
     padding-right: 100px; }
   .h-margin-right-100-lg {
     margin-right: 100px; } }
-    @media all and (min-width: 1441px) {
+  @media all and (min-width: 1441px) {
   .h-padding-top-12-mac {
     padding-top: 12px; }
   .h-margin-top-12-mac {
@@ -3639,7 +3639,7 @@ section {
     padding-right: 100px; }
   .h-margin-right-100-mac {
     margin-right: 100px; } }
-    @media all and (min-width: 1921px) {
+  @media all and (min-width: 1921px) {
   .h-padding-top-12-xl {
     padding-top: 12px; }
   .h-margin-top-12-xl {
@@ -3864,7 +3864,7 @@ section {
     padding-right: 100px; }
   .h-margin-right-100-xl {
     margin-right: 100px; } }
-    @media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @media screen and (-webkit-min-device-pixel-ratio: 0) {
   @font-face {
     font-family: "Flaticon";
     src: url("../fonts/Flaticon.svg#Flaticon") format("svg"); } }
