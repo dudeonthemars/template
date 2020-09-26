@@ -11,6 +11,8 @@ $(document).on('ready', function() {
         wow.init();
     }
 
+    $('#content3').stellar();
+
     // smooth scroll
     $("body").on("click", "a.btn, a.animate, .btn-liquid, a.smooth", function() {
         var idtop = $($(this).attr("href")).offset().top;
@@ -84,8 +86,6 @@ $(document).on('ready', function() {
     });
 });
 
-
-
 // count-down digits
 let countDown = (function() {
     return {
@@ -94,7 +94,7 @@ let countDown = (function() {
             $(window).on('scroll', function() {
                 var oTop = $('#count_down').offset().top - window.innerHeight;
                 if (a == 0 && $(window).scrollTop() > oTop) {
-                    $('.counter_value').each(function() {
+                    $('.count-down__value').each(function() {
                         var $this = $(this),
                             countTo = $this.attr('data-count');
                         $({
@@ -117,6 +117,15 @@ let countDown = (function() {
             })
         }
     }
+})();
+
+let loadBg = ( function() {
+    let target = document.querySelector('.content-1__mobile-bg');
+    $(window).on('scroll', function () {
+        if ($(window).scrollTop() > 100 ) {
+            target.classList.add('is-fadeIn');
+        }
+    })
 })();
 
 // ОТСЧЕТ	
@@ -209,6 +218,7 @@ let dateChanger = (function() {
         }
     }
 })();
+
 // call need scripts
 countDown.init();
 //timer.init();

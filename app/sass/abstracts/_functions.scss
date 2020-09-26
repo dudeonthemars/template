@@ -18,3 +18,12 @@
 	@warn "Unknown `#{$key}` in $colors.";
 	@return null;
 }
+
+@function gradient($key) {
+	@if map-has-key($gradient, $key) {
+		@return map-get($gradient, $key);
+	}
+
+	@warn "Unknown `#{$key}` in $gradients.";
+	@return null;
+}

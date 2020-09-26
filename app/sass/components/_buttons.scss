@@ -2,16 +2,20 @@
     &,
     &:link,
     &:visited {
-        border: none;
         border-radius: 10rem;
+        border: none;
         cursor: pointer;
         display: inline-block;
-        font-size: 1.6rem;
-        padding: 1.5rem 4rem;
+        font-size: 1.2rem;
+        font-weight: 900;
+        letter-spacing: 1px;
+        padding: 1.5rem 3rem;
         position: relative;
+        text-align: center;
         text-decoration: none;
         text-transform: uppercase;
         transition: all .2s;
+        white-space: normal;
     }
 
     &:hover {
@@ -49,6 +53,27 @@
         }
     }
 
+    &--yellow {
+        @include grad(-45, 3);
+        @include trans;
+
+        background-size: 100% 100%;
+        color: colors(purple);
+
+        &::after {
+            background-color: colors(yellow);
+        }
+
+        &:active {
+            background-color: colors(yellow);
+        }
+
+        &:hover {
+            background-size: 150% 100%;
+            color: colors(purple);
+        }
+    }
+
     &::after {
         border-radius: 10rem;
         content: "";
@@ -66,13 +91,22 @@
         animation: moveInBottom .5s ease-out .75s;
         animation-fill-mode: backwards;
     }
+
+    &.btn--small {
+        
+            font-size: 16px;
+            padding: 12px 24px;
+        
+    }
 }
 
-.btn-link {
+
+
+.btn--link {
     &:link,
     &:visited {
-        border-bottom: 1px solid colors(green);
-        color: colors(green);
+        border-bottom: 1px solid colors(yellow);
+        color: colors(yellow);
         display: inline-block;
         font-size: $font-size;
         padding: 5px;
@@ -81,7 +115,7 @@
     }
 
     &:hover {
-        background-color: colors(green);
+        background-color: colors(yellow);
         box-shadow: 0 1rem 2rem rgba(colors(black), .15);
         color: colors(white);
         transform: translateY(-2px);
