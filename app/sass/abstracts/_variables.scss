@@ -1,23 +1,25 @@
 
 $colors: (
     white : #fff,
-    blue:  #48c7ef,
-    purple:  #422363,
+    blue:  #3c3bd6,
+    purple:  #6209c3,
     gray-light: #f4f4f4,
     black: #000,
     grey-dark: #222,
     green: #00e00b,
     yellow: #fbc618,
-    red: #f03358
+    red: #f03358,
 );
 
 $gradient: (
     1 : #{#f03358, #aa206c},
     2 : #{#6209c3, #3c3bd6},
     3: #{#fbc618, #f03358},
+    4: #{#00e00b, #00aa33},
     5 : #{#061161, #430931},
     6: #{#2a0213, #483775},
-    7: #{#333399, #a018b4}
+    7: #{#333399, #a018b4},
+    10: #{#f4f4f4, #fff}
 );
 
 //font
@@ -27,7 +29,7 @@ $font-family-normal: 'Montserrat', sans-serif;
 
 //shadows
 
-$box-shadow: 0 1rem 2rem rgba(colors(black), .15);
+$box-shadow: 0 1rem 1rem rgba(colors(black), .15);
 $box-shadow-neuro: inset 4px 4px 4px 0 #d1d9e6, inset -4px -4px 4px 0 colors(white);
 
 // breakpoints

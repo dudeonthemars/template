@@ -4,6 +4,7 @@
     &:visited {
         border-radius: 10rem;
         border: none;
+        box-shadow: $box-shadow;
         cursor: pointer;
         display: inline-block;
         font-size: 1.2rem;
@@ -58,7 +59,7 @@
         @include trans;
 
         background-size: 100% 100%;
-        color: colors(purple);
+        color: colors(black);
 
         &::after {
             background-color: colors(yellow);
@@ -70,7 +71,28 @@
 
         &:hover {
             background-size: 150% 100%;
-            color: colors(purple);
+            color: colors(black);
+        }
+    }
+
+    &--dark {
+        @include grad(-45, 2);
+        @include trans;
+
+        background-size: 100% 100%;
+        color: colors(white);
+
+        &::after {
+            background-color: colors(blue);
+        }
+
+        &:active {
+            background-color: colors(blue);
+        }
+
+        &:hover {
+            background-size: 150% 100%;
+            color: colors(white);
         }
     }
 
@@ -93,20 +115,16 @@
     }
 
     &.btn--small {
-        
             font-size: 16px;
             padding: 12px 24px;
-        
     }
 }
-
-
 
 .btn--link {
     &:link,
     &:visited {
-        border-bottom: 1px solid colors(yellow);
-        color: colors(yellow);
+        border-bottom: 1px solid colors(purple);
+        color: colors(purple);
         display: inline-block;
         font-size: $font-size;
         padding: 5px;
@@ -115,7 +133,7 @@
     }
 
     &:hover {
-        background-color: colors(yellow);
+        background-color: colors(purple);
         box-shadow: 0 1rem 2rem rgba(colors(black), .15);
         color: colors(white);
         transform: translateY(-2px);

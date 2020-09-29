@@ -11,6 +11,13 @@
     transition: $tr-property $tr-duration $tr-timing-function $tr-delay;
 }
 
+@mixin neuro-out {
+    background: rgb(238, 238, 238);
+    border-bottom: 1px solid rgba(81, 81, 90, 0.3);
+    box-shadow: rgb(240, 240, 241) 0px 2px 2px, rgb(240, 240, 241) 0px 4px 4px, rgb(240, 240, 241) 0px 8px 8px, rgb(240, 240, 241) 0px 16px 16px, rgb(240, 240, 241) 0px 32px 32px, rgb(240, 240, 241) 0px 64px 64px;
+    transition: background 0.25s ease-out 0s;
+}
+
 @mixin media($query) {
     @each $media-name in $query {
         @if map-has-key($breakpoints, $media-name) {

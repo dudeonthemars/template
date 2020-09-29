@@ -119,14 +119,14 @@ let countDown = (function() {
     }
 })();
 
-let loadBg = ( function() {
-    let target = document.querySelector('.content-1__mobile-bg');
-    $(window).on('scroll', function () {
-        if ($(window).scrollTop() > 100 ) {
-            target.classList.add('is-fadeIn');
-        }
-    })
-})();
+// let loadBg = ( function() {
+//     let target = document.querySelector('.content-1__mobile-bg');
+//     $(window).on('scroll', function () {
+//         if ($(window).scrollTop() > 100 ) {
+//             target.classList.add('is-fadeIn');
+//         }
+//     })
+// })();
 
 // ОТСЧЕТ	
 let timer = (function($) {

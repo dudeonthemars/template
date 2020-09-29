@@ -1,0 +1,22 @@
+.oferta {
+    margin-top: rem(12);
+    position: relative;
+
+    &__text {
+        font-size: rem(12);
+        padding-left: rem(20);
+        text-align: left;
+    }
+
+    &__checkbox {
+        left: 0;
+        position: absolute;
+        top: -2px;
+    }
+
+    a {
+        color: colors(purple);
+        font-size: rem(12);
+        text-decoration: underline;
+    }
+}

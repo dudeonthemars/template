@@ -87,6 +87,18 @@ b {
     font-weight: 400;
 }
 
+.d-block {
+    display: block;
+}
+
+.d-iblock {
+    display: inline-block;
+}
+
+.d-none {
+    display: none;
+}
+
 a {
     &:hover {
         color: inherit;
@@ -101,7 +113,7 @@ a {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: colors(yellow);
+    background: colors(blue);
     border-color: transparent;
     border-radius: rem(2);
     border-width: 1px 1px 1px 2px;
