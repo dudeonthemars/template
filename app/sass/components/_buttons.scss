@@ -54,6 +54,27 @@
         }
     }
 
+    &--red {
+        @include grad(-45, 1);
+        @include trans;
+
+        background-size: 100% 100%;
+        color: colors(white);
+
+        &::after {
+            background-color: colors(red);
+        }
+
+        &:active {
+            background-color: colors(red);
+        }
+
+        &:hover {
+            background-size: 150% 100%;
+            color: colors(black);
+        }
+    }
+
     &--yellow {
         @include grad(-45, 3);
         @include trans;
@@ -88,6 +109,29 @@
 
         &:active {
             background-color: colors(blue);
+        }
+
+        &:hover {
+            background-size: 150% 100%;
+            color: colors(white);
+        }
+    }
+
+    &--blue {
+        @include grad(-45, 7);
+        @include trans;
+
+        background-size: 100% 100%;
+        color: colors(white);
+
+        &::after {
+            background-color: colors(purple);
+            color: colors(white);
+        }
+
+        &:active {
+            background-color: colors(purple);
+            color: colors(white);
         }
 
         &:hover {

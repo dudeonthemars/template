@@ -1,0 +1,105 @@
+.modal-popup {
+    display: none;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+
+    &__overlay {
+        background: #F6FCFF;
+        height: 100%;
+        opacity: .9;
+        position: fixed;
+        width: 100%;
+    }
+
+    &__mockup {
+        width: 40%;
+        padding: rem(24);
+    }
+
+    &__socials {
+        text-align: center;
+        width: 50%;
+    }
+
+    &__cta {
+        text-align: center;
+        width: 100%;
+        padding-bottom: rem(24);
+        border-bottom: 2px dashed colors(yellow);
+    }
+
+    &__content {
+        @include grad(-130, 7);
+
+        align-items: center;
+        border-radius: rem(10);
+        box-shadow: $box-shadow;
+        box-sizing: border-box;
+        color: colors(white);
+        display: flex;
+        justify-content: center;
+        left: 50%;
+        flex-wrap: wrap;
+        margin-top: 10vh;
+        padding: rem(20 40);
+        position: absolute;
+        transform: translateX(-50%);
+        width: 100%;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-evenly;
+        margin: rem(42) auto;
+
+        li {
+            background: colors(gray-light);
+            border-radius: rem(10);
+            box-shadow: $box-shadow-neuro;
+            cursor: pointer;
+            font-size: rem(42);
+            height: rem(75);
+            line-height: rem(75);
+            width: rem(75);
+
+            &:hover {
+                .modal-popup__link {
+                    color: colors(yellow);
+                }
+            }
+        }
+    }
+
+    &__link {
+        color: colors(purple);
+    }
+
+    &__close {
+        color: colors(purple);
+        cursor: pointer;
+        font-size: rem(62);
+        line-height: rem(50);
+        position: fixed;
+        right: rem(30);
+        text-align: center;
+        top: rem(20);
+        transform: rotate(45deg);
+    }
+}
+
+.fixed {
+    overflow-y: hidden;
+}
+
+.oferta.oferta--popup {
+    max-width: rem(360);
+    margin: auto;
+
+    a {
+        color: colors(yellow);
+    }
+}

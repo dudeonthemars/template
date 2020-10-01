@@ -11,10 +11,8 @@ $(document).on('ready', function() {
         wow.init();
     }
 
-    $('#content3').stellar();
-
     // smooth scroll
-    $("body").on("click", "a.btn, a.animate, .btn-liquid, a.smooth", function() {
+    $("body").on("click", "a.btn", function() {
         var idtop = $($(this).attr("href")).offset().top;
         $('html,body').animate({
             scrollTop: idtop
@@ -22,68 +20,6 @@ $(document).on('ready', function() {
         return false;
     });
 
-    //text-rotator
-    $(".rotate").textrotator({
-        animation: "dissolve", //  Options dissolve (default), fade, flip, flipUp, flipCube, flipCubeUp and spin.
-        separator: ",", // If you don't want commas to be the separator, you can define a new separator (|, &, * etc.) by yourself using this field.
-        speed: 2000 // How many milliseconds until the next word show.
-    });
-    //slick
-    $('.testimonials').slick({
-        draggable: true,
-        infinite: true,
-        dots: false,
-        autoplay: false,
-        speed: 900,
-        cssEase: 'ease-in-out',
-        lazyLoad: 'ondemand',
-        slidesToShow: 1,
-        responsive: [{
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    dots: false,
-                    arrows: false,
-                    infinite: true,
-
-                }
-            },
-            {
-                breakpoint: 760,
-                settings: {
-                    slidesToShow: 1,
-                    dots: false,
-                    arrows: false,
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 580,
-                settings: {
-                    dots: false,
-                    arrows: false
-                }
-            }
-
-        ]
-    });
-
-    //readmore
-
-    $('.testimonials p').readmore({
-        speed: 300,
-        moreLink: '<a href="#">Читать полностью</a>',
-        lessLink: '<a href="#">Закрыть</a>',
-        collapsedHeight: 240
-    });
-
-    // site preloader 
-    $(window).load(function() {
-        $('#preloader').fadeOut('slow', function() {
-            $(this).remove();
-        });
-    });
 });
 
 // count-down digits
@@ -128,99 +64,19 @@ let countDown = (function() {
 //     })
 // })();
 
-// ОТСЧЕТ	
-let timer = (function($) {
-    return {
-        init: function() {
-            'use strict';
-            $.countdown.regionalOptions.ru = {
-                labels: ['Лет', 'Месяцев', 'Недель', 'Дней', 'Часов', 'Минут', 'Секунд'],
-                labels1: ['Год', 'Месяц', 'Неделя', 'День', 'Час', 'Минута', 'Секунда'],
-                labels2: ['Года', 'Месяца', 'Недели', 'Дня', 'Часа', 'Минуты', 'Секунды'],
-                compactLabels: ['л', 'м', 'н', 'д'],
-                compactLabels1: ['г', 'м', 'н', 'д'],
-                whichLabels: function(amount) {
-                    var units = amount % 10;
-                    var tens = Math.floor((amount % 100) / 10);
-                    return (amount === 1 ? 1 : (units >= 2 && units <= 4 && tens !== 1 ? 2 :
-                        (units === 1 && tens !== 1 ? 1 : 0)));
-                },
-                digits: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'],
-                timeSeparator: ':',
-                isRTL: false
-            };
-            $.countdown.setDefaults($.countdown.regionalOptions.ru);
-            if (Cookies.get("timer") === undefined) { Cookies.set("timer", new Date(), { expires: 7 }) }
-            var now = new Date();
-            var timer = new Date(Cookies.get("timer"));
-            timer.setMilliseconds(59 * 60 * 60 * 1000); //hours
-            //timer = new Date(2019, 2 - 1, 8); // date 2019-year feb 8-day
-            $('#counter div').countdown({
-                until: timer,
-                format: 'dHMS',
-                /*onTick: showPauseTime*/
-                onExpiry: noDiscount
-            });
-
-            if (timer.getTime() < now.getTime()) { noDiscount() }
-
-            function noDiscount() {
-                console.log('some function')
-            }
-        }
+$(document).mouseleave(function (e) {
+    if (e.clientY < 10) {
+        $(".modal-popup").fadeIn("fast");
+        if ($(".modal-popup").length) {
+            $('body').addClass('fixed');
+        };
     }
-})(jQuery);
-
-
-// toggler 
-let toggler = (function() {
-    return {
-        init: function() {
-
-            let acc = document.getElementsByClassName("question");
-
-            for (let i = 0; i < acc.length; i++) {
-                acc[i].addEventListener('click', function() {
-                    this.classList.toggle('active');
-                    let panel = this.nextElementSibling;
-
-                    if (panel.style.opacity === "1") {
-                        panel.style.opacity = "0";
-                    } else {
-                        panel.style.opacity = "1";
-                    }
-                });
-            }
-        }
+});
+$(document).click(function (e) {
+    if (($(".modal-popup").is(':visible')) && (!$(e.target).closest(".modal-popup .modal-popup__content").length)) {
+        $(".modal-popup").remove();
+        $('body').removeClass('fixed');
     }
-})();
+});
 
-// autodateChanger
-let dateChanger = (function() {
-    return {
-        init: function() {
-            let ourDate = jQuery('.ourDate');
-            let theDate = new Date(2019, 9, 14);
-            let currentDate = new Date();
-            let options = {
-                month: 'long',
-                day: 'numeric'
-            };
-
-            do {
-                theDate.setDate(theDate.getDate() + 14);
-            } while (currentDate > theDate);
-
-            for (let i = 0; i <= ourDate.length; i++) {
-                ourDate[i].innerHTML = theDate.toLocaleString("ru", options);
-            }
-
-        }
-    }
-})();
-
-// call need scripts
 countDown.init();
-//timer.init();
-toggler.init();
-//dateChanger.init();

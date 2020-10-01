@@ -1,7 +1,7 @@
 .count-down {
-    @include grad(-90, 2);
+    @include grad(-90, 1);
 
-    animation: bgRotation 5s ease-in-out infinite;
+    animation: bgRotation 3s ease-in-out infinite;
     background-size: 200% 200%;
     border-radius: rem(20);
     box-shadow: 0 0 35px 20px rgba(colors(black), 0.1);
