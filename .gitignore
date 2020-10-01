@@ -1,1 +1,17 @@
 node_modules
+app/libs/bootstrap-3.3.7-dist/css/bootstrap.css
+app/libs/bootstrap-3.3.7-dist/css/bootstrap.css.map
+app/libs/bootstrap-3.3.7-dist/css/bootstrap.min.css
+app/libs/bootstrap-3.3.7-dist/css/bootstrap.min.css.map
+app/libs/bootstrap-3.3.7-dist/css/bootstrap-theme.css
+app/libs/bootstrap-3.3.7-dist/css/bootstrap-theme.css.map
+app/libs/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css
+app/libs/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css.map
+app/libs/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.eot
+app/libs/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.svg
+app/libs/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.ttf
+app/libs/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.woff
+app/libs/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.woff2
+app/libs/bootstrap-3.3.7-dist/js/bootstrap.js
+app/libs/bootstrap-3.3.7-dist/js/bootstrap.min.js
+app/libs/bootstrap-3.3.7-dist/js/npm.js

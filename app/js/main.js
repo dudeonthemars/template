@@ -86,16 +86,6 @@ $(document).on('ready', function() {
 });
 
 
-//parallax
-if ($(window).width() > 767) {
-    var scene = document.getElementById('scene1');
-    var parallax = new Parallax(scene);
-
-    var scene = document.getElementById('scene2');
-    var parallax = new Parallax(scene);
-
-}
-
 
 // form fields
 function checkform(f) {
@@ -254,6 +244,6 @@ let dateChanger = (function() {
 })();
 // call need scripts
 countDown.init();
-timer.init();
+//timer.init();
 toggler.init();
-dateChanger.init();
+//dateChanger.init();
