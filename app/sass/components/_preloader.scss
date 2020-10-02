@@ -28,12 +28,12 @@
         height: 300px;
     }
     svg .draw {
-        stroke: #000;
-        stroke-width: 1px;
+        animation: animate_logo 3s forwards infinite;
         fill: transparent;
         stroke-dasharray: 290;
         stroke-dashoffset: 290;
-        animation: animate_logo 3s forwards infinite;
+        stroke-width: 1px;
+        stroke: #000;
     }
     @keyframes animate_logo {
         to {

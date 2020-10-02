@@ -1,3 +1,8 @@
 @import "../template/scss/styleguide";
 
+@import "base/reset";
+@import "base/presets";
+
+@import "components/form";
+
 @import "layout/common";

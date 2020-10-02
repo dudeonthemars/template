@@ -28,6 +28,11 @@
     }
 }
 
+
+@mixin grad($deg, $key) {
+    background: linear-gradient($deg+deg, gradient($key));
+}
+
 @mixin container {
     margin: 0 auto;
     max-width: 1170px;

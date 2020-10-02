@@ -494,144 +494,6 @@
       -ms-transform: rotate(270deg);
           transform: rotate(270deg); }
 
-/* reset css */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big,
-cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol,
-ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, input {
-  margin: 0;
-  padding: 0;
-  border: none;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  outline: none; }
-
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-  display: block; }
-
-body {
-  line-height: 1; }
-
-ul {
-  list-style: none; }
-
-blockquote, q {
-  quotes: none; }
-
-blockquote:before, blockquote:after, q:before, q:after {
-  content: '';
-  content: none; }
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
-/* preset */
-.clear {
-  clear: both;
-  display: block;
-  font-size: 0;
-  height: 0;
-  line-height: 0;
-  overflow: hidden;
-  width: 100%; }
-
-html {
-  font-size: 80%; }
-
-body {
-  background: #fff;
-  color: #000;
-  font-family: "Jost", sans-serif;
-  font-size: 1.125rem;
-  line-height: 1.23;
-  overflow-x: hidden;
-  position: relative; }
-
-input:focus,
-button:focus {
-  outline: 0; }
-
-.img-rounded {
-  border-radius: 100%; }
-
-.img-fluid {
-  display: block;
-  height: auto;
-  margin: 0 auto;
-  max-width: 100%; }
-
-.video-responsive {
-  display: block;
-  margin: 20px;
-  max-width: 350px;
-  overflow: hidden;
-  padding: 0;
-  position: relative;
-  width: 100%; }
-  .video-responsive::before {
-    content: "";
-    display: block; }
-  .video-responsive embed,
-  .video-responsive iframe,
-  .video-responsive object,
-  .video-responsive video {
-    border: 0;
-    bottom: 0;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%; }
-
-.video-responsive-16by9::before {
-  padding-top: 56.25%; }
-
-/* scrollbar*/
-::-webkit-scrollbar {
-  width: 0.625rem; }
-
-::-webkit-scrollbar-thumb {
-  background-color: #222;
-  border-color: transparent;
-  border-radius: 0.125rem;
-  border-width: 1px 1px 1px 2px; }
-
-::-webkit-scrollbar-track {
-  border-width: 0; }
-
-/* slick arrows */
-.slick-prev.slick-arrow {
-  background: url(../img/left.png) no-repeat 50% 50%/contain;
-  border: none;
-  font-size: 0;
-  height: 51px;
-  left: -6%;
-  position: absolute;
-  top: 40%;
-  -webkit-transition: 0.3s all ease-in-out;
-  -o-transition: 0.3s all ease-in-out;
-  transition: 0.3s all ease-in-out;
-  width: 51px;
-  z-index: 1; }
-
-.slick-next.slick-arrow {
-  background: url(../img/right.png) no-repeat 50% 50%/contain;
-  border: none;
-  font-size: 0;
-  height: 51px;
-  position: absolute;
-  right: -6%;
-  top: 40%;
-  -webkit-transition: 0.3s all ease-in-out;
-  -o-transition: 0.3s all ease-in-out;
-  transition: 0.3s all ease-in-out;
-  width: 51px;
-  z-index: 1; }
-
 /*md
 
 # Typography
@@ -792,6 +654,25 @@ b {
 .italic {
   font-style: italic; }
 
+/* countdown timer-keithwood styles */
+.countdown-section {
+  position: relative; }
+
+.countdown-amount {
+  font-size: 32px;
+  padding: 17px;
+  position: relative; }
+
+.countdown-period {
+  bottom: -15px;
+  color: #6c6c6c;
+  font-size: 12px;
+  left: 50%;
+  position: absolute;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%); }
+
 /*md
 
 # Buttons
@@ -901,7 +782,7 @@ b {
     border-bottom: 1px solid #89d80b;
     color: #89d80b;
     display: inline-block;
-    font-size: 1.125rem;
+    font-size: 1rem;
     padding: 5px;
     text-decoration: none;
     -webkit-transition: all .2s;
@@ -1793,13 +1674,6 @@ b {
 .flaticon-twitter:before {
   content: "\f1f9"; }
 
-.ea_form .ph {
-  border-radius: 30px;
-  border: 2px solid #000;
-  width: 90%;
-  padding: 1rem;
-  margin: 0.5rem auto; }
-
 .tabs > input[type="radio"] {
   position: absolute;
   left: -200vw; }
@@ -1989,6 +1863,137 @@ footer {
   margin: 10px auto;
   stroke: #89d80b;
   width: 70px; }
+
+/* reset css */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big,
+cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol,
+ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, input {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* preset */
+.clear {
+  clear: both;
+  display: block;
+  font-size: 0;
+  height: 0;
+  line-height: 0;
+  width: 100%;
+  overflow: hidden; }
+
+html {
+  font-size: 80%; }
+
+body {
+  background: #fff;
+  color: #000;
+  font-family: "Jost", sans-serif;
+  font-size: 1rem;
+  position: relative;
+  line-height: 1.23;
+  overflow-x: hidden; }
+
+input:focus,
+button:focus {
+  outline: 0; }
+
+.img-fluid {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto; }
+
+.video-fluid {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 1.875rem;
+  height: 0;
+  overflow: hidden; }
+
+.video-fluid iframe,
+.video-fluid object,
+.video-fluid embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+/* scrollbar*/
+::-webkit-scrollbar {
+  width: 0.625rem; }
+
+::-webkit-scrollbar-thumb {
+  border-width: 1px 1px 1px 2px;
+  border-color: transparent;
+  background-color: #222;
+  border-radius: 0.125rem; }
+
+::-webkit-scrollbar-track {
+  border-width: 0; }
+
+.slick-prev.slick-arrow {
+  border: none;
+  width: 51px;
+  height: 51px;
+  font-size: 0;
+  background: url(../img/left.png) no-repeat 50% 50%/contain;
+  position: absolute;
+  left: -6%;
+  -webkit-transition: 0.3s all ease-in-out;
+  -o-transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
+  z-index: 1;
+  top: 40%; }
+
+.slick-next.slick-arrow {
+  border: none;
+  width: 51px;
+  height: 51px;
+  font-size: 0;
+  background: url(../img/right.png) no-repeat 50% 50%/contain;
+  position: absolute;
+  right: -6%;
+  -webkit-transition: 0.3s all ease-in-out;
+  -o-transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
+  z-index: 1;
+  top: 40%; }
+
+.ea_form .ph {
+  border-radius: 30px;
+  border: 2px solid #000;
+  width: 90%;
+  padding: 1rem;
+  margin: 0.5rem auto; }
 
 @media all and (min-width: 350px){
   .h-padding-top-12-xxs{
@@ -2667,20 +2672,25 @@ footer {
     padding-right: 100px; }
   .h-margin-right-100-sm{
     margin-right: 100px; }
-  html{
-    font-size: 100%; }
   .hero{
     font-size: 3.625rem; }
   .title{
     font-size: 2.375rem; }
   .title-alt{
     font-size: 2.375rem; }
+  .countdown-amount{
+    font-size: 42px;
+    padding: 20px; }
+  .countdown-period{
+    font-size: 14px; }
   .footer .fitem{
     width: 50%; }
   .footer .fitem.footer-links{
     text-align: left; }
   .footer .fitem.footer-socials{
-    text-align: right; } }
+    text-align: right; }
+  html{
+    font-size: 100%; } }
 
 @media all and (min-width: 992px){
   .h-padding-top-12-md{
@@ -3602,6 +3612,21 @@ footer {
     font-size: 3rem; }
   .title-alt{
     font-size: 3rem; } }
+
+@media screen and (max-width: 428px){
+  .countdown-amount{
+    font-size: 32px;
+    padding: 17px;
+    position: relative; }
+  .countdown-period{
+    bottom: -15px;
+    color: #6c6c6c;
+    font-size: 12px;
+    left: 50%;
+    position: absolute;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%); } }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0){
   @font-face{

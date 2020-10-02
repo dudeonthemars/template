@@ -12,8 +12,12 @@ $colors: (
     orange-red: #ff3e33
 );
 
+$gradient: (
+    1: #{#ccc, #ff3e33}
+);
+
 //font
-$font-size: rem(18);
+$font-size: rem(16);
 
 $font-family-normal: 'Jost', sans-serif;
 $font-family-alt: 'Caveat', cursive;

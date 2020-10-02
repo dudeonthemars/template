@@ -8,16 +8,9 @@ section {
 }
 
 .container {
-    margin: 0 auto;
-    max-width: 1170px;
-    padding: 0 15px;
-    position: relative;
-    width: 100%;
+    @include container;
 }
 
 .container-fluid {
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 15px;
-    padding-right: 15px;
+    @include container-fluid;
 }
