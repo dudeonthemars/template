@@ -1,20 +1,20 @@
 @function rem($fn-size) {
-	$values: ();
+    $values: ();
 
-	@each $val in $fn-size {
-		$rem-size: $val / 16;
+    @each $val in $fn-size {
+        $rem-size: $val / 16;
 
-		$values: append($values, #{$rem-size}rem);
-	}
+        $values: append($values, #{$rem-size}rem);
+    }
 
-	@return $values;
+    @return $values;
 }
 
 @function colors($key) {
-	@if map-has-key($colors, $key) {
-		@return map-get($colors, $key);
-	}
+    @if map-has-key($colors, $key) {
+        @return map-get($colors, $key);
+    }
 
-	@warn "Unknown `#{$key}` in $colors.";
-	@return null;
+    @warn "Unknown `#{$key}` in $colors.";
+    @return null;
 }

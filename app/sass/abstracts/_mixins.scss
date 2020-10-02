@@ -1,10 +1,11 @@
 /* mixins */
+
 @mixin psd ($width, $height) {
     content: '';
     display: block;
+    height: $height;
     position: absolute;
     width: $width;
-    height: $height;
 }
 
 @mixin trans($tr-property: all, $tr-duration: .15s, $tr-timing-function: ease-in, $tr-delay: 0s) {
@@ -28,16 +29,16 @@
 }
 
 @mixin container {
-	position: relative;
-	width: 100%;
-	max-width: 1170px;
-	margin: 0 auto;
-	padding: 0 15px;
+    margin: 0 auto;
+    max-width: 1170px;
+    padding: 0 15px;
+    position: relative;
+    width: 100%;
 }
 
 @mixin container-fluid {
-	padding-right: 15px;
-	padding-left: 15px;
-	margin-right: auto;
-	margin-left: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
 }
