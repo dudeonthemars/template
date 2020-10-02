@@ -3,13 +3,12 @@ $(document).on('ready', function() {
     //  WOW Transitions
     if ($(window).width() > 767) {
         wow = new WOW({
-            boxClass: 'wow', // default               
+            boxClass: 'wow', // default
             offset: 200, // default
             mobile: true, // default
             live: true // default
         })
         wow.init();
-        $(window).stellar();
     }
 
     // smooth scroll

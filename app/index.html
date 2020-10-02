@@ -21,6 +21,9 @@
 
 <body>
     <main>
+        <header>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet consequatur ea ex temporibus cumque quibusdam ullam vero perferendis? Quasi aspernatur incidunt hic facere, aliquid debitis ullam excepturi sequi deserunt ex nesciunt unde. Vero adipisci quia beatae eum officia odit ullam, veritatis consectetur repellendus aut aspernatur enim harum obcaecati rem itaque dignissimos. Tenetur, accusamus eum vero error tempore eligendi enim itaque!
+        </header>
         <div class="row" id="count_down">
             <div class="col-lg-3">
                 <div class="text-center counter_box p-4 mt-3 bg-white rounded">
@@ -60,6 +63,23 @@
             </div>
         </div>
         </form>
+        <form novalidate class="ea_form " action="https://olgayurkovskaya.e-autopay.com/checkout/save_order_data.php" method=post name="order_form" target="_blank" onSubmit="return EAcheckForm(this);">
+
+            <input type="text" id="name" name="name" class="ea_name ea_input ph" value="" placeholder="Введите свое имя" />
+
+            <input type="email" id="email" name="email" class="ea_email ea_input ph" value="" required="required" placeholder="Введите email" />
+
+
+
+            <input type="submit" class="ea_submit btn" name="submit" value="Оформить заказ!">
+
+            <input type="hidden" name="fam" class="ea_fam ea_input" value="" />
+            <input type="hidden" name="otch" class="ea_otch ea_input" value="" />
+            <input type="hidden" name="form_charset" id="form_charset" value="">
+            <input type="hidden" name="tovar_id" value="223152">
+            <input type="hidden" name="form_id" value="25100">
+            <input type="hidden" name="order_page_referer" id="order_page_referer" value="" />
+        </form>
 		<footer>
             <div class="container-fluid">
                 <div class="center">
@@ -96,14 +116,9 @@
             </div>
         </footer>
     </main>
-    <script type="text/javascript" src="js/jquery-2.1.1.js"></script>
-    <script type="text/javascript" src="js/libs.min.js"></script>
-    <script type="text/javascript" src="js/modernizr.js"></script>
-    <!-- <script type="text/javascript" src="js/ea-form.js"></script> -->
-    
-        <script async language="javascript" src="https://olgayurkovskaya.e-autopay.com/stat.js"></script>
-        <script async language="javascript" src="https://olgayurkovskaya.e-autopay.com/hit.js"></script>
-    
+    <script type="text/javascript" src="js/libs.min.js"></script>    
+    <!-- <script async language="javascript" src="https://olgayurkovskaya.e-autopay.com/stat.js"></script>
+    <script async language="javascript" src="https://olgayurkovskaya.e-autopay.com/hit.js"></script> -->
     <script type="text/javascript" src="js/main.js"></script>
     <!-- scripts  -->
 </body>

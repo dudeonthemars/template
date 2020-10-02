@@ -59,19 +59,24 @@ gulp.task('browser-sync', function() {
         server: {
             baseDir: 'app'
         },
-        notify: false
+        notify: false,
+        online: true
     });
 });
 
 gulp.task('scripts', function() {
     return gulp.src([
+            'app/libs/jquery/dist/jquery.min.js',
             'app/libs/slick-carousel/slick/slick.min.js',
             'app/libs/jquery.scrollTo/jquery.scrollTo.min.js',
             'app/libs/rotator/jquery.simple-text-rotator.js',
-            'app/libs/stellar/jquery.stellar.js',
+            //'app/libs/stellar/jquery.stellar.js',
             'app/libs/timer-keithwood/timer-keithwood.js',
             'app/libs/wow/dist/wow.min.js',
-            'app/libs/readmore-js/readmore.min.js'
+            'app/libs/readmore-js/readmore.min.js',
+            'app/libs/common/cookies.js',
+            'app/libs/common/modernizr.js',
+            'app/libs/common/ea-form.js',
         ])
         .pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.js
         .pipe(uglify()) // Сжимаем JS файл
