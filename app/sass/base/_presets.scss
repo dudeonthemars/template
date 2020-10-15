@@ -40,6 +40,10 @@ button:focus {
     max-width: 100%;
 }
 
+.img-rounded {
+    border-radius: 100%;
+}
+
 .video-fluid {
     height: 0;
     overflow: hidden;
@@ -72,7 +76,7 @@ b {
 }
 
 .xbold {
-    font-weight: 900;
+    font-weight: 700;
 }
 
 .light {
@@ -121,30 +125,4 @@ a {
 
 ::-webkit-scrollbar-track {
     border-width: 0;
-}
-
-.slick-prev.slick-arrow {
-    background: url(../img/left.png) no-repeat 50% 50%/contain;
-    border: none;
-    font-size: 0;
-    height: 51px;
-    left: -6%;
-    position: absolute;
-    top: 40%;
-    transition: 0.3s all ease-in-out;
-    width: 51px;
-    z-index: 1;
-}
-
-.slick-next.slick-arrow {
-    background: url(../img/right.png) no-repeat 50% 50%/contain;
-    border: none;
-    font-size: 0;
-    height: 51px;
-    position: absolute;
-    right: -6%;
-    top: 40%;
-    transition: 0.3s all ease-in-out;
-    width: 51px;
-    z-index: 1;
 }

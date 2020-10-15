@@ -8,9 +8,9 @@
     z-index: 1000;
 
     &__overlay {
-        background: #F6FCFF;
+        background: colors(black);
         height: 100%;
-        opacity: .9;
+        opacity: .75;
         position: fixed;
         width: 100%;
     }

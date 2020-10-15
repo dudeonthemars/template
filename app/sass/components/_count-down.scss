@@ -1,8 +1,5 @@
 .count-down {
-    @include grad(-90, 1);
-
-    animation: bgRotation 3s ease-in-out infinite;
-    background-size: 200% 200%;
+    @include grad(0, 7);
     border-radius: rem(20);
     box-shadow: 0 0 35px 20px rgba(colors(black), 0.1);
     color: colors(white);
@@ -12,6 +9,30 @@
     margin-bottom: rem(48);
     margin-top: rem(48);
     padding: rem(16 12);
+    position: relative;
+
+    @include media(sm) {
+        &::after {
+            background: url(../img/decor.png)no-repeat 50% 50%/cover;
+            content: '';
+            height: rem(189);
+            position: absolute;
+            right: rem(-300);
+            top: rem(50);
+            width: rem(300);
+        }
+
+        &::before {
+            background: url(../img/decor.png)no-repeat 50% 50%/cover;
+            content: '';
+            height: rem(189);
+            left: rem(-300);
+            position: absolute;
+            top: rem(50);
+            transform: rotateY(180deg);
+            width: rem(300);
+        }
+    }
 
     &__column {
         padding: rem(24 0);
@@ -36,21 +57,5 @@
         color: colors(yellow);
         font-size: rem(48);
         padding-bottom: rem(12);
-    }
-
-    &__list {
-
-    }
-
-    &__li {
-
-        img {
-            width: rem(90);
-            height: rem(90);
-            object-fit: contain;
-            background: colors(white);
-            border-radius: rem(10);
-            padding: rem(6);
-        }
     }
 }

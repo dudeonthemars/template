@@ -1,20 +1,20 @@
 #footer {
-    @include grad(90, 7);
+    @include grad(0, 7);
 
     margin-top: rem(-2);
     padding-bottom: 1vh;
-    padding-top: 5vh;
+    padding-top: 16vh;
 }
 
 .footer {
     align-items: start;
     color: colors(white);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: center;
     padding-top: rem(24);
-    
-    a.btn--link {
+
+    a.btn--link, p {
         color: colors(gray-light);
         font-size: 12px;
     }

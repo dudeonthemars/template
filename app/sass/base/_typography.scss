@@ -8,15 +8,15 @@
 }
 
 .title-hero {
-    font-size: rem(38);
+    font-size: rem(28);
     font-weight: 900;
 
     @include media(sm) {
-        font-size: rem(52);
+        font-size: rem(42);
     }
 
     &__span {
-        font-size: rem(26);
+        font-size: rem(28);
         font-weight: 700;
     }
 }
@@ -25,4 +25,71 @@
     font-size: rem(20);
     font-weight: bold;
     text-transform: uppercase;
+}
+
+/*md
+
+# Links
+```html_example
+    <a class="link" href="/">link</a>
+```
+
+```html_example
+    <a class="link link_icon" href="/"><span class="fi flaticon-plus-1"></span> link with icon</a>
+```
+
+*/
+
+@mixin link {
+    cursor: pointer;
+    display: inline-block;
+    letter-spacing: 1px;
+    padding-bottom: rem(3);
+    position: relative;
+    text-decoration: none;
+    vertical-align: top;
+
+    &:hover {
+        &::after {
+            width: 100%;
+        }
+    }
+
+    &::before {
+        @include trans(background);
+
+        background: colors(gray-light);
+        bottom: 0;
+        content: '';
+        height: 1px;
+        left: 0;
+        position: absolute;
+        width: 100%;
+    }
+
+    &::after {
+        @include trans(all);
+
+        background: colors(blue);
+        bottom: -1px;
+        content: '';
+        height: 2px;
+        left: 0;
+        position: absolute;
+        width: 0;
+    }
+}
+
+.link {
+    @include link;
+
+    color: colors(blue);
+}
+
+.link_icon {
+    @include link;
+
+    span {
+        vertical-align: middle;
+    }
 }

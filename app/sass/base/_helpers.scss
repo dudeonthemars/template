@@ -18,6 +18,10 @@
     overflow: hidden;
 }
 
+.h-self-center {
+    align-self: center;
+}
+
 $text-alignments: (
     left,right,center,justify
 );

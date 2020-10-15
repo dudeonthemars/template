@@ -14,7 +14,7 @@
 @mixin neuro-out {
     background: rgb(238, 238, 238);
     border-bottom: 1px solid rgba(81, 81, 90, 0.3);
-    box-shadow: rgb(240, 240, 241) 0px 2px 2px, rgb(240, 240, 241) 0px 4px 4px, rgb(240, 240, 241) 0px 8px 8px, rgb(240, 240, 241) 0px 16px 16px, rgb(240, 240, 241) 0px 32px 32px, rgb(240, 240, 241) 0px 64px 64px;
+    box-shadow: rgb(240, 240, 241) 0px 2px 2px, rgb(240, 240, 241) 0px 4px 4px, rgb(240, 240, 241) 0px 8px 8px, rgb(240, 240, 241) rem(0 16 16), rgb(240, 240, 241) rem(0 32 32), rgb(240, 240, 241) rem(0 58 58);
     transition: background 0.25s ease-out 0s;
 }
 
@@ -51,4 +51,23 @@
     margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
+}
+
+@mixin grad-icon($fz: 18, $grad: 7) {
+    background: linear-gradient(-180deg, gradient($grad));
+    border-radius: rem(100);
+    display: inline-block;
+    font-size: rem($fz);
+    height: rem($fz*1.75);
+    line-height: rem($fz*1.75);
+    text-align: center;
+    width: rem($fz*1.75);
+
+    @if ($grad == 10) {
+        color: colors(black);
+    } @else if ($grad == 3) {
+        color: colors(black);
+    } @else {
+        color: colors(white);
+    }
 }

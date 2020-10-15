@@ -1,0 +1,62 @@
+.testimonials {
+    margin: rem(24) auto;
+
+    li {
+        img {
+            height: rem(600);
+            margin: auto;
+        }
+    }
+
+    
+}
+
+.slick-prev.slick-arrow {
+    background: url(../img/left.png) no-repeat 50% 50%/contain;
+    border: none;
+    font-size: 0;
+    height: 51px;
+    left: -6%;
+    position: absolute;
+    top: 40%;
+    transition: 0.3s all ease-in-out;
+    width: 51px;
+    z-index: 1;
+    border-radius: 100%;
+}
+
+.slick-next.slick-arrow {
+    background: url(../img/right.png) no-repeat 50% 50%/contain;
+    border: none;
+    font-size: 0;
+    height: 51px;
+    position: absolute;
+    right: -6%;
+    top: 40%;
+    transition: 0.3s all ease-in-out;
+    width: 51px;
+    z-index: 1;
+}
+
+.slick-dots {
+    margin-bottom: rem(24);
+    margin-top: rem(24);
+    text-align: center;
+
+    li {
+        display: inline-block;
+        button {
+            font-size: 0;
+            border-radius: 100%;
+            border: none;
+            height: 15px;
+            width: 15px;
+            margin: 5px;
+        }
+    }
+    .slick-active {
+        button {
+            @include grad(0, 3);
+        }
+    }
+}

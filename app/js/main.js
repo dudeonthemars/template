@@ -55,6 +55,107 @@ let countDown = (function() {
     }
 })();
 
+$('.testimonials').slick({
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    dots: true,
+    adaptiveHeight: true,
+    arrows: true,
+    speed: 500,
+    responsive: [
+        {
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }
+    ]
+});
+
+$('.testi-2').slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: true,
+    arrows: true,
+    speed: 500,
+    fade: true,
+    cssEase: 'linear',
+    responsive: [
+        {
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }
+    ]
+});
+
+let momentsJs = (function() {
+    return {
+        init: function() {
+            moment().utcOffset(3);
+        var ourDate = document.getElementById('date');
+        var dates = {
+            'monday': ['20:00'],
+            'tuesday': ['20:00'],
+            'wednesday': ['20:00'],
+            'thursday': ['20:00'],
+            'friday': ['20:00'],
+            'saturday': ['13:00'],
+            'sunday': ['13:00']
+        };
+        var day = moment();
+        var time = dates[day.format('dddd').toLowerCase()];
+        var getStr = function (today) {
+            for (var i = 0; i < time.length; i++) {
+                var nums = time[i].split(':');
+                var current = day.set({
+                    hour: nums[0],
+                    minute: nums[1]
+                });
+                if (moment().isBefore(current)) {
+                    var intro = 'УЖЕ СЕГОДНЯ';
+                    if (!today) {
+                        intro = 'УЖЕ ЗАВТРА';
+                    }
+                    document.getElementById('date_in').innerHTML = intro;
+                    return current.locale('ru').format('D MMMM [в] HH:mm [МСК]');
+                    break;
+                }
+            }
+        }
+
+        var str = getStr(true);
+
+        if (!str) {
+            day = day.add(1, 'days')
+            time = dates[day.format('dddd').toLowerCase()];
+            str = getStr();
+        }
+
+        ourDate.innerHTML = str;
+        }
+    }
+})();
+
 // let loadBg = ( function() {
 //     let target = document.querySelector('.content-1__mobile-bg');
 //     $(window).on('scroll', function () {
@@ -80,3 +181,4 @@ $(document).click(function (e) {
 });
 
 countDown.init();
+momentsJs.init();

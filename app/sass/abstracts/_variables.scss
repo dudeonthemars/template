@@ -1,7 +1,7 @@
 
 $colors: (
     white : #fff,
-    blue:  #3c3bd6,
+    blue:  #333399,
     purple:  #6209c3,
     gray-light: #f4f4f4,
     black: #000,
@@ -9,7 +9,8 @@ $colors: (
     green: #00e00b,
     yellow: #fbc618,
     red: #f03358,
-    pink: #a018b4
+    pink: #a018b4,
+    orange: #f36343
 );
 
 $gradient: (
@@ -20,7 +21,12 @@ $gradient: (
     5 : #{#061161, #430931},
     6: #{#2a0213, #483775},
     7: #{#333399, #a018b4},
-    10: #{#f4f4f4, #fff}
+    8: #{#333399, #5e5ec9},
+    10: #{#f4f4f4, #fff},
+    telegram: #{#a9cdfc ,#81a9fb},
+    vk: #{#94afd7 ,#6781b8 },
+    viber: #{#baa7f6 ,#baa7f6 },
+    fb: #{#8096d2 ,#5566b1}
 );
 
 //font

@@ -23,10 +23,10 @@
         box-shadow: 0 1rem 2rem rgba(colors(black), .2);
         transform: translateY(-3px);
 
-        &::after {
-            opacity: 0;
-            transform: scaleX(1.4) scaleY(1.6);
-        }
+        // &::after {
+        //     opacity: 0;
+        //     transform: scaleX(1.4) scaleY(1.6);
+        // }
     }
 
     &:active,
@@ -71,7 +71,6 @@
 
         &:hover {
             background-size: 150% 100%;
-            color: colors(black);
         }
     }
 
@@ -80,7 +79,8 @@
         @include trans;
 
         background-size: 100% 100%;
-        color: colors(black);
+        color: colors(white);
+        text-shadow: 1px 1px 1px black;
 
         &::after {
             background-color: colors(yellow);
@@ -92,7 +92,7 @@
 
         &:hover {
             background-size: 150% 100%;
-            color: colors(black);
+            color: colors(white);
         }
     }
 

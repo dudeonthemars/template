@@ -11,12 +11,13 @@
     &__checkbox {
         left: 0;
         position: absolute;
-        top: -2px;
+        top: 5px;
     }
 
     a {
         color: colors(purple);
         font-size: rem(12);
+        text-align: left;
         text-decoration: underline;
     }
 }
