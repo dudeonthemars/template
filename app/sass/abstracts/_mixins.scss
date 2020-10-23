@@ -1,0 +1,48 @@
+/* mixins */
+
+@mixin psd ($width, $height) {
+    content: '';
+    display: block;
+    height: $height;
+    position: absolute;
+    width: $width;
+}
+
+@mixin trans($tr-property: all, $tr-duration: .15s, $tr-timing-function: ease-in, $tr-delay: 0s) {
+    transition: $tr-property $tr-duration $tr-timing-function $tr-delay;
+}
+
+@mixin media($query) {
+    @each $media-name in $query {
+        @if map-has-key($breakpoints, $media-name) {
+            // Store the keys of the map as a list
+            $values: map-keys($breakpoints);
+
+            // define media
+            @media all and (min-width: map-get($breakpoints, $media-name)) { @content; }
+        }
+
+        @else {
+            @warn 'Unfortunately, no value could be retrieved from `#{$media-name}`.';
+        }
+    }
+}
+
+@mixin grad($deg, $key) {
+    background: linear-gradient($deg+deg, gradient($key));
+}
+
+@mixin container {
+    margin: 0 auto;
+    max-width: 1170px;
+    padding: 0 15px;
+    position: relative;
+    width: 100%;
+}
+
+@mixin container-fluid {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}

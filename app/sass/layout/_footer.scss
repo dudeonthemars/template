@@ -1,0 +1,123 @@
+/*md
+
+# Footer
+
+```html_example
+<footer>
+    <div class="container-fluid">
+        <div class="center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="footer__icon" viewBox="0 0 76 81" id="logo">
+
+                <g id="125a3f92-a363-45f1-acc8-10742e17ab1f">
+                    <g id="d472b04f-b251-45da-92c4-daf5784f296f">
+                        <polygon points="0.5 50.5 0.5 0.5 75.5 0.5 75.5 80.5 0.5 80.5 0.5 50.5" stroke-miterlimit="10" />
+                        <polyline points="15.5 15.5 39.5 40.5 57.5 15.5 39.5 44.5 39.5 68.5" stroke-miterlimit="10" />
+                    </g>
+                </g>
+            </svg>
+            YURKOVSKAYA CONSULTANCY FZE LLC | Licence #1810 United Arab Emirates
+        </div>
+        <div class="footer">
+            <div class="fitem footer-links">
+                <a href="https://infobiz.help/policy-infobiz.pdf" target="_blank" class="help-link">Политика конфиденциальности</a> <br> | E-mail: <a href="mailto:info@stressa.net" target="_blank" class="help-link">info@stressa.net</a>
+            </div>
+            <div class="footer-socials">
+                <a href="https://www.facebook.com/olgayurkovskaya" target="_blank" class="social-link"><i class="fi flaticon-facebook-1"></i></a>
+                <a href="https://vk.com/yurkovskaya_blog" target="_blank" class="social-link"><i class="fi flaticon-vk"></i></a>
+                <a href="https://stressa.net/" target="_blank" class="social-link"><i class="fi flaticon-domain"></i></a>
+                <a href="https://www.instagram.com/olga_yurkovskaya/" target="_blank" class="social-link"><i class="fi flaticon-instagram-1"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+```
+
+*/
+footer {
+    background: colors(grey-dark);
+    color: colors(white);
+    padding: 2rem 1rem;
+
+    @include media(lg) {
+        &:hover {
+            .footer__icon {
+                animation: animate_logo 3s forwards;
+                fill: transparent;
+                stroke: colors(white);
+                stroke-dasharray: 290;
+                stroke-dashoffset: 290;
+                stroke-width: 1px;
+            }
+        }
+    }
+}
+
+.footer {
+    align-items: center;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .fitem {
+        width: 100%;
+
+        @include media(sm) {
+            width: 50%;
+        }
+
+        &.footer-links {
+            padding-bottom: 20px;
+            text-align: center;
+
+            @include media(sm) {
+                text-align: left;
+            }
+        }
+
+        &.footer-socials {
+            text-align: center;
+
+            @include media(sm) {
+                text-align: right;
+            }
+        }
+    }
+
+    .social-link {
+        color: colors(white);
+        font-size: 24px;
+        padding: 0.5rem;
+
+        &:hover {
+            color: colors(blue);
+        }
+    }
+
+    .help-link {
+        color: colors(white);
+        line-height: 1.4rem;
+
+        &:hover {
+            color: colors(blue);
+        }
+    }
+}
+
+.footer__icon {
+    @include trans(all, .2s);
+
+    display: block;
+    fill:transparent;
+    margin: 10px auto;
+    stroke: colors(green);
+    width: 70px;
+
+    @include media(lg) {
+        fill: transparent;
+        stroke: transparent;
+    }
+}

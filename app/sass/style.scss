@@ -1,8 +1,19 @@
-@import "../template/scss/styleguide";
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
 
 @import "base/reset";
 @import "base/presets";
+@import "base/animations";
+@import "base/helpers";
+@import "base/typography";
 
+@import "components/buttons";
 @import "components/form";
+@import "components/flaticon";
+@import "components/icons";
+@import "components/links";
 
+@import "layout/footer";
+@import "layout/layout";
 @import "layout/common";

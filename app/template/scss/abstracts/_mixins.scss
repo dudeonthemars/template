@@ -28,7 +28,6 @@
     }
 }
 
-
 @mixin grad($deg, $key) {
     background: linear-gradient($deg+deg, gradient($key));
 }

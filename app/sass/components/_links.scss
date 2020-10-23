@@ -1,0 +1,54 @@
+
+@mixin link {
+    cursor: pointer;
+    display: inline-block;
+    letter-spacing: 1px;
+    padding-bottom: rem(3);
+    position: relative;
+    text-decoration: none;
+    vertical-align: top;
+
+    &:hover {
+        &::after {
+            width: 100%;
+        }
+    }
+
+    &::before {
+        @include trans(background);
+
+        background: colors(gray-light);
+        bottom: 0;
+        content: '';
+        height: 1px;
+        left: 0;
+        position: absolute;
+        width: 100%;
+    }
+
+    &::after {
+        @include trans(all);
+
+        background: colors(blue);
+        bottom: -1px;
+        content: '';
+        height: 2px;
+        left: 0;
+        position: absolute;
+        width: 0;
+    }
+}
+
+.link {
+    @include link;
+
+    color: colors(blue);
+}
+
+.link_icon {
+    @include link;
+
+    span {
+        vertical-align: middle;
+    }
+}

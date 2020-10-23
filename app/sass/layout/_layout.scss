@@ -1,0 +1,16 @@
+.fullwidth,
+.header,
+section {
+    margin: 0 auto;
+    max-width: 1920px;
+    position: relative;
+    width: 100%;
+}
+
+.container {
+    @include container;
+}
+
+.container-fluid {
+    @include container-fluid;
+}
