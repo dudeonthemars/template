@@ -68,7 +68,11 @@ $sides: (top, bottom, left, right);
 $degrees: (45, 90, 180, 270);
 
 @each $val in $degrees {
-    .rotate-#{$val} {
-        transform: rotate(#{$val}deg);
+    .rotate-x-#{$val} {
+        transform: rotateX(#{$val}deg);
+    }
+
+    .rotate-y-#{$val} {
+        transform: rotateY(#{$val}deg);
     }
 }

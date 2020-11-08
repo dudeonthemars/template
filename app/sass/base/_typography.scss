@@ -1,5 +1,4 @@
 
-
 @mixin hero {
     font-family: $font-family-normal;
     font-size: rem(42);
@@ -23,7 +22,7 @@
     font-size: rem(32);
     font-weight: bold;
     letter-spacing: rem(2);
-    line-height: 1.3;
+    line-height: 1.2;
 
     @include media(sm) {
         font-size: rem(38);
@@ -31,6 +30,22 @@
 
     @include media(xl) {
         font-size: rem(48);
+    }
+
+    @content;
+}
+
+@mixin title-alt {
+    font-family: $font-family-alt;
+    font-size: rem(36);
+    line-height: 1.1;
+
+    @include media(sm) {
+        font-size: rem(40);
+    }
+
+    @include media(lg) {
+        font-size: rem(50);
     }
 
     @content;
@@ -72,9 +87,7 @@
 }
 
 .title-alt {
-    @include title;
-
-    font-family: $font-family-alt;
+    @include title-alt;
 }
 
 .sub-title {
@@ -87,7 +100,7 @@
 
 p {
     font-family: $font-family-normal;
-    line-height: rem(20);
+    line-height: 1.2;
 }
 
 .list {

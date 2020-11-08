@@ -1,15 +1,12 @@
 $(document).on('ready', function() {
 
-    //  WOW Transitions
-    if ($(window).width() > 767) {
-        wow = new WOW({
-            boxClass: 'wow', // default
-            offset: 200, // default
-            mobile: true, // default
-            live: true // default
-        })
-        wow.init();
-    }
+    wow = new WOW({
+        boxClass: 'wow', // default
+        offset: 200, // default
+        mobile: false, // default
+        live: true // default
+    })
+    wow.init();
 
     // smooth scroll
     $("body").on("click", "a.btn, a.animate, .btn-liquid, a.smooth", function() {
@@ -84,39 +81,6 @@ $(document).on('ready', function() {
     });
 });
 
-
-
-// form fields
-function checkform(f) {
-    var line = document.getElementsByClassName('.some-form__line');
-    var errMSG = "";
-    // цикл ниже перебирает все элементы в объекте f, 
-    // переданном в качестве параметра
-    // функции, в данном случае - наша форма.            
-    for (var i = 0; i < f.elements.length; i++)
-    // если текущий элемент имеет атрибут required
-    // т.е. обязательный для заполнения
-        if (null != f.elements[i].getAttribute("required"))
-        // проверяем, заполнен ли он в форме
-            if (isEmpty(f.elements[i].value)) // пустой
-                errMSG += "  " + f.elements[i].name + "\n"; // формируем сообщение
-            // об ошибке, перечисляя 
-            // незаполненные поля
-            // если сообщение об ошибке не пусто,
-            // выводим его, и возвращаем false     
-    if ("" != errMSG) {
-        alert("Не заполнены обязательные поля:\n" + errMSG);
-        return false;
-    }
-
-    function isEmpty(str) {
-        for (var i = 0; i < str.length; i++)
-            if (" " != str.charAt(i))
-                return false;
-        return true;
-    }
-
-}
 
 // count-down digits
 let countDown = (function() {
@@ -241,8 +205,105 @@ let dateChanger = (function() {
         }
     }
 })();
+
+let parralax = (function(){
+    return {
+        init: function() {
+            var scene = document.getElementById('scene');
+            var parallaxInstance = new Parallax(scene);
+        }
+    }
+})();
+
+let bubbles = (function(){
+    return {
+        init: function() {
+            function createBubble() {
+                const section = document.querySelector('#content2');
+                const createElement = document.createElement('span');
+                let size = Math.random() * 60;
+
+                createElement.style.width = 20 + size + 'px';
+                createElement.style.height = 20 + size + 'px';
+                createElement.classList.add('bubble');
+                createElement.style.left = Math.random() * innerWidth + 'px';
+                section.appendChild(createElement);
+
+                setTimeout(() => {
+                    createElement.remove()
+                }, 8000);
+            }
+
+            setInterval(createBubble, 500);
+        }
+    }
+})();
+
+let tabs = (function() {
+    return {
+        init: function () {
+
+            let tabButton = document.querySelectorAll('.modules__btn');
+            let tabContent = document.querySelectorAll('.modules__content');
+            let parent = document.querySelector('.modules__tabs');
+            let tabContentList = [];
+            let tabButtonsList = [];
+
+            for (i = 0; i < tabButton.length; i++) {
+                tabButton[i].setAttribute('data-index', [i]);
+                tabContent[i].setAttribute('data-index', [i]);
+                tabContentList.push(tabContent[i]);
+                tabButtonsList.push(tabButton[i]);
+            }
+
+            parent.addEventListener('click', (event)=> {
+                let ourClick = event.target.parentNode;
+                removeActive();
+                tabContentList[ourClick.dataset.index].classList.add('is-active');
+                tabButtonsList[ourClick.dataset.index].classList.add('is-active');
+            });
+
+            function removeActive() {
+                for (x = 0; x < tabContentList.length; x++) {
+                    tabContentList[x].classList.remove('is-active');
+                    tabButtonsList[x].classList.remove('is-active');
+                }
+            }
+        } 
+    }
+})();
+
+let smooth = (function() {
+    return {
+        init: function() {
+            const selectors = document.querySelectorAll('.smooth');
+
+            for (const link of selectors) {
+                link.addEventListener('click', scrollBehavior);
+            }
+
+            function scrollBehavior(e) {
+                e.preventDefault();
+                const href = this.getAttribute('href');
+
+                document.querySelector(href).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        }
+    }
+})()
+
 // call need scripts
-countDown.init();
+
+//countDown.init();
 //timer.init();
 toggler.init();
 //dateChanger.init();
+tabs.init()
+smooth.init();
+
+if (window.screen.width > 1024) {
+    parralax.init();
+    bubbles.init();
+}
