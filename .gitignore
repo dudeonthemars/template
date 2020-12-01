@@ -16,3 +16,5 @@ app/libs/bootstrap-3.3.7-dist/js/bootstrap.js
 app/libs/bootstrap-3.3.7-dist/js/bootstrap.min.js
 app/libs/bootstrap-3.3.7-dist/js/npm.js
 app/fonts/my-icons-collection.zip
+
+dist
