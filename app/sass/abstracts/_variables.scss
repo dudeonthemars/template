@@ -9,11 +9,13 @@ $colors: (
     grey-dark: #222,
     yellow: #ebeb12,
     purple: #4c305b,
-    orange-red: #ff3e33
+    orange-red: #ff3e33,
+    gold: #eebe6c
 );
 
 $gradient: (
-    1: #{#ccc, #ff3e33}
+    gold: #{#eebe6c, #f5cfa2, #d89b53},
+    red: #{#f36a69, #f36a69, #600913}
 );
 
 //font

@@ -1,0 +1,206 @@
+header {
+    align-items: center;
+    background: url(../img/bg.jpg)no-repeat 50% 50%/cover fixed;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+
+    h1 {
+        @include grad(135, gold);
+
+        background-clip: text;
+        font-size: rem(58);
+        font-weight: 900;
+        -webkit-text-fill-color: transparent;
+        text-transform: uppercase;
+
+        span {
+            @include grad(195, red);
+
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+        }
+    }
+
+    h2 {
+        color: colors(white);
+        font-size: rem(32);
+        padding: rem(12 0);
+        position: relative;
+        text-shadow: 1px 2px colors(black);
+        z-index: 1;
+    }
+
+    .sale-tag {
+        animation: swing 4s ease-in-out infinite;
+        position: relative;
+        top: -39px;
+        z-index: 0;
+    }
+}
+
+#content2 {
+    padding-bottom: 10vh;
+    padding-top: 10vh;
+    background: url(../img/bg0.jpg)no-repeat 50% 50%/cover fixed;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    &__item {
+        background: colors(white);
+        border: rem(2) solid colors(gold);
+        border-radius: rem(10);
+        box-shadow: rem(10 10 0 0) colors(gold);
+        margin-bottom: rem(24);
+        padding: rem(12);
+        text-align: center;
+        width: 100%;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+
+        @include media(sm) {
+            width: 40%;
+        }
+
+        
+    }
+
+    .plus {
+        @include grad(180, red);
+
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        display: block;
+        font-size: rem(65);
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+    
+    .discount {
+        font-size: 38px;
+        padding: 24px 0;
+        font-weight: 900;
+        color: colors(gold);
+        position: relative;
+        &::before {
+            background: url(../img/tag.png) no-repeat 50% 50%/contain;
+            content: '';
+            display: block;
+            height: 100%;
+            right: 10px;
+            position: absolute;
+            width: rem(32);
+            z-index: 1;
+            transform: rotate(-60deg);
+        }
+        
+        @include media(md) {
+            font-size: 48px;
+        }
+    }
+
+    &__heading {
+        font-size: rem(24);
+        font-weight: bold;
+        
+        a {
+            @include trans;
+
+            text-decoration: none;
+            color: colors(black);
+            
+            &:hover {
+                color: colors(gold)
+            }
+        }
+    }
+    
+    strike {
+        font-size: 24px;
+    }
+    
+    .cost {
+        @include grad(195, red);
+
+        font-size: rem(32);
+        padding: 24px 0;
+        font-weight: bold;   
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-transform: uppercase;
+    }
+    
+    .btn {
+        margin-top: auto;
+    }
+}
+
+.bg-text {
+    background: colors(white);
+    border: rem(2) solid colors(gold);
+    border-radius: rem(10);
+    box-shadow: rem(10 10 0 0) colors(gold);
+    padding: rem(24);
+    margin-bottom: rem(48)
+}
+
+.answer {
+    padding-top: rem(48)
+}
+
+.time-up {
+    @include grad(135, gold);
+
+    background-clip: text;
+    font-size: rem(58);
+    font-weight: 900;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: rem(32);
+}
+
+.is-countdown {
+    margin: 48px auto;
+    text-align: center;
+}
+
+/* countdown timer-keithwood styles */
+
+.countdown-section {
+    position: relative;
+}
+
+.countdown-amount {
+    @include grad(195, gold);
+    
+    font-size: 48px;
+    position: relative;
+    padding: 20px;    
+    font-weight: 900;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+}
+
+.countdown-period {
+    font-size: 11px;
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    color: colors(gold);
+}
+
+.second-counter.is-countdown {
+    text-align: center;
+    margin-bottom: 20px;
+}

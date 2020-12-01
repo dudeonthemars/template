@@ -85,6 +85,16 @@
             background-color: colors(orange-red);
         }
     }
+    
+    &_gold {
+        @include grad(130, gold);
+
+        min-width: rem(250);
+
+        &::after {
+            background-color: colors(gold);
+        }
+    }
 }
 
 .btn-link {

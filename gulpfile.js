@@ -48,8 +48,8 @@ gulp.task('svg', ()=> {
 gulp.task('sass', function() {
     return gulp.src('app/sass/**/*.scss')
         .pipe(sass())
-        .pipe(cmq())
         .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
+        .pipe(cmq())
         .pipe(gulp.dest('app/css'))
         .pipe(browserSync.reload({ stream: true }))
 });
