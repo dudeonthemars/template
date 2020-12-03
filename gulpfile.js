@@ -67,13 +67,13 @@ gulp.task('browser-sync', function() {
 gulp.task('scripts', function() {
     return gulp.src([
             'app/libs/jquery/dist/jquery.min.js',
-            'app/libs/slick-carousel/slick/slick.min.js',
-            'app/libs/jquery.scrollTo/jquery.scrollTo.min.js',
-            'app/libs/rotator/jquery.simple-text-rotator.js',
+            //'app/libs/slick-carousel/slick/slick.min.js',
+            //'app/libs/jquery.scrollTo/jquery.scrollTo.min.js',
+            //'app/libs/rotator/jquery.simple-text-rotator.js',
             //'app/libs/stellar/jquery.stellar.js',
             'app/libs/timer-keithwood/timer-keithwood.js',
             'app/libs/wow/dist/wow.min.js',
-            'app/libs/readmore-js/readmore.min.js',
+            //'app/libs/readmore-js/readmore.min.js',
             'app/libs/common/cookies.js',
             'app/libs/common/modernizr.js',
             'app/libs/common/ea-form.js',

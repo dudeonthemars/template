@@ -3,23 +3,26 @@ $colors: (
     white : #fff,
     orange: #f37b06,
     green: #89d80b,
-    blue:  #2793d6,
+    blue: #2793d6,
     gray-light: #f4f4f4,
     black: #000,
     grey-dark: #222,
     yellow: #ebeb12,
     purple: #4c305b,
-    orange-red: #ff3e33
+    orange-red: #ff3e33,
+    gold: #ae8913,
 );
 
 $gradient: (
-    1: #{#ccc, #ff3e33}
+    1: #{#4c305b, #54087c},
+    2: #{#4b6cb7, #182848},
+    3: #{#AE8913, #FFEEB5},
 );
 
 //font
 $font-size: rem(16);
 
-$font-family-normal: 'Jost', sans-serif;
+$font-family-normal: 'Raleway', sans-serif;
 $font-family-alt: 'Caveat', cursive;
 
 //shadows

@@ -298,12 +298,7 @@ let smooth = (function() {
 
 //countDown.init();
 //timer.init();
-toggler.init();
+//toggler.init();
 //dateChanger.init();
-tabs.init()
+//tabs.init()
 smooth.init();
-
-if (window.screen.width > 1024) {
-    parralax.init();
-    bubbles.init();
-}

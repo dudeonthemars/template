@@ -1,25 +1,25 @@
 
-
 .btn {
     &,
     &:link,
     &:visited {
+        box-shadow: 0 1rem 2rem rgba(colors(black), .2);
+        border-radius: rem(5);
         border: 1px solid transparent;
-        border-radius: 10rem;
         cursor: pointer;
         display: inline-block;
         font-size: rem(18);
+        font-weight: bold;
         letter-spacing: 1px;
         padding: rem(16 30);
         position: relative;
         text-decoration: none;
-        text-shadow: 1px 1px 1px rgba(colors(black), .7);
         text-transform: uppercase;
         transition: all .2s;
     }
 
     &:hover {
-        box-shadow: 0 1rem 2rem rgba(colors(black), .2);
+        box-shadow: none;
         transform: translateY(-3px);
 
         &::after {
@@ -36,7 +36,7 @@
     }
 
     &::after {
-        border-radius: 10rem;
+        border-radius: rem(5);
         content: "";
         display: inline-block;
         height: 100%;
@@ -74,6 +74,16 @@
 
         &::after {
             background-color: colors(orange);
+        }
+    }
+
+    &_gold {
+        @include grad(130, 3);
+
+        color: colors(black);
+
+        &::after {
+            @include grad(90, 3);
         }
     }
 

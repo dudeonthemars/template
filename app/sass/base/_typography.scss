@@ -19,9 +19,8 @@
 
 @mixin title {
     font-family: $font-family-normal;
-    font-size: rem(32);
+    font-size: rem(28);
     font-weight: bold;
-    letter-spacing: rem(2);
     line-height: 1.2;
 
     @include media(sm) {
