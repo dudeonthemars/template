@@ -10,14 +10,18 @@ var gulp = require('gulp'),
     pngquant = require('imagemin-pngquant'),
     cache = require('gulp-cache'),
     autoprefixer = require('gulp-autoprefixer'),
-    cmq = require('crlab-gulp-combine-media-queries');
-    cheerio = require('gulp-cheerio');
-    svgmin = require('gulp-svgmin');
-    replace = require('gulp-replace');
-    svgSprite = require('gulp-svg-sprite');
+    cmq = require('crlab-gulp-combine-media-queries'),
+    cheerio = require('gulp-cheerio'),
+    svgmin = require('gulp-svgmin'),
+    replace = require('gulp-replace'),
+    svgSprite = require('gulp-svg-sprite'),
+    fileinclude = require('gulp-file-include'),
+    webp = require('gulp-webp'),
+    webpHTML = require('gulp-webp-html'),
+    webpcss = require('gulp-webp-css');
 
 
-gulp.task('svg', ()=> {
+gulp.task('svg', function() {
 	return gulp.src('app/img/svg/*.svg')
 	.pipe(svgmin({
 		js2svg: {
@@ -42,7 +46,6 @@ gulp.task('svg', ()=> {
 		}
 	}))
 	.pipe(gulp.dest('app/img/svg/'));
-	
 });
 
 gulp.task('sass', function() {
@@ -50,6 +53,7 @@ gulp.task('sass', function() {
         .pipe(sass())
         .pipe(cmq())
         .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
+        .pipe(webpcss())
         .pipe(gulp.dest('app/css'))
         .pipe(browserSync.reload({ stream: true }))
 });
@@ -84,7 +88,7 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('code', function() {
-    return gulp.src('app/*.html')
+    return gulp.src('app/index.html')
         .pipe(browserSync.reload({ stream: true }))
 });
 
@@ -106,15 +110,29 @@ gulp.task('clean', async function() {
     return del.sync('dist'); // Удаляем папку dist перед сборкой
 });
 
+gulp.task('webp', function() {
+    return gulp.src(['app/img/**/*.png', 'app/img/**/*.jpg'])
+    .pipe(
+        webp({
+            quality: 78
+        })
+    )
+    .pipe(gulp.dest('app/img'))
+})
+
 gulp.task('img', function() {
-    return gulp.src('app/img/**/*') // Берем все изображения из app
-        .pipe(cache(imagemin({ // С кешированием
-            // .pipe(imagemin({ // Сжимаем изображения без кеширования
-            interlaced: true,
-            progressive: true,
-            svgoPlugins: [{ removeViewBox: false }],
-            use: [pngquant()]
-        })) /**/ )
+    return gulp.src('app/img/**/*')
+            .pipe(imagemin([
+                imagemin.gifsicle({interlaced: true}),
+                imagemin.mozjpeg({quality: 78, progressive: true}),
+                imagemin.optipng({optimizationLevel: 4}),
+                imagemin.svgo({
+                    plugins: [
+                        { removeViewBox: true },
+                        {cleanupIDs: false}
+                    ]
+                })
+            ]))
         .pipe(gulp.dest('dist/img')); // Выгружаем на продакшен
 });
 
@@ -133,6 +151,7 @@ gulp.task('prebuild', async function() {
         .pipe(gulp.dest('dist/js'))
 
     var buildHtml = gulp.src('app/*.html') // Переносим HTML в продакшен
+        .pipe(webpHTML())
         .pipe(gulp.dest('dist'));
 
 });
@@ -144,7 +163,8 @@ gulp.task('clear', function(callback) {
 gulp.task('watch', function() {
     gulp.watch('app/sass/**/*.scss', gulp.parallel('sass'));
     gulp.watch('app/*.html', gulp.parallel('code'));
+    gulp.watch(['app/img/**/*.png', 'app/img/**/*.jpg'], gulp.parallel('webp'));
     gulp.watch(['app/js/main.js', 'app/libs/**/*.js'], gulp.parallel('scripts'));
 });
-gulp.task('default', gulp.parallel('css-libs', 'code', 'mainjs', 'sass', 'scripts', 'browser-sync', 'watch'));
+gulp.task('default', gulp.parallel('css-libs', 'code', 'mainjs', 'sass', 'scripts', 'browser-sync', 'watch', 'webp'));
 gulp.task('build', gulp.parallel('prebuild', 'clean', 'img', 'sass', 'scripts'));
