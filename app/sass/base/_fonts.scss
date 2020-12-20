@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'Pribambas';
+    src: url('../fonts/Pribambas-Regular.eot');
+    src: local('../fonts/Pribambas-Regular'),
+        url('../fonts/Pribambas-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Pribambas-Regular.woff2') format('woff2'),
+        url('../fonts/Pribambas-Regular.woff') format('woff'),
+        url('../fonts/Pribambas-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+	font-family: 'Acrom';
+	src: url('../fonts/Acrom-Regular.eot');
+	src: local('../fonts/Acrom Regular'), local('../fonts/Acrom-Regular'),
+		url('../fonts/Acrom-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Acrom-Regular.woff') format('woff'),
+		url('../fonts/Acrom-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Acrom';
+	src: url('../fonts/Acrom-Bold.eot');
+	src: local('../fonts/Acrom Bold'), local('../fonts/Acrom-Bold'),
+		url('../fonts/Acrom-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Acrom-Bold.woff') format('woff'),
+		url('../fonts/Acrom-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Acrom';
+	src: url('../fonts/Acrom-Light.eot');
+	src: local('../fonts/Acrom Light'), local('../fonts/Acrom-Light'),
+		url('../fonts/Acrom-Light.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Acrom-Light.woff') format('woff'),
+		url('../fonts/Acrom-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
