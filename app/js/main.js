@@ -5,17 +5,11 @@ $(document).on('ready', function() {
         offset: 200, // default
         mobile: false, // default
         live: true // default
-    })
+    });
+
     wow.init();
 
-    // smooth scroll
-    $("body").on("click", "a.btn, a.animate, .btn-liquid, a.smooth", function() {
-        var idtop = $($(this).attr("href")).offset().top;
-        $('html,body').animate({
-            scrollTop: idtop
-        }, 600);
-        return false;
-    });
+    $(window).stellar();
 
     //text-rotator
     $(".rotate").textrotator({
@@ -30,6 +24,49 @@ $(document).on('ready', function() {
         dots: false,
         autoplay: false,
         speed: 900,
+        cssEase: 'ease-in-out',
+        lazyLoad: 'ondemand',
+        slidesToShow: 2,
+        responsive: [{
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    dots: false,
+                    arrows: false,
+                    infinite: true,
+
+                }
+            },
+            {
+                breakpoint: 760,
+                settings: {
+                    slidesToShow: 1,
+                    dots: false,
+                    arrows: false,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 580,
+                settings: {
+                    dots: false,
+                    arrows: true,
+                    slidesToShow: 1,
+                }
+            }
+
+        ]
+    });
+
+
+    $('.testimonials2').slick({
+        draggable: true,
+        infinite: true,
+        dots: false,
+        autoplay: false,
+        speed: 900,
+        adaptiveHeight: true,
         cssEase: 'ease-in-out',
         lazyLoad: 'ondemand',
         slidesToShow: 1,
@@ -57,7 +94,8 @@ $(document).on('ready', function() {
                 breakpoint: 580,
                 settings: {
                     dots: false,
-                    arrows: false
+                    arrows: true,
+                    slidesToShow: 1,
                 }
             }
 
@@ -72,13 +110,6 @@ $(document).on('ready', function() {
         lessLink: '<a href="#">Закрыть</a>',
         collapsedHeight: 240
     });
-
-    // site preloader 
-    $(window).load(function() {
-        $('#preloader').fadeOut('slow', function() {
-            $(this).remove();
-        });
-    });
 });
 
 
@@ -90,7 +121,7 @@ let countDown = (function() {
             $(window).on('scroll', function() {
                 var oTop = $('#count_down').offset().top - window.innerHeight;
                 if (a == 0 && $(window).scrollTop() > oTop) {
-                    $('.counter_value').each(function() {
+                    $('.count-down__value').each(function() {
                         var $this = $(this),
                             countTo = $this.attr('data-count');
                         $({
@@ -215,30 +246,6 @@ let parralax = (function(){
     }
 })();
 
-let bubbles = (function(){
-    return {
-        init: function() {
-            function createBubble() {
-                const section = document.querySelector('#content2');
-                const createElement = document.createElement('span');
-                let size = Math.random() * 60;
-
-                createElement.style.width = 20 + size + 'px';
-                createElement.style.height = 20 + size + 'px';
-                createElement.classList.add('bubble');
-                createElement.style.left = Math.random() * innerWidth + 'px';
-                section.appendChild(createElement);
-
-                setTimeout(() => {
-                    createElement.remove()
-                }, 8000);
-            }
-
-            setInterval(createBubble, 500);
-        }
-    }
-})();
-
 let tabs = (function() {
     return {
         init: function () {
@@ -292,18 +299,79 @@ let smooth = (function() {
             }
         }
     }
-})()
+})();
+
+let momentsJs = (function() {
+    return {
+        init: function() {
+        moment().utcOffset(3);
+        var ourDate = document.getElementById('date');
+        var dates = {
+            'monday': ['20:00'],
+            'tuesday': ['20:00'],
+            'wednesday': ['20:00'],
+            'thursday': ['20:00'],
+            'friday': ['20:00'],
+            'saturday': ['13:00'],
+            'sunday': ['13:00']
+        };
+        var day = moment();
+        var time = dates[day.format('dddd').toLowerCase()];
+        var getStr = function (today) {
+            for (var i = 0; i < time.length; i++) {
+                var nums = time[i].split(':');
+                var current = day.set({
+                    hour: nums[0],
+                    minute: nums[1]
+                });
+                if (moment().isBefore(current)) {
+                    var intro = 'УЖЕ СЕГОДНЯ';
+                    if (!today) {
+                        intro = 'УЖЕ ЗАВТРА';
+                    }
+                    document.getElementById('date_in').innerHTML = intro;
+                    return current.locale('ru').format('D MMMM [в] HH:mm [МСК]');
+                    break;
+                }
+            }
+        }
+
+        var str = getStr(true);
+
+        if (!str) {
+            day = day.add(1, 'days')
+            time = dates[day.format('dddd').toLowerCase()];
+            str = getStr();
+        }
+
+        ourDate.innerHTML = str;
+        }
+    }
+})();
 
 // call need scripts
-
-//countDown.init();
+countDown.init();
 //timer.init();
 toggler.init();
 //dateChanger.init();
-tabs.init()
+//tabs.init()
 smooth.init();
+//momentsJs.init()
 
-if (window.screen.width > 1024) {
-    parralax.init();
-    bubbles.init();
-}
+// if (window.screen.width > 1024) {
+//     parralax.init();
+//     bubbles.init();
+// }
+
+
+window.addEventListener('load', function(){
+    let loc = document.getElementById("3140935fe475d87b6db");
+    loc.value = window.location.href;
+    let ref = document.getElementById("3140935fe475d87b6dbref");
+    ref.value = document.referrer;
+    
+    let statUrl = "https://school.marketinator.org/stat/counter?ref=" + encodeURIComponent(document.referrer)
+        + "&loc=" + encodeURIComponent(document.location.href);
+    document.getElementById('gccounterImgContainer').innerHTML
+        = "<img width=1 height=1 style='display:none' id='gccounterImg' src='" + statUrl + "'/>";
+});

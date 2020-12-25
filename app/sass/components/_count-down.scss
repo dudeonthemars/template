@@ -1,0 +1,38 @@
+.count-down {
+    background: colors(blue);
+    border-radius: rem(20);
+    box-shadow: 0 0 35px 20px rgba(colors(black), 0.1);
+    color: colors(white);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: rem(48);
+    margin-top: rem(48);
+    padding: rem(16 12);
+    position: relative;
+
+    &__column {
+        padding: rem(24 0);
+        width: 100%;
+
+        @include media(sm) {
+            width: 50%;
+        }
+
+        @include media(md) {
+            width: 25%;
+        }
+    }
+
+    &__numbers {
+        font-size: rem(32);
+        font-weight: bold;
+        padding-bottom: rem(18);
+    }
+
+    &__icon {
+        color: colors(white);
+        font-size: rem(48);
+        padding-bottom: rem(12);
+    }
+}

@@ -78,6 +78,14 @@
     }
 }
 
+@mixin text-alt {
+    font-family: $font-family-alt;
+}
+
+.text-alt {
+    @include text-alt;
+}
+
 .hero {
     @include hero;
 }
