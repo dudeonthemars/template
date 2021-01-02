@@ -375,3 +375,10 @@ window.addEventListener('load', function(){
     document.getElementById('gccounterImgContainer').innerHTML
         = "<img width=1 height=1 style='display:none' id='gccounterImg' src='" + statUrl + "'/>";
 });
+
+// outline debugger
+
+[].forEach.call($$("*"), function(a) {
+    a.style.outline =
+      "1px solid #" + (~~(Math.random() * (1 << 24))).toString(16);
+});
