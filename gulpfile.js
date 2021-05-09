@@ -17,9 +17,8 @@ var gulp = require('gulp'),
     svgSprite = require('gulp-svg-sprite'),
     fileinclude = require('gulp-file-include'),
     webp = require('gulp-webp'),
-    webpHTML = require('gulp-webp-html'),
-    webpcss = require('gulp-webp-css');
-
+    // webpHTML = require('gulp-webp-html'),
+    webpcss = require('gulp-webpcss');
 
 gulp.task('svg', function() {
 	return gulp.src('app/img/svg/*.svg')
@@ -48,7 +47,7 @@ gulp.task('svg', function() {
 	.pipe(gulp.dest('app/img/svg/'));
 });
 
-gulp.task('sass', function() {
+gulp.task('sass', async function() {
     return gulp.src('app/sass/**/*.scss')
         .pipe(sass())
         .pipe(cmq())
@@ -68,22 +67,23 @@ gulp.task('browser-sync', function() {
     });
 });
 
-gulp.task('scripts', function() {
+gulp.task('scripts', async function() {
     return gulp.src([
-            //'app/libs/jquery/dist/jquery.min.js',
+            'app/libs/jquery/dist/jquery.min.js',
             'app/libs/slick-carousel/slick/slick.min.js',
             //'app/libs/jquery.scrollTo/jquery.scrollTo.min.js',
-            'app/libs/rotator/jquery.simple-text-rotator.js',
+            //'app/libs/rotator/jquery.simple-text-rotator.js',
             'app/libs/stellar/jquery.stellar.js',
+            'app/libs/ityped-master/dist/index.min.js',
             'app/libs/timer-keithwood/timer-keithwood.js',
             'app/libs/wow/dist/wow.min.js',
-            'app/libs/moment/moment.js',
+            //'app/libs/moment/moment.js',
             'app/libs/readmore-js/readmore.min.js',
             'app/libs/common/cookies.js',
             'app/libs/common/modernizr.js',
-            //'app/libs/common/ea-form.js',
+            'app/libs/common/ea-form.js',
         ])
-        .pipe(concat('libs.min.js')) 
+        .pipe(concat('libs.min.js'))
         .pipe(uglify())
         .pipe(gulp.dest('app/js'));
 });
@@ -99,7 +99,7 @@ gulp.task('mainjs', function() {
 });
 
 
-gulp.task('css-libs', function() {
+gulp.task('css-libs', async function() {
     return gulp.src('app/sass/libs.scss') // Выбираем файл для минификации
         .pipe(sass()) // Преобразуем Sass в CSS посредством gulp-sass
         .pipe(cssnano()) // Сжимаем
@@ -115,18 +115,18 @@ gulp.task('webp', function() {
     return gulp.src(['app/img/**/*.png', 'app/img/**/*.jpg'])
     .pipe(
         webp({
-            quality: 78
+            quality: 95
         })
     )
     .pipe(gulp.dest('app/img'))
-})
+});
 
-gulp.task('img', function() {
+gulp.task('img', async function() {
     return gulp.src('app/img/**/*')
             .pipe(imagemin([
                 imagemin.gifsicle({interlaced: true}),
-                imagemin.mozjpeg({quality: 78, progressive: true}),
-                imagemin.optipng({optimizationLevel: 4}),
+                imagemin.mozjpeg({quality: 82, progressive: true}),
+                imagemin.optipng({optimizationLevel: 3}),
                 imagemin.svgo({
                     plugins: [
                         { removeViewBox: true },
@@ -152,7 +152,7 @@ gulp.task('prebuild', async function() {
         .pipe(gulp.dest('dist/js'))
 
     var buildHtml = gulp.src('app/*.html') // Переносим HTML в продакшен
-        .pipe(webpHTML())
+        // .pipe(webpHTML())
         .pipe(gulp.dest('dist'));
 
 });

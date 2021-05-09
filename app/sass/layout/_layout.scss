@@ -14,3 +14,9 @@ section {
 .container-fluid {
     @include container-fluid;
 }
+
+.is-visible-sm {
+    @include media(sm) {
+        display: none;
+    }
+}

@@ -3,29 +3,32 @@ $colors: (
     white : #fff,
     orange: #f37b06,
     green: #89d80b,
-    blue:  #2793d6,
+    blue:  #007cbb,
+    blue-2:  #303692,
     gray-light: #f4f4f4,
     black: #000,
     grey-dark: #222,
     yellow: #ebeb12,
-    purple: #4c305b,
+    purple: #7608b1,
+    purple-2: #3e086b,
     orange-red: #ff3e33
 );
 
 $gradient: (
-    1: #{#ccc, #ff3e33}
+    1: #{colors(blue), colors(blue-2)}
 );
 
 //font
 $font-size: rem(16);
 
-$font-family-normal: 'Acrom', sans-serif;
-$font-family-alt: 'Pribambas', sans-serif;
+$font-family-normal: 'Roboto', sans-serif;
+$font-family-alt: 'Acrom', sans-serif;
+$font-family-3: 'Pribambas', sans-serif;
 
 //shadows
 
 $box-shadow: 0 0 rem(30) rem(20) rgba(colors(black), 0.2);
-$box-shadow-sm:  0 0 rem(30) rem(8) rgba(colors(black), 0.2);
+$box-shadow-sm: rem(0 10 11 0) rgba(colors(black), 0.3);
 $box-shadow-neuro: inset 4px 4px 4px 0 #d1d9e6, inset -4px -4px 4px 0 colors(white);
 
 // breakpoints

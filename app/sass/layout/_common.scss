@@ -1,0 +1,410 @@
+header {
+    background: url('../img/bg1.jpg') no-repeat 50% 50%/cover fixed;
+    padding-top: 10vh;
+
+    @include media(sm) {
+        background: url('../img/bg-lg.jpg') no-repeat 50% 100%/cover;
+        min-height: rem(568);
+        padding-top: 20vh;
+    }
+}
+
+.content-header {
+    @include container;
+
+    color: colors(white);
+
+    &__title {
+        font-size: rem(28);
+        font-weight: bold;
+
+        @include media(sm) {
+            font-size: rem(42);
+        }
+    }
+
+    &__dynamic {
+        color: colors(yellow);
+        font-family: $font-family-3;
+    }
+
+    &__sub-title {
+        font-size: rem(18);
+    }
+
+    &__course {
+        border-bottom: 1px solid;
+        border-top: 1px solid;
+        display: inline-block;
+        font-size: rem(32);
+        margin: rem(24 0 20);
+        padding: rem(18 0);
+        text-transform: uppercase;
+    }
+
+    &__olga {
+        bottom: 0;
+        left: 0;
+        position: relative;
+    }
+}
+
+.modules {
+
+    position: relative;
+
+    &__content {
+
+    }
+
+    &__notebook {
+        width: rem(250);
+    }
+
+    &__feats {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: rem(48);
+        margin-top: rem(48);
+
+        @include media(md) {
+            flex-wrap: nowrap;
+        }
+
+        &_alt {
+            justify-content: center;
+
+            @include media(md) {
+                flex-wrap: wrap;
+            }
+        }
+    }
+
+    &__feats-item {
+        font-size: rem(24);
+        font-weight: bold;
+        margin-bottom: rem(24);
+        padding: rem(24 12);
+        text-align: center;
+        width: 100%;
+
+        @include media(md) {
+            width: 32%;
+        }
+
+        &_alt {
+            @include media(md) {
+                width: 32%;
+            }
+        }
+
+        &:hover {
+            .step {
+                box-shadow: $box-shadow-sm;
+                transform: translateY(-5px);
+            }
+        }
+    }
+
+    &__feats-item-3 {
+        @include media(md) {
+            width: 50%;
+        }
+    }
+
+    &__feats-4 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-bottom: rem(48);
+        margin-top: rem(48);
+    }
+
+    &__feats-4-item {
+        background: url('../img/bg1.jpg') no-repeat 50% 50%/cover fixed;
+        border-radius: rem(10);
+        box-shadow: $box-shadow-sm;
+        height: rem(300);
+        margin-bottom: rem(24);
+        padding: rem(24 12);
+        width: rem(300);
+
+        @include media(md) {
+            height: rem(400);
+            width: rem(400);
+        }
+
+        .content-1 & {
+            background: colors(purple) url('../img/bg1.jpg') no-repeat 50% 50%/cover fixed;
+            background-blend-mode: saturation;
+        }
+    }
+
+    &__feats-4-text {
+        color: colors(white);
+        font-size: rem(24);
+        font-weight: bold;
+        text-align: center;
+    }
+
+    &__feats-4-image {
+        height: rem(100);
+        margin-bottom: rem(12);
+
+        @include media(md) {
+            height: auto;
+            margin-bottom: rem(32);
+        }
+    }
+
+    &__tabs {
+        position: relative;
+    }
+
+    &__buttons {
+        display: flex;
+        flex-direction: column;
+        position: sticky;
+        top: 0;
+        z-index: 2;
+
+        @include media(md) {
+            flex-direction: row;
+        }
+    }
+
+    &__btn {
+        @include trans($tr-property: flex);
+
+        background: colors(gray-light);
+        border: none;
+        border-bottom: 2px solid colors(blue);
+        border-bottom-left-radius: rem(3);
+        border-bottom-right-radius: rem(3);
+        border-right: 2px solid colors(blue);
+        box-shadow: rem(0 10 18 -3) rgba(colors(grey-dark), 0.5);
+        color: colors(blue);
+        cursor: pointer;
+        flex: 0 1 33.3%;
+        font-size: rem(16);
+        padding: rem(12 4);
+        margin: 0;
+
+        &:hover {
+            background: colors(blue);
+            box-shadow: rem(0 4 18 -5) rgba(colors(grey-dark), 0.5);
+            color: colors(white);
+        }
+
+        &.is-active {
+            @include grad(90, 1);
+
+            border-bottom: none;
+            box-shadow: none;
+            color: colors(white);
+            flex: 1 0 66.3%;
+            font-size: rem(18);
+
+            .modules__span {
+                font-size: rem(18);
+            }
+        }
+
+        .modules__span {
+            font-size: 0;
+        }
+    }
+
+    &__content {
+        @include trans;
+
+        height: 0;
+        overflow: hidden;
+        position: relative;
+        visibility: hidden;
+        width: 0;
+
+        &.is-active {
+            @include container;
+
+            display: block;
+            height: 100%;
+            padding-top: 10vh;
+            visibility: visible;
+        }
+    }
+}
+
+.bg2 {
+    background: url('../img/bg2.jpg') no-repeat 50% 50%/cover fixed;
+}
+
+.bg1 {
+    background: url('../img/bg3.jpg') no-repeat 50% 50%/cover fixed;
+}
+
+.step {
+    @include trans;
+
+    background: #fff;
+    border: 2px solid;
+    border-radius: rem(10);
+    box-shadow: $box-shadow-sm;
+    margin: 0 auto rem(24);
+    max-width: rem(195);
+
+    @include media(md) {
+        box-shadow: none;
+    }
+}
+
+.square {
+    border: 2px solid;
+    border-radius: rem(10);
+    margin: rem(24) auto;
+    max-width: rem(600);
+    padding: rem(24);
+    width: 90%;
+
+    &_blue {
+        border: 2px solid colors(blue);
+    }
+
+    .content-1 & {
+        &_blue {
+            border: 2px solid colors(purple);
+        }
+    }
+}
+
+.testi {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: rem(48) auto;
+    padding: rem(12);
+
+    &__item {
+        align-items: center;
+        background: colors(white);
+        border-radius: rem(10);
+        color: colors(black);
+        display: flex;
+        margin-bottom: rem(24);
+        padding: rem(12 0);
+        width: 100%;
+
+        @include media(md) {
+            width: 48%;
+        }
+    }
+
+    &__foto {
+        padding: rem(8);
+        width: rem(150);
+
+        img {
+            border-radius: 100%;
+            height: rem(80);
+            object-fit: contain;
+            width: rem(80);
+        }
+    }
+
+    &__text {
+        padding-left: rem(12);
+        padding-right: rem(12);
+    }
+}
+
+.recomend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: rem(52);
+    position: relative;
+
+    &__item {
+        background: colors(gray-light);
+        border: 2px solid colors(blue);
+        margin: rem(10);
+        padding: rem(24 12);
+        position: relative;
+        text-align: center;
+        width: 100%;
+
+        @include media(md) {
+            width: 48%;
+        }
+    }
+}
+
+.recomendations {
+    margin-top: rem(52);
+    position: relative;
+
+    &__item {
+        background: colors(gray-light);
+        margin: rem(10);
+        padding: rem(24 12);
+        position: relative;
+        text-align: center;
+    }
+
+    &__heading {
+        @include small-title;
+    }
+
+    &__image {
+        display: block;
+        margin: rem(18) auto;
+        max-width: rem(200);
+        width: 100%;
+    }
+
+    .slick-dots {
+        display: flex;
+        justify-content: center;
+        margin: rem(24) auto rem(12);
+        text-align: center;
+
+        li + li {
+            margin-left: rem(10);
+        }
+
+        button {
+            @include grad(130, 1);
+
+            border: none;
+            border-radius: rem(5);
+            color: colors(white);
+            cursor: pointer;
+            padding: rem(6 12);
+        }
+
+        .slick-active button {
+            color: colors(yellow);
+            font-size: rem(16);
+        }
+    }
+}
+
+.section-dark {
+    background: url('../img/bg1.jpg') no-repeat 50% 50%/cover fixed;
+    border-radius: rem(10);
+    box-shadow: $box-shadow-sm;
+    color: colors(white);
+    margin-bottom: 10vh;
+    margin-top: 10vh;
+    padding-bottom: 10vh;
+    padding-top: 10vh;
+
+    .content-1 & {
+        background: colors(purple) url('../img/bg1.jpg') no-repeat 50% 50%/cover fixed;
+        background-blend-mode: saturation;
+    }
+}
+
+.section-light {
+    padding-bottom: 10vh;
+}

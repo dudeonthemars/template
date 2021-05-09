@@ -76,6 +76,17 @@
         }
     }
 
+    &_yellow {
+        background-color: colors(yellow);
+        color: colors(black);
+        font-weight: bold;
+        text-shadow: none;
+
+        &::after {
+            background-color: colors(yellow);
+        }
+    }
+
     &_orange {
         background-color: colors(orange);
         color: colors(white);

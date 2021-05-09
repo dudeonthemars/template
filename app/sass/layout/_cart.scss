@@ -1,0 +1,174 @@
+
+.courses {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+}
+
+.courses li {
+    background: #fff;
+    border-radius: 5px;
+    margin: 10px;
+    max-width: 330px;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+
+    @include media(md) {
+        text-align: left;
+    }
+}
+
+.courses li .img-responsive {
+    margin: auto;
+    padding: 20px 0;
+    width: 215px;
+}
+
+.ruble {
+    color: colors(black);
+    font-size: 16px;
+    font-weight: bold;
+    padding-top: 5px;
+}
+
+.courses .strike {
+    color: colors(black)
+}
+
+.equalh {
+
+    padding-bottom: rem(10);
+    text-align: center;
+}
+
+.cart {
+    @include grad(130, 1);
+
+    border: none;
+    border-radius: rem(10);
+    color: colors(yellow);
+    margin-top: rem(10);
+    padding: 8px 20px;
+    position: relative;
+    vertical-align: top;
+}
+
+.cart span {
+    font-size: 14px;
+    padding-left: 18px;
+}
+
+.cart img {
+    left: 10px;
+    position: absolute;
+    top: 8px;
+    width: 23px;
+}
+
+.allitems {
+    padding-left: 7%;
+}
+
+.allitems li {
+    font-size: 16px;
+    font-weight: bold;
+    margin: auto;
+    padding: 10px 5px 10px 20px;
+}
+
+.allitems li::before {
+    background: url(../img/check.png) no-repeat 50% 50%/contain;
+    content: '';
+    display: block;
+    height: 20px;
+    left: -7px;
+    position: absolute;
+    top: 10px;
+    width: 20px;
+}
+
+.cart-item {
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+}
+
+.cart-item:hover {
+    background: #fafafa;
+    -webkit-transition: 0.2s all ease-in-out;
+    transition: 0.2s all ease-in-out;
+}
+
+#cart-items {
+    border: 3px solid #ccc;
+    border-radius: 10px;
+    padding: 15px 10px;
+}
+
+.cart-item-title {
+    display: block;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.cart-item-remove {
+    color: #ff3e33;
+    cursor: pointer;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    top: -10px;
+}
+
+.cart-item-price {
+    color: colors(orange-red);
+    font-weight: bold;
+}
+
+.sub {
+    color: #10af10;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 15px 10px;
+    text-align: center;
+}
+
+.cfield input {
+    -webkit-transition: 0.2s all ease-in-out;
+    background: #fff;
+    border-radius: 30px;
+    border: 2px solid orange;
+    color: orange;
+    display: inline-block;
+    font-family: inherit;
+    font-size: 19px;
+    font-weight: bold;
+    padding: 10px 30px;
+    text-decoration: none;
+    transition: 0.2s all ease-in-out;
+}
+
+.cfield.error-empty input {
+    border: 2px solid red;
+    box-shadow: 0 0 5px 0 red;
+    color: red;
+}
+
+.strike {
+    font-size: 15px;
+    padding-top: 10px;
+    text-decoration: line-through;
+}
+
+#cart-items .question6 {
+    margin: 15px auto;
+    width: 250px;
+}
+
+.coursesimg {
+    border-radius: 12px;
+    border: 1px solid #ff5e00;
+    box-shadow: 0px 10px 25px 13px #ccc;
+}

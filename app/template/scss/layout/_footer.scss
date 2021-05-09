@@ -34,7 +34,8 @@
 
 */
 footer {
-    background: colors(grey-dark);
+    @include grad(1);
+
     color: colors(white);
     padding: 2rem 1rem;
 
