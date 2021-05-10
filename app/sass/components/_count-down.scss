@@ -1,5 +1,5 @@
 .count-down {
-    background: colors(blue);
+    background: blue;
     border-radius: rem(20);
     box-shadow: 0 0 35px 20px rgba(colors(black), 0.1);
     color: colors(white);
@@ -13,6 +13,7 @@
 
     &__column {
         padding: rem(24 0);
+        text-align: center;
         width: 100%;
 
         @include media(sm) {
@@ -24,7 +25,7 @@
         }
     }
 
-    &__numbers {
+    &__value {
         font-size: rem(32);
         font-weight: bold;
         padding-bottom: rem(18);

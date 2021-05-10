@@ -17,7 +17,7 @@
     &::before {
         @include trans(background);
 
-        background: colors(gray-light);
+        background: rgba(colors(black), 0.5);
         bottom: 0;
         content: '';
         height: 1px;
@@ -29,7 +29,7 @@
     &::after {
         @include trans(all);
 
-        background: colors(blue);
+        background: blue;
         bottom: -1px;
         content: '';
         height: 2px;
@@ -42,7 +42,7 @@
 .link {
     @include link;
 
-    color: colors(blue);
+    color: blue;
 }
 
 .link_icon {

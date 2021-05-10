@@ -11,7 +11,6 @@
         padding: rem(16 30);
         position: relative;
         text-decoration: none;
-        text-shadow: 1px 1px 1px rgba(colors(black), .7);
         text-transform: uppercase;
         transition: all .2s;
         white-space: unset;
@@ -49,48 +48,12 @@
 
     &_white {
         background-color: colors(white);
-        border: 1px solid colors(grey-dark);
-        color: colors(grey-dark);
+        border: 1px solid colors(black);
+        color: colors(black);
         text-shadow: none !important;
 
         &::after {
             background-color: colors(white);
-        }
-    }
-
-    &_green {
-        background-color: colors(green);
-        color: colors(white);
-
-        &::after {
-            background-color: colors(green);
-        }
-    }
-
-    &_blue {
-        background-color: colors(blue);
-        color: colors(white);
-
-        &::after {
-            background-color: colors(blue);
-        }
-    }
-
-    &_orange {
-        background-color: colors(orange);
-        color: colors(white);
-
-        &::after {
-            background-color: colors(orange);
-        }
-    }
-
-    &_orange-red {
-        background-color: colors(orange-red);
-        color: colors(white);
-
-        &::after {
-            background-color: colors(orange-red);
         }
     }
 }
@@ -100,8 +63,8 @@
 
     &:link,
     &:visited {
-        border-bottom: 1px solid colors(green);
-        color: colors(green);
+        border-bottom: 1px solid blue;
+        color: blue;
         display: inline-block;
         font-size: $font-size;
         padding: 5px;
@@ -110,7 +73,7 @@
     }
 
     &:hover {
-        background-color: colors(green);
+        background-color: blue;
         box-shadow: 0 1rem 2rem rgba(colors(black), .15);
         color: colors(white);
         transform: translateY(-2px);

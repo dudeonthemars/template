@@ -1,9 +1,9 @@
 .ea_form {
-	.ph {
-		border-radius: 30px;
-		border: 2px solid colors(black);
-		width: 90%;
-		padding: 1rem;
-		margin: 0.5rem auto;
-	}
+    &__ph {
+        border: 2px solid colors(black);
+        border-radius: 30px;
+        margin: 0.5rem auto;
+        padding: 1rem;
+        width: 90%;
+    }
 }

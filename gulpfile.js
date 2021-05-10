@@ -1,5 +1,6 @@
 var gulp = require('gulp'),
-    sass = require('gulp-sass'),
+    //sass = require('gulp-sass'), leave for support old projects
+    sass = require('gulp-dart-sass'); // use for newer projects wia dart-sass
     browserSync = require('browser-sync'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglifyjs'),
@@ -70,18 +71,18 @@ gulp.task('browser-sync', function() {
 
 gulp.task('scripts', function() {
     return gulp.src([
-            //'app/libs/jquery/dist/jquery.min.js',
-            'app/libs/slick-carousel/slick/slick.min.js',
+            'app/libs/jquery/dist/jquery.min.js',
+            //'app/libs/slick-carousel/slick/slick.min.js',
             //'app/libs/jquery.scrollTo/jquery.scrollTo.min.js',
-            'app/libs/rotator/jquery.simple-text-rotator.js',
-            'app/libs/stellar/jquery.stellar.js',
-            'app/libs/timer-keithwood/timer-keithwood.js',
-            'app/libs/wow/dist/wow.min.js',
-            'app/libs/moment/moment.js',
-            'app/libs/readmore-js/readmore.min.js',
+            //'app/libs/rotator/jquery.simple-text-rotator.js',
+            //'app/libs/stellar/jquery.stellar.js',
+            //'app/libs/timer-keithwood/timer-keithwood.js',
+            //'app/libs/wow/dist/wow.min.js',
+            //'app/libs/moment/moment.js',
+            //'app/libs/readmore-js/readmore.min.js',
             'app/libs/common/cookies.js',
             'app/libs/common/modernizr.js',
-            //'app/libs/common/ea-form.js',
+            'app/libs/common/ea-form.js',
         ])
         .pipe(concat('libs.min.js')) 
         .pipe(uglify())
@@ -100,15 +101,15 @@ gulp.task('mainjs', function() {
 
 
 gulp.task('css-libs', function() {
-    return gulp.src('app/sass/libs.scss') // Выбираем файл для минификации
-        .pipe(sass()) // Преобразуем Sass в CSS посредством gulp-sass
-        .pipe(cssnano()) // Сжимаем
-        .pipe(rename({ suffix: '.min' })) // Добавляем суффикс .min
-        .pipe(gulp.dest('app/css')); // Выгружаем в папку app/css
+    return gulp.src('app/sass/libs.scss')
+        .pipe(sass())
+        .pipe(cssnano()) 
+        .pipe(rename({ suffix: '.min' })) 
+        .pipe(gulp.dest('app/css')); 
 });
 
 gulp.task('clean', async function() {
-    return del.sync('dist'); // Удаляем папку dist перед сборкой
+    return del.sync('dist'); 
 });
 
 gulp.task('webp', function() {

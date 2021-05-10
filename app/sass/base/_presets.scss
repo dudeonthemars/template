@@ -31,14 +31,14 @@ body {
 
 input:focus,
 button:focus {
-    outline: 0
+    outline: 0;
 }
 
 .img-fluid {
     display: block;
-    max-width: 100%;
     height: auto;
     margin: 0 auto;
+    max-width: 100%;
 }
 
 .video-fluid {

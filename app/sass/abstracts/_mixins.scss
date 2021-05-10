@@ -34,15 +34,15 @@
 
 @mixin container {
     margin: 0 auto;
-    max-width: 1170px;
-    padding: 0 15px;
+    max-width: rem(1170);
+    padding: rem(0 15);
     position: relative;
-    width: 100%;
+    width: 95%;
 }
 
 @mixin container-fluid {
     margin-left: auto;
     margin-right: auto;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: rem(15);
+    padding-right: rem(15);
 }

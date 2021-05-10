@@ -7,16 +7,16 @@ $(document).on('ready', function() {
         live: true // default
     });
 
-    wow.init();
+    // wow.init();
 
-    $(window).stellar();
+    // $(window).stellar();
 
     //text-rotator
-    $(".rotate").textrotator({
-        animation: "dissolve", //  Options dissolve (default), fade, flip, flipUp, flipCube, flipCubeUp and spin.
-        separator: ",", // If you don't want commas to be the separator, you can define a new separator (|, &, * etc.) by yourself using this field.
-        speed: 2000 // How many milliseconds until the next word show.
-    });
+    // $(".rotate").textrotator({
+    //     animation: "dissolve", //  Options dissolve (default), fade, flip, flipUp, flipCube, flipCubeUp and spin.
+    //     separator: ",", // If you don't want commas to be the separator, you can define a new separator (|, &, * etc.) by yourself using this field.
+    //     speed: 2000 // How many milliseconds until the next word show.
+    // });
     //slick
     $('.testimonials').slick({
         draggable: true,
@@ -111,7 +111,6 @@ $(document).on('ready', function() {
         collapsedHeight: 240
     });
 });
-
 
 // count-down digits
 let countDown = (function() {
@@ -349,36 +348,17 @@ let momentsJs = (function() {
     }
 })();
 
-// call need scripts
-countDown.init();
+// call scripts
+
+smooth.init();
+//countDown.init();
 //timer.init();
-toggler.init();
+//toggler.init();
 //dateChanger.init();
 //tabs.init()
-smooth.init();
 //momentsJs.init()
 
 // if (window.screen.width > 1024) {
 //     parralax.init();
 //     bubbles.init();
 // }
-
-
-window.addEventListener('load', function(){
-    let loc = document.getElementById("3140935fe475d87b6db");
-    loc.value = window.location.href;
-    let ref = document.getElementById("3140935fe475d87b6dbref");
-    ref.value = document.referrer;
-    
-    let statUrl = "https://school.marketinator.org/stat/counter?ref=" + encodeURIComponent(document.referrer)
-        + "&loc=" + encodeURIComponent(document.location.href);
-    document.getElementById('gccounterImgContainer').innerHTML
-        = "<img width=1 height=1 style='display:none' id='gccounterImg' src='" + statUrl + "'/>";
-});
-
-// outline debugger
-
-[].forEach.call($$("*"), function(a) {
-    a.style.outline =
-      "1px solid #" + (~~(Math.random() * (1 << 24))).toString(16);
-});

@@ -28,53 +28,73 @@
                 <img alt="image" src="img/img1.jpg" class="img-fluid">
             </picture>
         </header>
-        <div class="row" id="count_down">
-            <div class="col-lg-3">
-                <div class="text-center counter_box p-4 mt-3 bg-white rounded">
-                    <div class="counter_icon mb-3">
-                        <i class="text_custom mdi mdi-alarm"></i>
-                    </div>
-                    <h1 class="counter_value mb-1" data-count="654">4 </h1>
-                    <p class="info_name mb-0">Working Hours</p>
-                </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-1">1</div>
+                <div class="col-sm-11">11</div>
             </div>
-            <div class="col-lg-3">
-                <div class="text-center counter_box p-4 mt-3 bg-white rounded">
-                    <div class="counter_icon mb-3">
-                        <i class="text_custom mdi mdi-box-shadow"></i>
-                    </div>
-                    <h1 class="counter_value mb-1" data-count="6400">10</h1>
-                    <p class="info_name mb-0">Completed Projects</p>
-                </div>
+            <div class="row">
+                <div class="col-md-2">2</div>
+                <div class="col-md-10">10</div>
             </div>
-            <div class="col-lg-3">
-                <div class="text-center counter_box p-4 mt-3 bg-white rounded">
-                    <div class="counter_icon mb-3">
-                        <i class="text_custom mdi mdi-account-box-outline"></i>
-                    </div>
-                    <h1 class="counter_value mb-1" data-count="2389">201</h1>
-                    <p class="info_name mb-0">No. of Clients</p>
-                </div>
+            <div class="row">
+                <div class="col-3">3</div>
+                <div class="col-9">9</div>
             </div>
-            <div class="col-lg-3">
-                <div class="text-center counter_box p-4 mt-3 bg-white rounded">
-                    <div class="counter_icon mb-3">
-                        <i class="text_custom mdi mdi-account-multiple-outline"></i>
+            <div class="row">
+                <div class="col-4">4</div>
+                <div class="col-8">8</div>
+            </div>
+            <div class="row">
+                <div class="col-5">5</div>
+                <div class="col-7">7</div>
+            </div>
+            <div class="row">
+                <div class="col-6">6</div>
+                <div class="col-6">6</div>
+            </div>
+            <div class="row">
+                <div class="col-12">12</div>
+            </div>
+            <div class="row">
+                <div class="col-6 col-md-offset-6 col-sm-offset-4">col-6 offset-md-3 & offset-sm-4</div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="count-down" id="count_down">
+                <div class="count-down__column">
+                    <div class="count-down__icon">
+                        <div class="fi flaticon-success"></div>
                     </div>
-                    <h1 class="counter_value mb-1" data-count="653">2</h1>
-                    <p class="info_name mb-0">Team Member</p>
+                    <p class="sub-title">Working Hours</p>
+                    <h1 class="count-down__value " data-count="654">4 </h1>
+                </div>
+                <div class="count-down__column">
+                    <div class="count-down__icon">
+                        <div class="fi flaticon-success"></div>
+                    </div>
+                    <p class="sub-title">Working Hours</p>
+                    <h1 class="count-down__value " data-count="6400">10</h1>
+                </div>
+                <div class="count-down__column">
+                    <div class="count-down__icon">
+                        <div class="fi flaticon-success"></div>
+                    </div>
+                    <p class="sub-title">Working Hours</p>
+                    <h1 class="count-down__value " data-count="2389">201</h1>
+                </div>
+                <div class="count-down__column">
+                    <div class="count-down__icon">
+                        <div class="fi flaticon-success"></div>
+                    </div>
+                    <p class="sub-title">Working Hours</p>
+                    <h1 class="count-down__value " data-count="653">2</h1>
                 </div>
             </div>
         </div>
-        </form>
         <form novalidate class="ea_form " action="https://olgayurkovskaya.e-autopay.com/checkout/save_order_data.php" method=post name="order_form" target="_blank" onSubmit="return EAcheckForm(this);">
-
-            <input type="text" id="name" name="name" class="ea_name ea_input ph" value="" placeholder="Введите свое имя" />
-
-            <input type="email" id="email" name="email" class="ea_email ea_input ph" value="" required="required" placeholder="Введите email" />
-
-
-
+            <input type="text" id="name" name="name" class="ea_name ea_input ea_form__ph" value="" placeholder="Введите свое имя" />
+            <input type="email" id="email" name="email" class="ea_email ea_input ea_form__ph" value="" required="required" placeholder="Введите email" />
             <input type="submit" class="ea_submit btn" name="submit" value="Оформить заказ!">
 
             <input type="hidden" name="fam" class="ea_fam ea_input" value="" />
@@ -84,7 +104,7 @@
             <input type="hidden" name="form_id" value="25100">
             <input type="hidden" name="order_page_referer" id="order_page_referer" value="" />
         </form>
-		<footer>
+        <footer>
             <div class="container-fluid">
                 <div class="center">
                     <svg xmlns="http://www.w3.org/2000/svg" class="footer__icon" viewBox="0 0 76 81" id="logo">
@@ -120,7 +140,7 @@
             </div>
         </footer>
     </main>
-    <script type="text/javascript" src="js/libs.min.js"></script>    
+    <script type="text/javascript" src="js/libs.min.js"></script>
     <!-- <script async language="javascript" src="https://olgayurkovskaya.e-autopay.com/stat.js"></script>
     <script async language="javascript" src="https://olgayurkovskaya.e-autopay.com/hit.js"></script> -->
     <script type="text/javascript" src="js/main.js"></script>
