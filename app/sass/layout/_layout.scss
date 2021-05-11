@@ -10,6 +10,8 @@ section {
 .container {
     background: pink;
     @include container;
+
+    background: green;
 }
 
 .container-fluid {

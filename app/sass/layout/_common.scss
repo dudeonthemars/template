@@ -3,13 +3,15 @@
 }
 
 .header {
+    align-items: flex-start;
+    background: url("../img/bg1_sm.jpg") no-repeat 50% 50%/cover;
     display: flex;
     justify-content: flex-end;
-    align-items: flex-start;
     text-align: center;
 
-    @include media(sm){
+    @include media(sm) {
         align-items: center;
+        background: url("../img/bg1.jpg") no-repeat 50% 50%/cover fixed;
     }
 
     &__content {
@@ -17,12 +19,8 @@
         padding: rem(32 16);
         width: 100%;
 
-        @include media(sm){
+        @include media(sm) {
             width: 50%;
         }
-    }
-
-    h1 {
-        font-size: rem(66);
     }
 }
