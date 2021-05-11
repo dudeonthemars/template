@@ -56,6 +56,16 @@
             background-color: colors(white);
         }
     }
+    &_orange {
+        background-color: colors(orange);
+        border: 1px solid colors(black);
+        color: colors(white);
+        text-shadow: none !important;
+
+        &::after {
+            background-color: colors(orange);
+        }
+    }
 }
 
 .btn-link {

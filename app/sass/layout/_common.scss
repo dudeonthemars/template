@@ -1,0 +1,28 @@
+#content1 {
+    min-height: 100vh;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    text-align: center;
+
+    @include media(sm){
+        align-items: center;
+    }
+
+    &__content {
+        background: pink;
+        padding: rem(32 16);
+        width: 100%;
+
+        @include media(sm){
+            width: 50%;
+        }
+    }
+
+    h1 {
+        font-size: rem(66);
+    }
+}
