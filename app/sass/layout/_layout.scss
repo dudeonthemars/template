@@ -9,6 +9,8 @@ section {
 
 .container {
     @include container;
+    
+    background: green;
 }
 
 .container-fluid {
