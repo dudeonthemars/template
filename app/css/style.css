@@ -2521,6 +2521,11 @@ section {
 }
 
 .header {
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  background: url("../img/bg1_sm.jpg") no-repeat 50% 50%/cover;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2529,19 +2534,12 @@ section {
   -webkit-justify-content: flex-end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  -webkit-box-align: start;
-  -webkit-align-items: flex-start;
-      -ms-flex-align: start;
-          align-items: flex-start;
   text-align: center;
 }
 .header__content {
   background: pink;
   padding: 2rem 1rem;
   width: 100%;
-}
-.header h1 {
-  font-size: 4.125rem;
 }
 @media all and (min-width: 768px){
   html{
@@ -3017,6 +3015,7 @@ section {
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
+    background: url("../img/bg1.jpg") no-repeat 50% 50%/cover fixed;
   }
   .header__content{
     width: 50%;
@@ -5192,12 +5191,13 @@ section {
 @supports (-webkit-appearance:none){
 .slick-prev.slick-arrow{background:url(../img/left.webp) no-repeat 50% 50%/contain}
 .slick-next.slick-arrow{background:url(../img/right.webp) no-repeat 50% 50%/contain}
+.header{background:url("../img/bg1_sm.webp") no-repeat 50% 50%/cover}
 }
 
  @media all and (min-width: 768px){
 
 @supports (-webkit-appearance:none){
-
+.header{background:url("../img/bg1.webp") no-repeat 50% 50%/cover fixed}
 }
 
 }
