@@ -2594,11 +2594,12 @@ section {
 }
 
 .content-2 {
+  background: url("../img/bg2.jpg") no-repeat 50% 50%/cover, rgba(255, 255, 255, 0.5);
+  background-blend-mode: color;
   padding-bottom: 10vh;
   padding-top: 10vh;
 }
 .content-2__reviews {
-  margin-top: 3.125rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2606,30 +2607,26 @@ section {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
   -webkit-justify-content: space-around;
       -ms-flex-pack: distribute;
           justify-content: space-around;
-  font-family: "Montserrat", sans-serif;
-  font-size: 1rem;
   letter-spacing: 0.0625rem;
+  margin-top: 3.125rem;
 }
 .content-2__rev-item {
-  width: 28.125rem;
-  margin-bottom: 2rem;
-  text-align: center;
   background: url("../img/cloud-blue.png") no-repeat 50% 0/contain, rgba(255, 255, 255, 0.5);
   background-blend-mode: color;
+  margin-bottom: 2rem;
+  text-align: center;
+  width: 28.125rem;
 }
 .content-2__rev-item .fi {
+  color: #ff3e33;
   font-size: 3.125rem;
   margin-bottom: 1.25rem;
-  color: #ff3e33;
 }
-
-.content-3 {
-  background-color: #ccc;
-}
-
 @media all and (min-width: 768px){
   html{
     font-size: 100%;
@@ -3119,7 +3116,6 @@ section {
     font-size: 1.25rem;
   }
 }
-
 @media all and (min-width: 350px){
   .h-padding-top-12-xxs{
     padding-top: 12px;
@@ -3458,7 +3454,6 @@ section {
     margin-right: 100px;
   }
 }
-
 @media all and (min-width: 450px){
   .h-padding-top-12-xs{
     padding-top: 12px;
@@ -3797,7 +3792,6 @@ section {
     margin-right: 100px;
   }
 }
-
 @media all and (min-width: 992px){
   .h-padding-top-12-md{
     padding-top: 12px;
@@ -4250,7 +4244,6 @@ section {
     width: 12.5rem;
   }
 }
-
 @media all and (min-width: 1200px){
   .h-padding-top-12-lg{
     padding-top: 12px;
@@ -4611,7 +4604,6 @@ section {
     font-size: 2.25rem;
   }
 }
-
 @media all and (min-width: 1920px){
   .h-padding-top-12-hd{
     padding-top: 12px;
@@ -4950,7 +4942,6 @@ section {
     margin-right: 100px;
   }
 }
-
 @media all and (min-width: 1921px){
   .h-padding-top-12-xl{
     padding-top: 12px;
@@ -5295,7 +5286,6 @@ section {
     font-size: 3rem;
   }
 }
-
 @media screen and (-webkit-min-device-pixel-ratio: 0){
   @font-face{
     font-family: "Flaticon";
@@ -5307,6 +5297,7 @@ section {
 .slick-next.slick-arrow{background:url(../img/right.webp) no-repeat 50% 50%/contain}
 .cloud{background:url("../img/cloud.webp") no-repeat 50% 50%/contain}
 .header{background:url("../img/bg1_sm.webp") no-repeat 50% 50%/cover}
+.content-2{background:url("../img/bg2.webp") no-repeat 50% 50%/cover, rgba(255, 255, 255, 0.5)}
 .content-2__rev-item{background:url("../img/cloud-blue.webp") no-repeat 50% 0/contain, rgba(255, 255, 255, 0.5)}
 }
 

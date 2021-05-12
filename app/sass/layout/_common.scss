@@ -82,35 +82,32 @@
 }
 
 .content-2 {
+    background: url("../img/bg2.jpg") no-repeat 50% 50%/cover, rgba(#fff, 0.5);
+    background-blend-mode: color;
     padding-bottom: 10vh;
     padding-top: 10vh;
 
     &__reviews {
-        margin-top: rem(50);
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-around;
         font-family: $font-family-normal;
         font-size: rem(16);
+        justify-content: space-around;
         letter-spacing: rem(1);
+        margin-top: rem(50);
     }
 
     &__rev-item {
-        width: rem(450);
+        background: url("../img/cloud-blue.png") no-repeat 50% 0 /contain, rgba(#fff, 0.5);
+        background-blend-mode: color;
         margin-bottom: rem(32);
         text-align: center;
-        background: url("../img/cloud-blue.png") no-repeat 50% 0 /contain, rgba( #fff, 0.5);
-        background-blend-mode: color;
-
+        width: rem(450);
 
         .fi {
+            color: colors(orange-red);
             font-size: rem(50);
             margin-bottom: rem(20);
-            color: colors(orange-red);
         }
     }
-}
-
-.content-3 {
-    background-color: #ccc
 }
