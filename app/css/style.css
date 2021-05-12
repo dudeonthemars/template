@@ -2570,7 +2570,7 @@ section {
 .header__h1 {
   color: #fff;
   font-family: "Roboto Condensed", sans-serif;
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: bold;
   letter-spacing: 0.125rem;
   line-height: 1.2;
@@ -2596,6 +2596,38 @@ section {
 .content-2 {
   padding-bottom: 10vh;
   padding-top: 10vh;
+}
+.content-2__reviews {
+  margin-top: 3.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.0625rem;
+}
+.content-2__rev-item {
+  width: 28.125rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  background: url("../img/cloud-blue.png") no-repeat 50% 0/contain, rgba(255, 255, 255, 0.5);
+  background-blend-mode: color;
+}
+.content-2__rev-item .fi {
+  font-size: 3.125rem;
+  margin-bottom: 1.25rem;
+  color: #ff3e33;
+}
+
+.content-3 {
+  background-color: #ccc;
 }
 
 @media all and (min-width: 768px){
@@ -5275,6 +5307,7 @@ section {
 .slick-next.slick-arrow{background:url(../img/right.webp) no-repeat 50% 50%/contain}
 .cloud{background:url("../img/cloud.webp") no-repeat 50% 50%/contain}
 .header{background:url("../img/bg1_sm.webp") no-repeat 50% 50%/cover}
+.content-2__rev-item{background:url("../img/cloud-blue.webp") no-repeat 50% 0/contain, rgba(255, 255, 255, 0.5)}
 }
 
  @media all and (min-width: 768px){

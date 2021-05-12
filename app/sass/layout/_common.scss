@@ -34,7 +34,7 @@
     &__h1 {
         color: colors(white);
         font-family: $font-family-alt;
-        font-size: rem(48);
+        font-size: rem(32);
         font-weight: bold;
         letter-spacing: rem(2);
         line-height: 1.2;
@@ -84,4 +84,33 @@
 .content-2 {
     padding-bottom: 10vh;
     padding-top: 10vh;
+
+    &__reviews {
+        margin-top: rem(50);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        font-family: $font-family-normal;
+        font-size: rem(16);
+        letter-spacing: rem(1);
+    }
+
+    &__rev-item {
+        width: rem(450);
+        margin-bottom: rem(32);
+        text-align: center;
+        background: url("../img/cloud-blue.png") no-repeat 50% 0 /contain, rgba( #fff, 0.5);
+        background-blend-mode: color;
+
+
+        .fi {
+            font-size: rem(50);
+            margin-bottom: rem(20);
+            color: colors(orange-red);
+        }
+    }
+}
+
+.content-3 {
+    background-color: #ccc
 }
