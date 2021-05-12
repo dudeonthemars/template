@@ -2672,6 +2672,7 @@ section {
   max-width: 37.5rem;
   margin: 3rem auto 0.75rem;
   text-align: center;
+  background: url(../img/cloud-blue.png) no-repeat 0% 0%/contain;
 }
 @media all and (min-width: 768px){
   html{
@@ -5359,6 +5360,7 @@ section {
 .header{background:url("../img/bg1_sm.webp") no-repeat 50% 50%/cover}
 .content-2{background:url("../img/bg2.webp") no-repeat 50% 50%/cover, rgba(255, 255, 255, 0.5)}
 .content-2__rev-item{background:url("../img/cloud-blue.webp") no-repeat 50% 0/contain, rgba(255, 255, 255, 0.5)}
+.content-3__form{background:url(../img/cloud-blue.webp) no-repeat 0% 0%/contain}
 }
 
  @media all and (min-width: 768px){
