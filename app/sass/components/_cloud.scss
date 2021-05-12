@@ -1,0 +1,14 @@
+.cloud {
+    align-items: center;
+    background: url("../img/cloud.png") no-repeat 50% 50%/contain;
+    display: flex;
+    height: rem(120);
+    justify-content: center;
+    margin: rem(24) auto;
+    width: rem(150);
+
+    &__icon {
+        color: colors(white);
+        font-size: rem(50);
+    }
+}

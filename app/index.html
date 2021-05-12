@@ -14,9 +14,8 @@
     <meta property="og:type" content="article" />
     <meta property="og:image" content="img/og.jpg" />
     <link rel="shortcut icon" href="img/ico.png">
-    <link
-        href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:400,400i,700,900|Roboto+Slab:400,700&display=swap&subset=cyrillic"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,400;1,700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
     <link rel="stylesheet" href="css/style.css">
 
@@ -30,29 +29,50 @@
                 <h1 class="header__h1">КАК СОХРАНЯТЬ УСТОЙЧИВОСТЬ
                 В НЕУСТОЙЧИВОМ МИРЕ
                 </h1>
+                <picture>
+                    <source srcset="img/yoga.webp" alt="image">
+                    <img alt="image" src="img/yoga.png" class="img-fluid header__image" loading="lazy">
+                </picture>
                 <h3 class="header__h3">20 мая в 19:00 Мск</h3>
-                <div class="header__btn"><a href="#form" class="btn btn_orange">Участвовать бесплатно</a></div>
+                <div class="header__btn">
+                    <a href="#form" class="btn btn_orange">
+                        <span class="fi flaticon-like"></span> Участвовать бесплатно
+                    </a>
+                </div>
             </div>
         </header>
 
-        <section id="content2">
+        <section id="content2" class="content-2">
             <div class="container">
-                Смотрите, что пишут мои читательницы:
-
-
-                «Познакомились в интернете, летали друг к другу в гости, назначили дату свадьбы. За месяц до свадьбы
-                границы перекрыли...»
-
-                «Клиент наслушался бизнес-гуру и требует работать строго по утрам. Я не для того уходила из офиса во
-                фриланс...»
-
-                «Дети целыми днями дома, муж тоже все время хлопает холодильником. Не могу работать в такой обстановке,
-                эффективность упала ниже плинтуса…»
-
-                «Мою напарницу сократили, а ее обязанности свалили на меня. Если откажусь, меня выгонят с работы...»
-
-                «Мой бизнес связан с путешествиями, теперь все сломалось. Удручает, что планировать вдолгую невозможно,
-                мир сошел с ума…»
+                <h2 class="title text-center">
+                    Смотрите, что пишут мои читательницы:
+                </h2>
+                <div class="cloud">
+                    <div class="cloud__icon">
+                        <div class="fi flaticon-smartphone"></div>
+                    </div>
+                </div>
+                <div class="content-2__reviews">
+                    <div class="content-2__rev-item">
+                        «Познакомились в интернете, летали друг к другу в гости, назначили дату свадьбы. За месяц до свадьбы
+                        границы перекрыли...»
+                    </div>
+                    <div class="content-2__rev-item">
+                        «Клиент наслушался бизнес-гуру и требует работать строго по утрам. Я не для того уходила из офиса во
+                        фриланс...»
+                    </div>
+                    <div class="content-2__rev-item">
+                        «Дети целыми днями дома, муж тоже все время хлопает холодильником. Не могу работать в такой обстановке,
+                        эффективность упала ниже плинтуса…»
+                    </div>
+                    <div class="content-2__rev-item">
+                        «Мою напарницу сократили, а ее обязанности свалили на меня. Если откажусь, меня выгонят с работы...»
+                    </div>
+                    <div class="content-2__rev-item">
+                        «Мой бизнес связан с путешествиями, теперь все сломалось. Удручает, что планировать вдолгую невозможно,
+                        мир сошел с ума…»
+                    </div>
+                </div>
                 <picture>
                     <source srcset="img/img1.webp" alt="image">
                     <img alt="image" src="img/img1.jpg" class="img-fluid">
