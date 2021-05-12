@@ -2214,13 +2214,11 @@ section {
 }
 
 .container {
-  background: pink;
   margin: 0 auto;
   max-width: 73.125rem;
   padding: 0rem 0.9375rem;
   position: relative;
   width: 95%;
-  background: green;
 }
 
 .container-fluid {
@@ -2540,6 +2538,33 @@ section {
 .header__content {
   padding: 2rem 1rem;
   width: 100%;
+  padding: 2rem 1rem 1rem;
+}
+.header__btn {
+  text-align: center;
+  margin: 3.125rem 0.625rem;
+}
+.header__h1 {
+  font-family: "Acrom", sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 0.125rem;
+  line-height: 1.2;
+  color: #fff;
+  padding: 1.875rem 1.875rem;
+}
+.header__h2 {
+  font-family: "Pribambas", sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.1;
+  color: #fff;
+}
+.header__h3 {
+  font-family: "Acrom", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 0.0625rem;
+  color: #fff;
 }
 @media all and (min-width: 768px){
   html{
@@ -3019,6 +3044,15 @@ section {
   }
   .header__content{
     width: 50%;
+    margin-right: 3.125rem;
+    padding: 5rem 1.875rem;
+    border: 0.5rem solid white;
+  }
+  .header__h1{
+    font-size: 2.375rem;
+  }
+  .header__h2{
+    font-size: 1.25rem;
   }
 }
 @media all and (min-width: 350px){
@@ -4499,6 +4533,9 @@ section {
     fill: transparent;
     stroke: transparent;
   }
+  .header__h2{
+    font-size: 2.25rem;
+  }
 }
 @media all and (min-width: 1920px){
   .h-padding-top-12-hd{
@@ -5179,6 +5216,9 @@ section {
     font-size: 5rem;
   }
   .title{
+    font-size: 3rem;
+  }
+  .header__h1{
     font-size: 3rem;
   }
 }

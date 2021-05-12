@@ -9,6 +9,7 @@
     justify-content: flex-end;
     text-align: center;
 
+
     @include media(sm) {
         align-items: center;
         background: url("../img/bg1.jpg") no-repeat 50% 50%/cover fixed;
@@ -17,9 +18,60 @@
     &__content {
         padding: rem(32 16);
         width: 100%;
+        padding: rem(32 16 16);
+
 
         @include media(sm) {
             width: 50%;
+            margin-right: rem(50);
+            padding: rem(80 30);
+            border: rem(8) solid white;
         }
+    }
+
+    &__btn {
+        text-align: center;
+        margin: rem(50 10);
+    }
+
+    &__h1 {
+        font-family: $font-family-normal;
+        font-size: rem(32);
+        font-weight: bold;
+        letter-spacing: rem(2);
+        line-height: 1.2;
+        color: colors(white);
+        padding: rem(30 30);
+
+        @include media(sm) {
+            font-size: rem(38);
+        }
+
+        @include media(xl) {
+            font-size: rem(48);
+        }
+    }
+
+    &__h2 {
+        font-family: $font-family-alt;
+        font-size: rem(20);
+        line-height: 1.1;
+        color: colors(white);
+
+        @include media(sm) {
+        font-size: rem(20);
+        }
+
+        @include media(lg) {
+        font-size: rem(36);
+        }
+    }
+
+    &__h3 {
+        font-family: $font-family-normal;
+        font-size: rem(24);
+        font-weight: bold;
+        letter-spacing: rem(1);
+        color: colors(white);
     }
 }
