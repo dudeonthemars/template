@@ -70,6 +70,7 @@
         font-size: rem(24);
         font-weight: bold;
         letter-spacing: rem(1);
+        padding-top: rem(10);
     }
 
     &__image {
@@ -108,6 +109,60 @@
             color: colors(orange-red);
             font-size: rem(50);
             margin-bottom: rem(20);
+        }
+    }
+}
+.content-3 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background: colors(gray-light);
+
+    @include media(md) {
+        flex-wrap: nowrap;
+    }
+
+    &__img {
+        width: 100%;
+
+        @include media(md) {
+            width: 50%;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__text {
+        padding: rem(24);
+        width: 100%;
+
+        @include media(md) {
+            width: 50%;
+        }
+
+        p + p {
+            padding-top: rem(18);
+        }
+    }
+
+    &__border {
+        border: rem(8) solid colors(orange);
+        padding: rem(0 24 24);
+        border-radius:rem(5);
+        background: colors(white);
+        box-shadow: $bs;
+    }
+
+    &__form {
+        display: flex;
+        max-width: rem(600);
+        margin: rem(48) auto rem(12);
+        text-align: center;
+
+        @include media(md) {
+            margin: rem(32) auto rem(12);
         }
     }
 }
