@@ -1,11 +1,11 @@
-$(document).on('ready', function() {
+$(document).ready(function() {
 
-    wow = new WOW({
-        boxClass: 'wow', // default
-        offset: 200, // default
-        mobile: false, // default
-        live: true // default
-    });
+    // wow = new WOW({
+    //     boxClass: 'wow', // default
+    //     offset: 200, // default
+    //     mobile: false, // default
+    //     live: true // default
+    // });
 
     // wow.init();
 
@@ -17,56 +17,14 @@ $(document).on('ready', function() {
     //     separator: ",", // If you don't want commas to be the separator, you can define a new separator (|, &, * etc.) by yourself using this field.
     //     speed: 2000 // How many milliseconds until the next word show.
     // });
+
     //slick
-    $('.testimonials').slick({
+    $('.content-2__list2').slick({
         draggable: true,
         infinite: true,
         dots: false,
         autoplay: false,
         speed: 900,
-        cssEase: 'ease-in-out',
-        lazyLoad: 'ondemand',
-        slidesToShow: 2,
-        responsive: [{
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    dots: false,
-                    arrows: false,
-                    infinite: true,
-
-                }
-            },
-            {
-                breakpoint: 760,
-                settings: {
-                    slidesToShow: 1,
-                    dots: false,
-                    arrows: false,
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 580,
-                settings: {
-                    dots: false,
-                    arrows: true,
-                    slidesToShow: 1,
-                }
-            }
-
-        ]
-    });
-
-
-    $('.testimonials2').slick({
-        draggable: true,
-        infinite: true,
-        dots: false,
-        autoplay: false,
-        speed: 900,
-        adaptiveHeight: true,
         cssEase: 'ease-in-out',
         lazyLoad: 'ondemand',
         slidesToShow: 1,
@@ -104,12 +62,13 @@ $(document).on('ready', function() {
 
     //readmore
 
-    $('.testimonials p').readmore({
-        speed: 300,
-        moreLink: '<a href="#">Читать полностью</a>',
-        lessLink: '<a href="#">Закрыть</a>',
-        collapsedHeight: 240
-    });
+    // $('.testimonials p').readmore({
+    //     speed: 300,
+    //     moreLink: '<a href="#">Читать полностью</a>',
+    //     lessLink: '<a href="#">Закрыть</a>',
+    //     collapsedHeight: 240
+    // });
+
 });
 
 // count-down digits
@@ -282,7 +241,7 @@ let tabs = (function() {
 let smooth = (function() {
     return {
         init: function() {
-            const selectors = document.querySelectorAll('.smooth');
+            const selectors = document.querySelectorAll('.js-smooth');
 
             for (const link of selectors) {
                 link.addEventListener('click', scrollBehavior);

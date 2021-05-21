@@ -58,3 +58,28 @@
         margin: rem(40 0);
     }
 }
+
+.content-2 {
+    padding-bottom: 10vh;
+    padding-top: 10vh;
+
+    &__image {
+        padding: rem(24 12);
+
+        img {
+            border-radius: rem(5);
+            box-shadow: $bs-sm;
+        }
+    }
+
+    &__text {
+        padding: rem(24 12);
+    }
+
+    &__list {
+        li {
+            font-size: 24px;
+            padding-bottom: 20px;
+        }
+    }
+}
