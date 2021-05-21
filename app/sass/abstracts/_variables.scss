@@ -1,3 +1,7 @@
+:root {
+    --green: #89d80b;
+}
+
 // colors
 $colors: (
     white : #fff,
@@ -7,14 +11,15 @@ $colors: (
     gray-light: #f4f4f4,
     black: #000,
     grey-dark: #222,
-    yellow: #ebeb12,
+    yellow: #ffb42b,
     purple: #4c305b,
     orange-red: #ff3e33
 );
 
 // gradients
 $gradient: (
-    1: #{#ccc, #ff3e33}
+    1: #{colors(yellow), darken(colors(yellow), 18%), colors(yellow)},
+    2: #{colors(green), darken(colors(green), 18%), colors(green)}
 );
 
 //font

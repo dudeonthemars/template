@@ -56,14 +56,26 @@
             background-color: colors(white);
         }
     }
-    &_orange {
-        background-color: colors(orange);
-        border: 1px solid colors(black);
+
+    &_yellow {
+        @include grad(0, 1);
+
         color: colors(white);
         text-shadow: none !important;
 
         &::after {
-            background-color: colors(orange);
+            background-color: colors(yellow);
+        }
+    }
+
+    &_green {
+        @include grad(0, 2);
+
+        color: colors(white);
+        text-shadow: none !important;
+
+        &::after {
+            background-color: colors(green);
         }
     }
 }

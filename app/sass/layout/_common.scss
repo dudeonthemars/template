@@ -1,49 +1,60 @@
 .content-1 {
-    min-height: 100vh;
+    align-items: center;
+    background: url("../img/bg1.jpg") no-repeat 35% 100%/cover fixed;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    padding-left: 5%;
-    background-color: colors(purple);
+    min-height: 100vh;
+    padding: rem(0 15);
+
+    @include media(md) {
+        background: url("../img/bg1.jpg") no-repeat 90% 100%/cover fixed;
+    }
 
     &__text {
-        width: 50%;
-        text-align: center;
         color: white;
-        text-shadow: 0 .3rem 2rem rgba(colors(black), .5);
         font-weight: 700;
+        text-align: center;
+        text-shadow: 0 .3rem 2rem rgba(colors(black), .5);
 
-        & h1 {
-            color: colors(green);
+        @include media(md) {
+            width: 60%;
         }
 
-        & h2 {
-            padding: rem(45) 0;
+        h1 {
+            color: colors(yellow);
+        }
+
+        h2 {
             font-size: rem(30);
             line-height: rem(40);
-
+            padding: rem(45 0);
         }
-
-        & h3 {
-            padding-bottom: rem(25);
-        }
-
     }
 
-    &__img {
-        width: 50%;
+    .content-1__olga {
+        margin: rem(24) auto 0;
+        width: rem(200);
+
+        @include media(md) {
+            display: none;
+        }
+
+        img {
+            border-radius: 50%;
+            box-shadow: rem(0 0 25 -9) colors(yellow);
+        }
     }
 
-    &__olga {
-        max-height: 720px;
-        box-shadow: 0 .3rem 2rem rgba(colors(black), .5);
+    &__dates {
+        @include small-title;
+
+        border: 2px solid colors(green);
+        border-radius: rem(10);
+        display: inline-block;
+        padding: rem(24);
     }
 
     &__btn {
-        background-color: white;
-        margin: rem(40) 0;
-        color: colors(blue);
-        font-weight: 700;
+        margin: rem(40 0);
     }
 }
-
