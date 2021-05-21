@@ -1,3 +1,12 @@
+/*
+    <div class="bg-video">
+        <video class="bg-video__content" muted="" autoplay="" loop="">
+            <source src="img/oy1.mp4" type="video/mp4">
+            <source src="img/oy2.webm" type="video/webm">
+        </video>
+    </div>
+*/
+
 .bg-video {
     height: 100%;
     left: 0;
@@ -10,8 +19,8 @@
 
     &__content {
         height: 100%;
-        width: 100%;
         -o-object-fit: cover;
         object-fit: cover;
+        width: 100%;
     }
 }
