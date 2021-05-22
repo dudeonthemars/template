@@ -63,17 +63,31 @@
     padding-bottom: 10vh;
     padding-top: 10vh;
 
-    &__image {
-        padding: rem(24 12);
+    &__top {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
 
-        img {
-            border-radius: rem(5);
-            box-shadow: $bs-sm;
+        &-image {
+            padding: rem(24 12);
+
+            @include media(sm) {
+                width: 30%;
+            }
+        }
+
+        &-text {
+            padding: rem(24 12);
+
+            @include media(sm) {
+                width: 70%;
+            }
         }
     }
 
-    &__text {
-        padding: rem(24 12);
+    &__bottom {
+
     }
 
     &__list {
