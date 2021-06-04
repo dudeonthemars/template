@@ -1,6 +1,19 @@
+@mixin bordered {
+    @include small-title;
+
+    border: 2px solid colors(green);
+    border-radius: rem(10);
+    display: inline-block;
+    padding: rem(24);
+}
+
+.bordered {
+    @include bordered;
+}
+
 .content-1 {
     align-items: center;
-    background: url("../img/bg1.jpg") no-repeat 35% 100%/cover fixed;
+    background: url("../img/bg1.jpg") no-repeat 35% 100%/cover;
     display: flex;
     flex-wrap: wrap;
     min-height: 100vh;
@@ -32,7 +45,7 @@
     }
 
     .content-1__olga {
-        margin: rem(24) auto 0;
+        margin: rem(24) auto;
         width: rem(200);
 
         @include media(md) {
@@ -46,12 +59,7 @@
     }
 
     &__dates {
-        @include small-title;
-
-        border: 2px solid colors(green);
-        border-radius: rem(10);
-        display: inline-block;
-        padding: rem(24);
+        @include bordered;
     }
 
     &__btn {
@@ -60,8 +68,13 @@
 }
 
 .content-2 {
+    background: url("../img/bg2.jpg") no-repeat 0 50%/cover;
     padding-bottom: 10vh;
     padding-top: 10vh;
+
+    @include media(sm) {
+        background: url("../img/bg2.jpg") no-repeat 50% 50%/cover;
+    }
 
     &__top {
         align-items: center;
@@ -71,6 +84,8 @@
 
         &-image {
             padding: rem(24 12);
+            margin: auto;
+            width: 50%;
 
             @include media(sm) {
                 width: 30%;
@@ -86,14 +101,155 @@
         }
     }
 
-    &__bottom {
-
-    }
-
     &__list {
         li {
-            font-size: 24px;
-            padding-bottom: 20px;
+            @include trans;
+
+            background: #fff;
+            border-bottom: 1px solid var(--green);
+            border-left: 1px solid var(--green);
+            border-radius: rem(16);
+            box-shadow: $bs-sm;
+            font-size: rem(24);
+            margin-bottom: rem(16);
+            padding: rem(16);
+
+            @include media(md) {
+                box-shadow: none;
+
+                &:hover {
+                    box-shadow: $bs-sm;
+                    transform: translateY(-3px) scale(1.05);
+                }
+            }
+        }
+    }
+
+    &__bottom {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: rem(32);
+        margin-top: rem(32);
+    }
+
+    &__bottom-text {
+        background: #fff;
+        border-radius: rem(10);
+        box-shadow: $bs-neuro;
+        font-size: rem(24);
+        padding: rem(24);
+
+        @include media(sm) {
+            width: 60%;
+        }
+    }
+
+    &__bottom-image {
+        padding: rem(24 12);
+
+        img {
+            border-radius: rem(10);
+        }
+
+        @include media(sm) {
+            width: 40%;
+        }
+    }
+
+    .bordered {
+        background: #fff;
+        box-shadow: $bs-neuro;
+    }
+}
+
+.content-3 {
+    background: linear-gradient(180deg, #fff, colors(gray-light));
+    padding-bottom: 10vh;
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        list-style: none;
+        margin: rem(48) auto;
+    }
+
+    &__list-item {
+        background: #fff;
+        border-radius: rem(10);
+        box-shadow: $bs-neuro;
+        font-size: rem(24);
+        margin-bottom: rem(18);
+        padding: rem(24 0);
+        text-align: center;
+
+        @include media(md) {
+            width: 48%;
+        }
+
+        &:hover .content-3__list-icon {
+            @include grad(130, 1);
+
+            transform: rotateY(360deg);
+        }
+    }
+
+    &__list-icon {
+        @include trans(all, .35s, ease-in-out,);
+        @include grad(130, 2);
+
+        border-radius: 50%;
+        box-shadow: $bs-sm;
+        color: #fff;
+        display: inline-block;
+        font-size: rem(64);
+        height: rem(80);
+        line-height: rem(84);
+        margin-bottom: rem(24);
+        width: rem(80);
+    }
+
+    .bordered {
+        background: #fff;
+        box-shadow: $bs-neuro;
+    }
+}
+
+.content-4 {
+    background: linear-gradient(0deg, #fff, colors(gray-light));
+    padding-bottom: 10vh;
+
+    &__wrapper {
+        @include container;
+
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        @include media(md) {
+            justify-content: space-around;
+        }
+    }
+
+    &__text {
+        margin-bottom: rem(48);
+        padding: rem(24);
+
+        @include media(md) {
+            width: 60%;
+        }
+    }
+
+    &__image {
+        img {
+            border-radius: rem(10);
+            box-shadow: $bs-sm;
+        }
+        @include media(md) {
+            width: 40%;
         }
     }
 }

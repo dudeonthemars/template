@@ -1,5 +1,6 @@
 :root {
     --green: #89d80b;
+    --yellow: #ffb42b;
 }
 
 // colors
@@ -12,21 +13,21 @@ $colors: (
     black: #000,
     grey-dark: #222,
     yellow: #ffb42b,
-    purple: #4c305b,
+    purple: #9d88a8,
     orange-red: #ff3e33
 );
 
 // gradients
 $gradient: (
-    1: #{colors(yellow), darken(colors(yellow), 18%), colors(yellow)},
-    2: #{colors(green), darken(colors(green), 18%), colors(green)}
+    1: #{colors(yellow), darken(colors(yellow), 19%), colors(yellow)},
+    2: #{colors(green), darken(colors(green), 19%), colors(green)}
 );
 
 //font
 $font-size: rem(16);
 
-$font-family-normal: 'Acrom', sans-serif;
-$font-family-alt: 'Pribambas', sans-serif;
+$font-family-normal: 'Raleway', sans-serif;;
+$font-family-alt: 'Acrom', sans-serif;
 
 //shadows
 

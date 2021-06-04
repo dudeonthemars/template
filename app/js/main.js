@@ -310,7 +310,7 @@ let momentsJs = (function() {
 // call scripts
 
 smooth.init();
-//countDown.init();
+countDown.init();
 //timer.init();
 //toggler.init();
 //dateChanger.init();

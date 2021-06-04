@@ -1,9 +1,19 @@
 .ea_form {
+    margin: rem(48) auto;
+    max-width: rem(600);
+    text-align: center;
+
     &__ph {
-        border: 2px solid colors(black);
+        border: 2px solid colors(green);
         border-radius: 30px;
+        box-shadow: $bs-neuro;
         margin: 0.5rem auto;
         padding: 1rem;
+        width: 90%;
+    }
+
+    .btn {
+        margin-top: rem(18);
         width: 90%;
     }
 }
