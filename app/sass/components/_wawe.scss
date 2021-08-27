@@ -1,0 +1,12 @@
+.wawe {
+    position: absolute;
+    z-index: 0;
+
+    &_bottom {
+        bottom: 0;
+    }
+
+    &_top {
+        top: 0;
+    }
+}

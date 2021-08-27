@@ -2,6 +2,7 @@ footer {
     background: colors(grey-dark);
     color: colors(white);
     padding: 2rem 1rem;
+    text-align: center;
 
     @include media(lg) {
         &:hover {

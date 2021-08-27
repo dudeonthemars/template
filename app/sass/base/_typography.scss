@@ -2,7 +2,6 @@
 @mixin hero {
     font-family: $font-family-normal;
     font-size: rem(42);
-    letter-spacing: rem(2);
     line-height: 1.2;
     text-transform: uppercase;
 
@@ -21,8 +20,7 @@
     font-family: $font-family-normal;
     font-size: rem(32);
     font-weight: bold;
-    letter-spacing: rem(2);
-    line-height: 1.2;
+    line-height: 1.12;
 
     @include media(sm) {
         font-size: rem(38);
@@ -54,7 +52,7 @@
 @mixin sub-title {
     font-family: $font-family-normal;
     font-size: rem(20);
-    letter-spacing: rem(2);
+    
     line-height: rem(24);
     text-transform: uppercase;
 }

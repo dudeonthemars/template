@@ -12,7 +12,7 @@ $text-alignments: (
 // .c-white
 
 @each $key, $value in $colors {
-    .c-#{$key}{
+    .c-#{"" + $key}{
         color: $value;
     }
 }

@@ -14,6 +14,7 @@
         text-transform: uppercase;
         transition: all .2s;
         white-space: unset;
+        z-index: 1;
     }
 
     &:hover {
@@ -54,6 +55,28 @@
 
         &::after {
             background-color: colors(white);
+        }
+    }
+
+    &_green {
+        @include grad(315, 2);
+
+        color: colors(white);
+        text-shadow: none !important;
+
+        &::after {
+            @include grad(-315, 2);
+        }
+    }
+
+    &_red {
+        @include grad(315, 1);
+
+        color: colors(white);
+        text-shadow: none !important;
+
+        &::after {
+            @include grad(-315, 1);
         }
     }
 }
