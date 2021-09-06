@@ -59,24 +59,22 @@
     }
 
     &_green {
-        @include grad(315, 2);
-
+        background: colors(green);
         color: colors(white);
         text-shadow: none !important;
 
         &::after {
-            @include grad(-315, 2);
+            background: colors(green);
         }
     }
 
     &_red {
-        @include grad(315, 1);
-
+        background: colors(red);
         color: colors(white);
         text-shadow: none !important;
 
         &::after {
-            @include grad(-315, 1);
+            background: colors(red);
         }
     }
 }

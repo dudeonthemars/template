@@ -3,28 +3,29 @@ $colors: (
     white : #fff,
     orange: #f37b06,
     green: #20bf55,
-    blue:  #01baef,
+    blue:  #1bb0d6,
     gray-light: #f4f4f4,
     black: #000,
     grey-dark: #222,
     yellow: #ebeb12,
     purple: #4c305b,
-    orange-red: #ff3e33
+    orange-red: #ff3e33,
+    red: #e8366a
 );
 
 // gradients
 $gradient: (
-    1: #{#f37b06, #ff3e33},
+    1: #{#ff3e33, #e8366a},
     2: #{#20bf55, #01baef}
 );
 
 //font
 $font-size: rem(16);
 
-$font-family-normal: 'Acrom', sans-serif;
+$font-family-normal: 'Roboto', sans-serif;
 $font-family-alt: 'Pribambas', sans-serif;
 
-//shadows
+//shadows 
 
 $bs: 0 0 rem(30) rem(20) rgba(colors(black), 0.2);
 $bs-sm:  0 0 rem(30) rem(8) rgba(colors(black), 0.2);
