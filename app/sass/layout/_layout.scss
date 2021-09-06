@@ -68,3 +68,40 @@ $columns: 12;
         margin-left: 100% / $columns * $i;
     }
 }
+
+/*
+
+<div class="container">
+            <div class="row">
+                <div class="col-sm-1">1</div>
+                <div class="col-sm-11">11</div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">2</div>
+                <div class="col-md-10">10</div>
+            </div>
+            <div class="row">
+                <div class="col-3">3</div>
+                <div class="col-9">9</div>
+            </div>
+            <div class="row">
+                <div class="col-4">4</div>
+                <div class="col-8">8</div>
+            </div>
+            <div class="row">
+                <div class="col-5">5</div>
+                <div class="col-7">7</div>
+            </div>
+            <div class="row">
+                <div class="col-6">6</div>
+                <div class="col-6">6</div>
+            </div>
+            <div class="row">
+                <div class="col-12">12</div>
+            </div>
+            <div class="row">
+                <div class="col-6 col-md-offset-6 col-sm-offset-4">col-6 offset-md-3 & offset-sm-4</div>
+            </div>
+        </div>
+
+*/

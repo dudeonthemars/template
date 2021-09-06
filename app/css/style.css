@@ -295,11 +295,11 @@ button:focus {
 }
 
 .c-green {
-  color: #89d80b;
+  color: #20bf55;
 }
 
 .c-blue {
-  color: #2793d6;
+  color: #01baef;
 }
 
 .c-gray-light {
@@ -821,7 +821,6 @@ button:focus {
 .hero {
   font-family: "Acrom", sans-serif;
   font-size: 2.625rem;
-  letter-spacing: 0.125rem;
   line-height: 1.2;
   text-transform: uppercase;
 }
@@ -830,8 +829,7 @@ button:focus {
   font-family: "Acrom", sans-serif;
   font-size: 2rem;
   font-weight: bold;
-  letter-spacing: 0.125rem;
-  line-height: 1.2;
+  line-height: 1.12;
 }
 
 .title-alt {
@@ -843,7 +841,6 @@ button:focus {
 .sub-title {
   font-family: "Acrom", sans-serif;
   font-size: 1.25rem;
-  letter-spacing: 0.125rem;
   line-height: 1.5rem;
   text-transform: uppercase;
 }
@@ -933,6 +930,7 @@ b {
   -o-transition: all 0.2s;
   transition: all 0.2s;
   white-space: unset;
+  z-index: 1;
 }
 .btn:hover {
   -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
@@ -978,6 +976,26 @@ b {
 .btn_white::after {
   background-color: #fff;
 }
+.btn_green {
+  background: -o-linear-gradient(135deg, #20bf55, #01baef);
+  background: linear-gradient(315deg, #20bf55, #01baef);
+  color: #fff;
+  text-shadow: none !important;
+}
+.btn_green::after {
+  background: -o-linear-gradient(45deg, #20bf55, #01baef);
+  background: linear-gradient(-315deg, #20bf55, #01baef);
+}
+.btn_red {
+  background: -o-linear-gradient(135deg, #f37b06, #ff3e33);
+  background: linear-gradient(315deg, #f37b06, #ff3e33);
+  color: #fff;
+  text-shadow: none !important;
+}
+.btn_red::after {
+  background: -o-linear-gradient(45deg, #f37b06, #ff3e33);
+  background: linear-gradient(-315deg, #f37b06, #ff3e33);
+}
 
 .btn-link {
   cursor: pointer;
@@ -1010,6 +1028,17 @@ b {
           transform: translateY(0);
 }
 
+.wawe {
+  position: absolute;
+  z-index: 0;
+}
+.wawe_bottom {
+  bottom: 0;
+}
+.wawe_top {
+  top: 0;
+}
+
 .bg-video {
   height: 100%;
   left: 0;
@@ -1035,6 +1064,22 @@ b {
   width: 90%;
 }
 
+/*
+
+<form novalidate class="ea_form " action="https://olgayurkovskaya.e-autopay.com/checkout/save_order_data.php" method=post name="order_form" target="_blank" onSubmit="return EAcheckForm(this);">
+    <input type="text" id="name" name="name" class="ea_name ea_input ea_form__ph" value="" placeholder="Введите свое имя" />
+    <input type="email" id="email" name="email" class="ea_email ea_input ea_form__ph" value="" required="required" placeholder="Введите email" />
+    <input type="submit" class="ea_submit btn" name="submit" value="Оформить заказ!">
+
+    <input type="hidden" name="fam" class="ea_fam ea_input" value="" />
+    <input type="hidden" name="otch" class="ea_otch ea_input" value="" />
+    <input type="hidden" name="form_charset" id="form_charset" value="">
+    <input type="hidden" name="tovar_id" value="223152">
+    <input type="hidden" name="form_id" value="25100">
+    <input type="hidden" name="order_page_referer" id="order_page_referer" value="" />
+</form>
+
+*/
 @font-face {
   font-family: "Flaticon";
   src: url("../fonts/Flaticon.eot");
@@ -2135,6 +2180,42 @@ b {
   vertical-align: middle;
 }
 
+/*
+
+<div class="container">
+            <div class="count-down" id="count_down">
+                <div class="count-down__column">
+                    <div class="count-down__icon">
+                        <div class="fi flaticon-success"></div>
+                    </div>
+                    <p class="sub-title">Working Hours</p>
+                    <h1 class="count-down__value " data-count="654">4 </h1>
+                </div>
+                <div class="count-down__column">
+                    <div class="count-down__icon">
+                        <div class="fi flaticon-success"></div>
+                    </div>
+                    <p class="sub-title">Working Hours</p>
+                    <h1 class="count-down__value " data-count="6400">10</h1>
+                </div>
+                <div class="count-down__column">
+                    <div class="count-down__icon">
+                        <div class="fi flaticon-success"></div>
+                    </div>
+                    <p class="sub-title">Working Hours</p>
+                    <h1 class="count-down__value " data-count="2389">201</h1>
+                </div>
+                <div class="count-down__column">
+                    <div class="count-down__icon">
+                        <div class="fi flaticon-success"></div>
+                    </div>
+                    <p class="sub-title">Working Hours</p>
+                    <h1 class="count-down__value " data-count="653">2</h1>
+                </div>
+            </div>
+        </div>
+
+*/
 .count-down {
   background: blue;
   border-radius: 1.25rem;
@@ -2176,6 +2257,7 @@ footer {
   background: #222;
   color: #fff;
   padding: 2rem 1rem;
+  text-align: center;
 }
 
 .footer {
@@ -2214,14 +2296,14 @@ footer {
   padding: 0.5rem;
 }
 .footer .social-link:hover {
-  color: #2793d6;
+  color: #01baef;
 }
 .footer .help-link {
   color: #fff;
   line-height: 1.4rem;
 }
 .footer .help-link:hover {
-  color: #2793d6;
+  color: #01baef;
 }
 
 .footer__icon {
@@ -2231,7 +2313,7 @@ footer {
   display: block;
   fill: transparent;
   margin: 10px auto;
-  stroke: #89d80b;
+  stroke: #20bf55;
   width: 70px;
 }
 
@@ -2245,7 +2327,6 @@ section {
 }
 
 .container {
-  background: pink;
   margin: 0 auto;
   max-width: 73.125rem;
   padding: 0rem 0.9375rem;
@@ -2546,6 +2627,44 @@ section {
 .col-offset-12 {
   margin-left: 100%;
 }
+
+/*
+
+<div class="container">
+            <div class="row">
+                <div class="col-sm-1">1</div>
+                <div class="col-sm-11">11</div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">2</div>
+                <div class="col-md-10">10</div>
+            </div>
+            <div class="row">
+                <div class="col-3">3</div>
+                <div class="col-9">9</div>
+            </div>
+            <div class="row">
+                <div class="col-4">4</div>
+                <div class="col-8">8</div>
+            </div>
+            <div class="row">
+                <div class="col-5">5</div>
+                <div class="col-7">7</div>
+            </div>
+            <div class="row">
+                <div class="col-6">6</div>
+                <div class="col-6">6</div>
+            </div>
+            <div class="row">
+                <div class="col-12">12</div>
+            </div>
+            <div class="row">
+                <div class="col-6 col-md-offset-6 col-sm-offset-4">col-6 offset-md-3 & offset-sm-4</div>
+            </div>
+        </div>
+
+*/
+
 @media all and (min-width: 768px){
   html{
     font-size: 100%;
@@ -3016,6 +3135,7 @@ section {
     margin-left: 100%;
   }
 }
+
 @media all and (min-width: 350px){
   .h-padding-top-12-xxs{
     padding-top: 12px;
@@ -3354,6 +3474,7 @@ section {
     margin-right: 100px;
   }
 }
+
 @media all and (min-width: 450px){
   .h-padding-top-12-xs{
     padding-top: 12px;
@@ -3692,6 +3813,7 @@ section {
     margin-right: 100px;
   }
 }
+
 @media all and (min-width: 992px){
   .h-padding-top-12-md{
     padding-top: 12px;
@@ -4141,6 +4263,7 @@ section {
     margin-left: 100%;
   }
 }
+
 @media all and (min-width: 1200px){
   .h-padding-top-12-lg{
     padding-top: 12px;
@@ -4495,6 +4618,7 @@ section {
     stroke: transparent;
   }
 }
+
 @media all and (min-width: 1920px){
   .h-padding-top-12-hd{
     padding-top: 12px;
@@ -4833,6 +4957,7 @@ section {
     margin-right: 100px;
   }
 }
+
 @media all and (min-width: 1921px){
   .h-padding-top-12-xl{
     padding-top: 12px;
@@ -5177,6 +5302,7 @@ section {
     font-size: 3rem;
   }
 }
+
 @media screen and (-webkit-min-device-pixel-ratio: 0){
   @font-face{
     font-family: "Flaticon";

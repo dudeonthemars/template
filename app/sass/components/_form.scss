@@ -7,3 +7,20 @@
         width: 90%;
     }
 }
+
+/*
+
+<form novalidate class="ea_form " action="https://olgayurkovskaya.e-autopay.com/checkout/save_order_data.php" method=post name="order_form" target="_blank" onSubmit="return EAcheckForm(this);">
+    <input type="text" id="name" name="name" class="ea_name ea_input ea_form__ph" value="" placeholder="Введите свое имя" />
+    <input type="email" id="email" name="email" class="ea_email ea_input ea_form__ph" value="" required="required" placeholder="Введите email" />
+    <input type="submit" class="ea_submit btn" name="submit" value="Оформить заказ!">
+
+    <input type="hidden" name="fam" class="ea_fam ea_input" value="" />
+    <input type="hidden" name="otch" class="ea_otch ea_input" value="" />
+    <input type="hidden" name="form_charset" id="form_charset" value="">
+    <input type="hidden" name="tovar_id" value="223152">
+    <input type="hidden" name="form_id" value="25100">
+    <input type="hidden" name="order_page_referer" id="order_page_referer" value="" />
+</form>
+
+*/
