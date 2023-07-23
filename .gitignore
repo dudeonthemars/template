@@ -1,1 +1,5 @@
 node_modules
+app/libs/ityped-master/dist/index.js
+app/libs/ityped-master/dist/index.js.map
+app/libs/ityped-master/dist/index.min.js
+app/libs/ityped-master/dist/index.min.js.map
